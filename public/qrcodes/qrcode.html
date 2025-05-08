@@ -1,0 +1,23 @@
+<!-- Generating QR codes for the page -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+    <h1>QR Code Generator</h1>
+    <div id="qrcode"></div>
+    <script src="qrcode.js"></script>
+    <script>
+        const qrcode = new QRCode(document.getElementById('qrcode'), {
+            text: 'https://example.com',
+            width: 256,
+            height: 256,
+        });
+    </script>
+    <script src="qrcode.js"></script>
+
+ </body>
+ </html>

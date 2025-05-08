@@ -1,0 +1,1397 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MyBidhaa</title>
+    <link href="https://fonts.googleapis.com/css?family=Cairo:400,600,700&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:600&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400i,700i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu&amp;display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/nice-select.css">
+    <link rel="stylesheet" href="css/slick.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/main-color04.css">
+    <style>
+        /* Add some basic styling for the eye icon */
+        .password-container {
+            position: relative;
+        }
+    
+        .password-input-wrapper {
+            position: relative;
+            width: 100%;
+        }
+    
+        .txt-input {
+            width: 100%; /* Ensure the input field taKES  full width */
+            padding-right: 40px; /* Add padding to the right to prevent text overlap */
+            box-sizing: border-box; /* Ensure padding is included in the width */
+        }
+    
+        .toggle-password {
+            position: absolute;
+            right: 10px; /* Adjust as needed */
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            user-select: none;
+            color: purple; /* Make the eye icon purple */
+            font-size: 18px; /* Adjust icon size */
+        }
+    
+        .toggle-password:hover {
+            opacity: 0.8;
+        }
+    </style>
+    <style>
+        /* Add some basic styling for the role dropdown */
+        .role-container {
+            position: relative;
+            width: 100%;
+        }
+    
+        .txt-input {
+            color: black;
+            width: 100%; /* Ensure the input field takes full width */
+            padding: 0px;
+            border: 1px solid #cccccc;
+            border-radius: 4px;
+            box-sizing: border-box; /* Ensure padding is included in the width */
+            
+        }
+    .nice-select .current{
+        color: #000000;
+        display: inline-block;
+        padding: 14px 0;
+    }
+        /* Styling for dropdown */
+        .role-container select {
+            appearance: none;
+            background-color: white;
+            cursor: pointer;
+        }
+    
+        .role-container:hover select {
+            display: block;
+        }
+    </style>
+    <style>
+        header {
+            position: sticky;
+            top: 0;
+            width: 100%;
+            background: #ffffff; /* Change to match your theme */
+            padding: 0px 20px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            z-index: 1000; /* Ensures it's above other content */
+        }
+    </style>
+    <style>
+        /* Preloader styles */
+        #biof-loading {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+        }
+        .biof-loading-center {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+        }
+        .biof-loading-center img {
+            width: 200px; /* Adjust size as needed */
+            height: auto;
+        }
+    </style>
+    
+</head>
+
+<body class="biolife-body">
+
+    <!-- Preloader -->
+    <div id="biof-loading">
+        <div class="biof-loading-center">
+            <img src="images/preloader.gif" alt="Loading..."> <!-- Replace with actual GIF path -->
+        </div>
+    </div>
+
+    <!-- HEADER -->
+    <header id="header" class="header-area style-01 layout-03">
+        <div class="header-top bg-main hidden-xs">
+            <div class="container">
+                <div class="top-bar left">
+                    <ul class="horizontal-menu">
+                        <li>
+  <a href="mailto:hello@mybidhaa.com" target="_blank" rel="noopener noreferrer">
+    <i class="fa fa-envelope" aria-hidden="true"></i>hello@mybidhaa.com
+  </a>
+</li>
+                        <li><a>Free Shipping for  Order above KES  10,000</a></li>
+                    </ul>
+                </div>
+                <div class="top-bar right">
+                    <ul class="social-list">
+                        <li><a href="https://x.com/MyBidhaa" target="_blank" rel="noopener noreferrer"><i class="fa fa-twitter"></i></a></li>
+<li><a href="https://www.facebook.com/Myb1dhaa/" target="_blank" rel="noopener noreferrer"><i class="fa fa-facebook"></i></a></li>
+<li><a href="https://www.instagram.com/mybidhaa/" target="_blank" rel="noopener noreferrer"><i class="fa fa-instagram"></i></a></li>
+                    </ul>
+                    <ul class="horizontal-menu">
+
+                        <li>
+                            <a href="login.html" class="login-link">
+                                <i class="biolife-icon icon-login"></i>Login
+                            </a>
+                        </li>
+                        <li>
+                            <a href="login.html" class="register-link">
+                                <i class="biolife-icon icon-login"></i>Sign Up
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="header-middle biolife-sticky-object ">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-2 col-md-6 col-xs-6">
+                        <a href="../index.html" class="biolife-logo"><img src="images/My_Bidhaa_Final_Logoo-removebg-preview.png" alt="MyBidhaa logo" width="135" height="34"></a>
+                    </div>
+                    <div class="col-lg-6 col-md-7 hidden-sm hidden-xs">
+                        <div class="primary-menu">
+                            <ul class="menu biolife-menu clone-main-menu clone-primary-menu" id="primary-menu" data-menuname="main menu">
+                                <li class="menu-item"><a href="../index.html">Home</a></li>
+                                <li class="menu-item menu-item-has-children has-megamenu">
+                                    <a href="shop.html" class="menu-name" data-title="Shop">Shop</a>
+                                    <div class="wrap-megamenu lg-width-900 md-width-750">
+                                        <div class="mega-content">
+                                            <!-- Academic & Learning Resources -->
+                                            <div class="col-lg-3 col-md-3 col-xs-12 md-margin-bottom-0 xs-margin-bottom-25">
+                                                <div class="wrap-custom-menu vertical-menu">
+                                                    <h4 class="menu-title">Academic & Learning Resources</h4>
+                                                    <ul class="menu">
+                                                        <li><a href="shop.html">School Supplies</a></li>
+<li><a href="shop.html">Library Books</a></li>
+<li><a href="shop.html">Classroom Kits</a></li>
+<li><a href="shop.html">STEM Learning Kits</a></li>
+<li><a href="shop.html">Educational Posters</a></li>
+</ul>
+</div>
+</div>
+
+<!-- School Operations & Infrastructure -->
+<div class="col-lg-3 col-md-3 col-xs-12 md-margin-bottom-0 xs-margin-bottom-25">
+    <div class="wrap-custom-menu vertical-menu">
+        <h4 class="menu-title">School Operations & Infrastructure</h4>
+        <ul class="menu">
+            <li><a href="shop.html">Administrative Tools</a></li>
+            <li><a href="shop.html">Cleaning Supplies</a></li>
+            <li><a href="shop.html">School Furniture</a></li>
+            <li><a href="shop.html">Outdoor Equipment</a></li>
+            <li><a href="shop.html">Bulk Procurement</a></li>
+        </ul>
+    </div>
+</div>
+
+<!-- Health, Safety & Security -->
+<div class="col-lg-3 col-md-3 col-xs-12 md-margin-bottom-0 xs-margin-bottom-25">
+    <div class="wrap-custom-menu vertical-menu">
+        <h4 class="menu-title">Health, Safety & Security</h4>
+        <ul class="menu">
+            <li><a href="shop.html">First Aid Kits</a></li>
+            <li><a href="shop.html">Safety Equipment</a></li>
+            <li><a href="shop.html">Sanitation Supplies</a></li>
+            <li><a href="shop.html">Health Education Materials</a></li>
+            <li><a href="shop.html">Security Systems</a></li>
+        </ul>
+    </div>
+</div>
+
+<!-- Arts & Creativity -->
+<div class="col-lg-3 col-md-3 col-xs-12 md-margin-bottom-0 xs-margin-bottom-25">
+    <div class="wrap-custom-menu vertical-menu">
+        <h4 class="menu-title">Arts & Creativity</h4>
+        <ul class="menu">
+            <li><a href="shop.html">Art Supplies</a></li>
+            <li><a href="shop.html">Craft Kits</a></li>
+            <li><a href="shop.html">Music Instruments</a></li>
+            <li><a href="shop.html">Drama & Debate Materials</a></li>
+            <li><a href="shop.html">Creative Posters</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="./tutors.html" class="menu-name" data-title="Pages" target="_blank" rel="noopener noreferrer">Tutors</a>
+                                <li class="menu-item">
+                                    <a href="http://supplier.mybidhaa.com/" class="menu-name" data-title="Pages" target="_blank" rel="noopener noreferrer">Supplier</a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="blog.html" class="menu-name" data-title="Blog">Blog</a></li>
+                                <li class="menu-item"><a href="edtech.html">Edtech</a></li><li class="menu-item"><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div><div class="col-lg-3 col-md-3 col-md-6 col-xs-6">
+                        <div class="biolife-cart-info">
+                            <div class="mobile-search">
+                                <a href="#" class="open-searchbox"><i class="biolife-icon icon-search"></i></a>
+                                <div class="mobile-search-content">
+                                    <form action="#" class="form-search" name="mobile-seacrh" method="get">
+                                        <a href="#" class="btn-close"><span class="biolife-icon icon-close-menu"></span></a>
+                                        <input type="text" name="s" class="input-text" value="" placeholder="Search here...">
+                                        <select name="category">
+                                            <option value="-1" selected>All Categories</option>
+                            <option value="academic_learning_resources">Academic & Learning Resources</option>
+                            <option value="school_operations_infrastructure">School Operations & Infrastructure</option>
+                            <option value="health_safety_security">Health, Safety & Security</option>
+                            <option value="food_catering">Food & Catering</option>
+                            <option value="school_uniforms_accessories">School Uniforms & Accessories</option>
+                            <option value="sports_physical_activities">Sports & Physical Activities</option>
+                            <option value="arts_creativity">Arts & Creativity</option>
+                            <option value="stem_clubs">STEM & Clubs</option>
+                            <option value="agriculture_environment">Agriculture & Environment</option>
+                            <option value="financial_payment_solutions">Financial & Payment Solutions</option>
+                            <option value="educational_support_services">Educational Support Services</option>
+                            <option value="logistics_delivery_solutions">Logistics & Delivery Solutions</option>
+                                        </select>
+                                        <button type="submit" class="btn-submit">go</button>
+                                    </form>
+                                </div>
+                            </div>
+                            
+                            <div class="minicart-block">
+                                <div class="minicart-contain">
+                                    <a href="#        
+" class="link-to">
+                                        <span class="">
+                                            <img src="images/cart icon.png" alt="Cart" width="45" height="45"> <!-- Replace with actual cart image path -->
+                                            <span class="qty">2</span>
+                                            </span>
+                                         <span class="title">Cart </span>
+
+                                        <span class="sub-total">KES 0.00</span>
+                                    </a>
+                                    <div class="cart-content">
+                                        <div class="cart-inner">
+                                            <ul class="products">
+                                                <li>
+                                                    <div class="minicart-item">
+                                                        <div class="thumb">
+                                                            <a href="#"><img src="images/products/Mentor engl.jpg" width="90" height="90" alt="National Fresh"></a>
+                                                        </div>
+                                                        <div class="left-info">
+                                                            <div class="product-title"><a href="#" class="product-name">MENTOR ENGLISH GRADE 5</a></div>
+                                                            <div class="price">
+                                                                <ins><span class="price-amount"><span class="currencySymbol">KES</span>85.00</span></ins>
+                                                                
+                                                            </div>
+                                                            <div class="qty">
+                                                                <label for="cart[id123][qty]">Qty:</label>
+                                                                <input type="number" class="input-qty" name="cart[id123][qty]" id="cart[id123][qty]" value="1" disabled>
+                                                            </div>
+                                                        </div>
+                                                        <div class="action">
+                                                            <a href="#" class="edit"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                                                            <a href="#" class="remove"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="minicart-item">
+                                                        <div class="thumb">
+                                                            <a href="#"><img src="images/products/Mentor engl.jpg" width="90" height="90" alt="National Fresh"></a>
+                                                        </div>
+                                                        <div class="left-info">
+                                                            <div class="product-title"><a href="#" class="product-name">MENTOR ENGLISH GRADE 5</a></div>
+                                                            <div class="price">
+                                                                <ins><span class="price-amount"><span class="currencySymbol">KES</span>85.00</span></ins>
+                                                                
+                                                            </div>
+                                                            <div class="qty">
+                                                                <label for="cart[id124][qty]">Qty:</label>
+                                                                <input type="number" class="input-qty" name="cart[id124][qty]" id="cart[id124][qty]" value="1" disabled>
+                                                            </div>
+                                                        </div>
+                                                        <div class="action">
+                                                            <a href="#" class="edit"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                                                            <a href="#" class="remove"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                            <p class="btn-control">
+                                                <a href="shopping-cart.html" class="btn view-cart" id="view-cart-btn">view cart</a>
+                                                <a href="checkout.html" class="btn checkout-btn" id="checkout-btn">checkout</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mobile-menu-toggle">
+                                <a class="btn-toggle" data-object="open-mobile-menu" href="#        
+">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+        <div class="header-bottom hidden-sm hidden-xs">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-4">
+                        <div class="vertical-menu vertical-category-block">
+                            <div class="block-title">
+                                <span class="menu-icon">
+                                    <span class="line-1"></span>
+                                    <span class="line-2"></span>
+                                    <span class="line-3"></span>
+                                </span>
+                                <span class="menu-title">All Categories</span>
+                                    <span class="angle" data-tgleclass="fa fa-caret-down"><i class="fa fa-caret-up" aria-hidden="true"></i></span>
+                                </div>
+                            <div class="wrap-menu">
+                                    <ul class="menu clone-main-menu">
+                                        <li class="menu-item menu-item-has-children has-megamenu">
+                                            <a href="#" class="menu-name" data-title="Learning Resources">
+                                                <i class="fas fa-book"></i>&nbsp;</i>&nbsp;</i>&nbsp;</i>&nbsp;</i>&nbsp;</i>&nbsp;</i>&nbsp;</i>&nbsp;Learning Resources
+                                            </a>
+                                            <div class="wrap-megamenu lg-width-900 md-width-640 background-mega-02">
+                                                <div class="mega-content">
+                                                    <div class="row">
+                                                        <!-- School Supplies & Learning Materials -->
+                                                        <div class="col-lg-3 col-md-4 sm-col-12 md-margin-bottom-83 xs-margin-bottom-25">
+                                                            <div class="wrap-custom-menu vertical-menu">
+                                                                <h4 class="menu-title">School Supplies & Learning Materials</h4>
+                                                                <ul class="menu">
+                                                                    <li><a href="#">Notebooks & Exercise Books</a></li>
+                                                                    <li><a href="#">Pens, Pencils & Markers</a></li>
+                                                                    <li><a href="#">Textbooks & Workbooks</a></li> 
+                                                                    <li><a href="#">Educational Posters</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                        
+                                                        <!-- Library & Reading Materials -->
+                                                        <div class="col-lg-3 col-md-4 sm-col-12 lg-padding-left-23 xs-margin-bottom-36px md-margin-bottom-0">
+                                                            <div class="wrap-custom-menu vertical-menu">
+                                                                <h4 class="menu-title">Library & Reading Materials</h4>
+                                                                <ul class="menu">
+                                                                    <li><a href="#">Storybooks & Novels</a></li>
+                                                                    <li><a href="#">Reference Books</a></li>
+                                                                    <li><a href="#">Educational Magazines</a></li>
+                                                                    <li><a href="#">Reading Comprehension Kits</a></li>
+                                                                    <li><a href="#">Library Furniture</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                        
+                                                        <!-- Classroom Supplies -->
+                                                        <div class="col-lg-3 col-md-4 sm-col-12 lg-padding-left-23 xs-margin-bottom-36px md-margin-bottom-0">
+                                                            <div class="wrap-custom-menu vertical-menu">
+                                                                <h4 class="menu-title">Classroom Supplies</h4>
+                                                                <ul class="menu">
+                                                                    <li><a href="#">Whiteboards & Markers</a></li>
+                                                                    <li><a href="#">Bulletin Boards</a></li>
+                                                                    <li><a href="#">Desk Organizers</a></li>
+                                                                    <li><a href="#">Teaching Aids</a></li>
+                                                                    <li><a href="#">Classroom Decorations</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                        
+                                                        <!-- Stationery & Office Supplies -->
+                                                        <div class="col-lg-3 col-md-4 sm-col-12 lg-padding-left-23 xs-margin-bottom-36px md-margin-bottom-0">
+                                                            <div class="wrap-custom-menu vertical-menu">
+                                                                <h4 class="menu-title">Stationery & Office Supplies</h4>
+                                                                <ul class="menu">
+                                                                    <li><a href="#">Staplers & Hole Punches</a></li>
+                                                                    <li><a href="#">Files & Folders</a></li>
+                                                                    <li><a href="#">Sticky Notes & Memo Pads</a></li>
+                                                                    <li><a href="#">Printing Paper & Ink</a></li>
+                                                                    <li><a href="#">Desk Accessories</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="menu-item menu-item-has-children has-megamenu">
+                                            <a href="#" class="menu-name" data-title="Arts & Creativity"><i
+                                                    class="biolife-icon icon-grape"></i>Arts & Creativity</a>
+                                            <div class="wrap-megamenu lg-width-900 md-width-640 background-mega-02">
+                                                <div class="mega-content">
+                                                    <div class="row">
+                                                        <div
+                                                            class="col-lg-3 col-md-4 sm-col-12 md-margin-bottom-83 xs-margin-bottom-25">
+                                                            <div class="wrap-custom-menu vertical-menu">
+                                                                <h4 class="menu-title"></h4>
+                                                                <ul class="menu">
+                                                                    <li><a href="#">Ballet & Dance</a></li>
+                                                                    <li><a href="#">Ballet & Dance Attire</a></li>
+                                                                    <li><a href="#">Music & Performing Arts</a></li>
+                                                                    <li><a href="#">Music & Performance Attire</a></li>
+                                                                    <li><a href="#">Arts & Crafts</a></li>
+
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="col-lg-3 col-md-4 sm-col-12 lg-padding-left-23 xs-margin-bottom-36px md-margin-bottom-0">
+                                                            <div class="wrap-custom-menu vertical-menu">
+                                                                <h4 class="menu-title"></h4>
+                                                                <ul class="menu">
+                                                                    <li><a href="#">Arts & Crafts Attire</a></li>
+                                                                    <li><a href="#">Drama & Debate Club</a></li>
+                                                                    <li><a href="#">Drama & Debate Attire</a></li>
+                                                                    <li><a href="#">Journalism & Photography</a></li>
+                                                                    <li><a href="#">Journalism Attire</a></li>
+
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="col-lg-6 col-md-4 sm-col-12 lg-padding-left-25 md-padding-top-55">
+                                                            <div class="biolife-banner layout-01">
+                                                                <h3 class="top-title">Unleash Creativity</h3>
+                                                                <p class="content">"Every child is an artist. The
+                                                                    problem is how to remain an artist once we grow up."
+                                                                    – Pablo Picasso</p>
+                                                                <b class="bottomm-title">Arts & Crafts Series</b>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="menu-item menu-item-has-children has-megamenu">
+                                            <a href="#" class="menu-name" data-title="School Infrastructure"><i class="biolife-icon icon-grape"></i>School Infrastructure</a>
+                                            <div class="wrap-megamenu lg-width-900 md-width-640 background-mega-03">
+                                                <div class="mega-content">
+                                                    <div class="row">
+                                                        <!-- Facilities & Equipment -->
+                                                        <div class="col-lg-3 col-md-4 col-sm-12 xs-margin-bottom-25 md-margin-bottom-0">
+                                                            <div class="wrap-custom-menu vertical-menu">
+                                                                <h4 class="menu-title">Facilities</h4>
+                                                                <ul class="menu">
+                                                                    <li><a href="#">Classroom Furniture</a></li>
+                                                                    <li><a href="#">Laboratory Equipment</a></li>
+                                                                    <li><a href="#">Library Fixtures</a></li>
+                                                                    <li><a href="#">Furniturs and Fixtures</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <!-- Infrastructure Development -->
+                                                        <div class="col-lg-3 col-md-4 col-sm-12 lg-padding-left-23 xs-margin-bottom-25 md-margin-bottom-0">
+                                                            <div class="wrap-custom-menu vertical-menu">
+                                                                <ul class="menu">
+                                                                    <li><a href="#">Construction & Renovation</a></li>
+                                                                    <li><a href="#">Cleaning & Maintenance Supplies</a></li>
+                                                                    <li><a href="#">Playground & Sports Facilities</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        
+                                        <li class="menu-item menu-item-has-children has-megamenu">
+                                            <a href="#" class="menu-name" data-title="Health, Safety & Security"><i class="biolife-icon icon-grape"></i>Health, Safety & Security</a>
+                                            <div class="wrap-megamenu lg-width-900 md-width-640 background-mega-02">
+                                                <div class="mega-content">
+                                                    <div class="row">
+                                                        <!-- Safety Equipment -->
+                                                        <div class="col-lg-3 col-md-4 sm-col-12 md-margin-bottom-83 xs-margin-bottom-25">
+                                                            <div class="wrap-custom-menu vertical-menu">
+                                                                <h4 class="menu-title">Safety Equipment</h4>
+                                                                <ul class="menu">
+                                                                    <li><a href="#">First Aid Kits</a></li>
+                                                                    <li><a href="#">Fire Extinguishers</a></li>
+                                                                    <li><a href="#">Safety Helmets</a></li>
+                                                                    <li><a href="#">Reflective Vests</a></li>
+                                                                    <li><a href="#">Emergency Exit Signs</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                        
+                                                        <!-- Health & Well-being -->
+                                                        <div class="col-lg-3 col-md-4 sm-col-12 lg-padding-left-23 xs-margin-bottom-36px md-margin-bottom-0">
+                                                            <div class="wrap-custom-menu vertical-menu">
+                                                                <h4 class="menu-title">Health & Well-being</h4>
+                                                                <ul class="menu">
+                                                                    <li><a href="#">Hand Sanitizers</a></li>
+                                                                    <li><a href="#">Face Masks</a></li>
+                                                                    <li><a href="#">Thermometers</a></li>
+                                                                    <li><a href="#">Health Education Materials</a></li>
+                                                                    <li><a href="#">Disposable Gloves</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                        
+                                                        <!-- Security Systems -->
+                                                        <div class="col-lg-3 col-md-4 sm-col-12 lg-padding-left-23 xs-margin-bottom-36px md-margin-bottom-0">
+                                                            <div class="wrap-custom-menu vertical-menu">
+                                                                <h4 class="menu-title">Security Systems</h4>
+                                                                <ul class="menu">
+                                                                    <li><a href="#">CCTV Cameras</a></li>
+                                                                    <li><a href="#">Access Control Systems</a></li>
+                                                                    <li><a href="#">Alarm Systems</a></li>
+                                                                    <li><a href="#">Security Guards</a></li>
+                                                                    <li><a href="#">Visitor Management Systems</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                        
+                                                        <!-- Emergency Preparedness -->
+                                                        <div class="col-lg-3 col-md-4 sm-col-12 lg-padding-left-23 xs-margin-bottom-36px md-margin-bottom-0">
+                                                            <div class="wrap-custom-menu vertical-menu">
+                                                                <h4 class="menu-title">Emergency Preparedness</h4>
+                                                                <ul class="menu">
+                                                                    <li><a href="#">Emergency Kits</a></li>
+                                                                    <li><a href="#">Flashlights & Batteries</a></li>
+                                                                    <li><a href="#">First Responder Kits</a></li>
+                                                                    <li><a href="#">Emergency Blankets</a></li>
+                                                                    <li><a href="#">Portable Radios</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="menu-item menu-item-has-children has-megamenu">
+                                            <a href="#" class="menu-name" data-title="Food and Catering"><i class="biolife-icon icon-grape"></i>Food and Catering</a>
+                                            <div class="wrap-megamenu lg-width-900 md-width-640 background-mega-02">
+                                                <div class="mega-content">
+                                                    <div class="row">
+                                                        <!-- Food Supplies -->
+                                                        <div class="col-lg-3 col-md-4 sm-col-12 md-margin-bottom-83 xs-margin-bottom-25">
+                                                            <div class="wrap-custom-menu vertical-menu">
+                                                                <h4 class="menu-title">Food Supplies</h4>
+                                                                <ul class="menu">
+                                                                    <li><a href="#">Fresh Fruits</a></li>
+                                                                    <li><a href="#">Fresh Vegetables</a></li>
+                                                                    <li><a href="#">Dairy Products</a></li>
+                                                                    <li><a href="#">Bakery Items</a></li>
+                                                                    <li><a href="#">Dry Goods & Staples</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                        
+                                                        <!-- Cafeteria Supplies -->
+                                                        <div class="col-lg-3 col-md-4 sm-col-12 lg-padding-left-23 xs-margin-bottom-36px md-margin-bottom-0">
+                                                            <div class="wrap-custom-menu vertical-menu">
+                                                                <h4 class="menu-title">Cafeteria Supplies</h4>
+                                                                <ul class="menu">
+                                                                    <li><a href="#">Disposable Plates & Cutlery</a></li>
+                                                                    <li><a href="#">Food Storage Containers</a></li>
+                                                                    <li><a href="#">Serving Trays</a></li>
+                                                                    <li><a href="#">Beverage Dispensers</a></li>
+                                                                    <li><a href="#">Napkins & Paper Towels</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                        
+                                                        <!-- Catering Equipment -->
+                                                        <div class="col-lg-3 col-md-4 sm-col-12 lg-padding-left-23 xs-margin-bottom-36px md-margin-bottom-0">
+                                                            <div class="wrap-custom-menu vertical-menu">
+                                                                <h4 class="menu-title">Catering Equipment</h4>
+                                                                <ul class="menu">
+                                                                    <li><a href="#">Food Warmers</a></li>
+                                                                    <li><a href="#">Chafing Dishes</a></li>
+                                                                    <li><a href="#">Portable Stoves</a></li>
+                                                                    <li><a href="#">Catering Trolleys</a></li>
+                                                                    <li><a href="#">Buffet Serving Sets</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                        
+                                                        <!-- Beverages -->
+                                                        <div class="col-lg-3 col-md-4 sm-col-12 lg-padding-left-23 xs-margin-bottom-36px md-margin-bottom-0">
+                                                            <div class="wrap-custom-menu vertical-menu">
+                                                                <h4 class="menu-title">Beverages</h4>
+                                                                <ul class="menu">
+                                                                    <li><a href="#">Juices & Smoothies</a></li>
+                                                                    <li><a href="#">Bottled Water</a></li>
+                                                                    <li><a href="#">Tea & Coffee Supplies</a></li>
+                                                                    <li><a href="#">Energy Drinks</a></li>
+                                                                    <li><a href="#">Milk & Dairy Alternatives</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="menu-item menu-item-has-children has-megamenu">
+                                            <a href="#" class="menu-name" data-title="School Uniforms and Accessories"><i class="biolife-icon icon-grape"></i>Uniforms and Accessories</a>
+                                            <div class="wrap-megamenu lg-width-900 md-width-640 background-mega-02">
+                                                <div class="mega-content">
+                                                    <div class="row">
+                                                        <!-- School Uniforms -->
+                                                        <div class="col-lg-3 col-md-4 sm-col-12 md-margin-bottom-83 xs-margin-bottom-25">
+                                                            <div class="wrap-custom-menu vertical-menu">
+                                                                <h4 class="menu-title">School Uniforms</h4>
+                                                                <ul class="menu">
+                                                                    <li><a href="#">Boys' Uniform Sets</a></li>
+                                                                    <li><a href="#">Girls' Uniform Sets</a></li>
+                                                                    <li><a href="#">Blazers & Jackets</a></li>
+                                                                    <li><a href="#">Shirts & Blouses</a></li>
+                                                                    <li><a href="#">Trousers & Skirts</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                        
+                                                        <!-- School Shoes -->
+                                                        <div class="col-lg-3 col-md-4 sm-col-12 lg-padding-left-23 xs-margin-bottom-36px md-margin-bottom-0">
+                                                            <div class="wrap-custom-menu vertical-menu">
+                                                                <h4 class="menu-title">School Shoes</h4>
+                                                                <ul class="menu">
+                                                                    <li><a href="#">Black School Shoes</a></li>
+                                                                    <li><a href="#">Brown School Shoes</a></li>
+                                                                    <li><a href="#">Sports Shoes</a></li>
+                                                                    <li><a href="#">Sandals</a></li>
+                                                                    <li><a href="#">Shoe Care Kits</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                        
+                                                        <!-- Accessories -->
+                                                        <div class="col-lg-3 col-md-4 sm-col-12 lg-padding-left-23 xs-margin-bottom-36px md-margin-bottom-0">
+                                                            <div class="wrap-custom-menu vertical-menu">
+                                                                <h4 class="menu-title">Accessories</h4>
+                                                                <ul class="menu">
+                                                                    <li><a href="#">Ties & Bow Ties</a></li>
+                                                                    <li><a href="#">Belts</a></li>
+                                                                    <li><a href="#">Socks & Tights</a></li>
+                                                                    <li><a href="#">School Bags</a></li>
+                                                                    <li><a href="#">Badges & Pins</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                        
+                                                        <!-- Sports Uniforms -->
+                                                        <div class="col-lg-3 col-md-4 sm-col-12 lg-padding-left-23 xs-margin-bottom-36px md-margin-bottom-0">
+                                                            <div class="wrap-custom-menu vertical-menu">
+                                                                <h4 class="menu-title">Sports Uniforms</h4>
+                                                                <ul class="menu">
+                                                                    <li><a href="#">PE Kits</a></li>
+                                                                    <li><a href="#">Sports Jerseys</a></li>
+                                                                    <li><a href="#">Track Pants</a></li>
+                                                                    <li><a href="#">Sports Shorts</a></li>
+                                                                    <li><a href="#">Team Uniforms</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="menu-item menu-item-has-children has-megamenu">
+                                            <a href="#" class="menu-name" data-title="Arts & Creativity"><i class="biolife-icon icon-grape"></i>Arts & Creativity</a>
+                                            <div class="wrap-megamenu lg-width-900 md-width-640 background-mega-02">
+                                                <div class="mega-content">
+                                                    <div class="row">
+                                                        <!-- Art Supplies -->
+                                                        <div class="col-lg-3 col-md-4 sm-col-12 md-margin-bottom-83 xs-margin-bottom-25">
+                                                            <div class="wrap-custom-menu vertical-menu">
+                                                                <h4 class="menu-title">Art Supplies</h4>
+                                                                <ul class="menu">
+                                                                    <li><a href="#">Paints & Brushes</a></li>
+                                                                    <li><a href="#">Sketchbooks & Drawing Pads</a></li>
+                                                                    <li><a href="#">Colored Pencils</a></li>
+                                                                    <li><a href="#">Markers & Highlighters</a></li>
+                                                                    <li><a href="#">Canvas & Easels</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                        
+                                                        <!-- Craft Kits -->
+                                                        <div class="col-lg-3 col-md-4 sm-col-12 lg-padding-left-23 xs-margin-bottom-36px md-margin-bottom-0">
+                                                            <div class="wrap-custom-menu vertical-menu">
+                                                                <h4 class="menu-title">Craft Kits</h4>
+                                                                <ul class="menu">
+                                                                    <li><a href="#">Beading & Jewelry Kits</a></li>
+                                                                    <li><a href="#">Paper Craft Kits</a></li>
+                                                                    <li><a href="#">Sewing & Embroidery Kits</a></li>
+                                                                    <li><a href="#">DIY Craft Kits</a></li>
+                                                                    <li><a href="#">Model Building Kits</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                        
+                                                        <!-- Music & Performing Arts -->
+                                                        <div class="col-lg-3 col-md-4 sm-col-12 lg-padding-left-23 xs-margin-bottom-36px md-margin-bottom-0">
+                                                            <div class="wrap-custom-menu vertical-menu">
+                                                                <h4 class="menu-title">Music & Performing Arts</h4>
+                                                                <ul class="menu">
+                                                                    <li><a href="#">Musical Instruments</a></li>
+                                                                    <li><a href="#">Sheet Music & Books</a></li>
+                                                                    <li><a href="#">Dancewear & Shoes</a></li>
+                                                                    <li><a href="#">Theater Costumes</a></li>
+                                                                    <li><a href="#">Stage Props</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                        
+                                                        <!-- Creative Tools -->
+                                                        <div class="col-lg-3 col-md-4 sm-col-12 lg-padding-left-23 xs-margin-bottom-36px md-margin-bottom-0">
+                                                            <div class="wrap-custom-menu vertical-menu">
+                                                                <h4 class="menu-title">Creative Tools</h4>
+                                                                <ul class="menu">
+                                                                    <li><a href="#">Scissors & Cutting Tools</a></li>
+                                                                    <li><a href="#">Glue & Adhesives</a></li>
+                                                                    <li><a href="#">Stencils & Templates</a></li>
+                                                                    <li><a href="#">Art Storage Solutions</a></li>
+                                                                    <li><a href="#">Light Boxes & Tracing Tools</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="menu-item menu-item-has-children has-megamenu">
+                                            <a href="#" class="menu-name" data-title="STEM & Clubs"><i class="biolife-icon icon-grape"></i>STEM & Clubs</a>
+                                            <div class="wrap-megamenu lg-width-900 md-width-640 background-mega-02">
+                                                <div class="mega-content">
+                                                    <div class="row">
+                                                        <!-- Science Kits -->
+                                                        <div class="col-lg-3 col-md-4 sm-col-12 md-margin-bottom-83 xs-margin-bottom-25">
+                                                            <div class="wrap-custom-menu vertical-menu">
+                                                                <h4 class="menu-title">Science Kits</h4>
+                                                                <ul class="menu">
+                                                                    <li><a href="#">Chemistry Sets</a></li>
+                                                                    <li><a href="#">Physics Experiments</a></li>
+                                                                    <li><a href="#">Biology Lab Kits</a></li>
+                                                                    <li><a href="#">Astronomy Tools</a></li>
+                                                                    <li><a href="#">Microscopes & Telescopes</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                        <!-- Robotics & Coding -->
+                                                        <div class="col-lg-3 col-md-4 sm-col-12 lg-padding-left-23 xs-margin-bottom-36px md-margin-bottom-0">
+                                                            <div class="wrap-custom-menu vertical-menu">
+                                                                <h4 class="menu-title">Robotics & Coding</h4>
+                                                                <ul class="menu">
+                                                                    <li><a href="#">Robotics Kits</a></li>
+                                                                    <li><a href="#">Coding for Kids</a></li>
+                                                                    <li><a href="#">Arduino & Raspberry Pi</a></li>
+                                                                    <li><a href="#">AI & Machine Learning</a></li>
+                                                                    <li><a href="#">Game Development</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                        <!-- Engineering & Math -->
+                                                        <div class="col-lg-3 col-md-4 sm-col-12 lg-padding-left-23 xs-margin-bottom-36px md-margin-bottom-0">
+                                                            <div class="wrap-custom-menu vertical-menu">
+                                                                <h4 class="menu-title">Engineering & Math</h4>
+                                                                <ul class="menu">
+                                                                    <li><a href="#">Building & Construction Kits</a></li>
+                                                                    <li><a href="#">Circuit & Electronics</a></li>
+                                                                    <li><a href="#">3D Printing</a></li>
+                                                                    <li><a href="#">Math Games & Puzzles</a></li>
+                                                                    <li><a href="#">Engineering Projects</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                        <!-- Clubs & Competitions -->
+                                                        <div class="col-lg-3 col-md-4 sm-col-12 lg-padding-left-23 xs-margin-bottom-36px md-margin-bottom-0">
+                                                            <div class="wrap-custom-menu vertical-menu">
+                                                                <h4 class="menu-title">Clubs & Competitions</h4>
+                                                                <ul class="menu">
+                                                                    <li><a href="#">STEM Clubs</a></li>
+                                                                    <li><a href="#">Robotics Competitions</a></li>
+                                                                    <li><a href="#">Math Olympiads</a></li>
+                                                                    <li><a href="#">Science Fairs</a></li>
+                                                                    <li><a href="#">Coding Bootcamps</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        
+                                        <li class="menu-item menu-item-has-children has-megamenu">
+                                            <a href="#" class="menu-name" data-title="Financial & Payment Solutions"><i class="biolife-icon icon-grape"></i>Financial & Payment Solutions</a>
+                                            <div class="wrap-megamenu lg-width-900 md-width-640 background-mega-02">
+                                                <div class="mega-content">
+                                                    <div class="row">
+                                                        <!-- School Financing -->
+                                                        <div class="col-lg-4 col-md-4 sm-col-12 md-margin-bottom-83 xs-margin-bottom-25">
+                                                            <div class="wrap-custom-menu vertical-menu">
+                                                                <h4 class="menu-title">School Financing</h4>
+                                                                <ul class="menu">
+                                                                    <li><a href="#">Books & Supplies on Credit</a></li>
+                                                                    <li><a href="#">School Bus Financing</a></li>
+                                                                    <li><a href="#">Lab & Tech Equipment Loans</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                        <!-- Payment Plans -->
+                                                        <div class="col-lg-4 col-md-4 sm-col-12 lg-padding-left-23 xs-margin-bottom-36px md-margin-bottom-0">
+                                                            <div class="wrap-custom-menu vertical-menu">
+                                                                <h4 class="menu-title">Flexible Payment Plans</h4>
+                                                                <ul class="menu">
+                                                                    <li><a href="#">Installment Payment Options</a></li>  
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="menu-item menu-item-has-children has-megamenu">
+                                            <a href="#" class="menu-name" data-title="Educational Support Services"><i class="biolife-icon icon-grape"></i>Educational Support Services</a>
+                                            <div class="wrap-megamenu lg-width-900 md-width-640 background-mega-02">
+                                                <div class="mega-content">
+                                                    <div class="row">
+                                                        <!-- Tutoring & Mentorship -->
+                                                        <div class="col-lg-4 col-md-4 sm-col-12 md-margin-bottom-83 xs-margin-bottom-25">
+                                                            <div class="wrap-custom-menu vertical-menu">
+                                                                <h4 class="menu-title">Tutoring & Mentorship</h4>
+                                                                <ul class="menu">
+                                                                    <li><a href="#">Online Tutoring Services</a></li>
+                                                                    <li><a href="#">Subject-Specific Coaching</a></li>
+                                                                    <li><a href="#">Career Mentorship</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                        <!-- Special Education Support -->
+                                                        <div class="col-lg-4 col-md-4 sm-col-12 lg-padding-left-23 xs-margin-bottom-36px md-margin-bottom-0">
+                                                            <div class="wrap-custom-menu vertical-menu">
+                                                                <h4 class="menu-title">Special Education Support</h4>
+                                                                <ul class="menu">
+                                                                    <li><a href="#">Inclusive Learning Programs</a></li>
+                                                                    <li><a href="#">Assistive Learning Technologies</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                        <!-- Learning Resources -->
+                                                        <div class="col-lg-4 col-md-4 sm-col-12 lg-padding-left-23 xs-margin-bottom-36px md-margin-bottom-0">
+                                                            <div class="wrap-custom-menu vertical-menu">
+                                                                <h4 class="menu-title">Learning Resources</h4>
+                                                                <ul class="menu">
+                                                                    <li><a href="#">Digital Libraries & E-Books</a></li>
+                                                                    <li><a href="#">Study Guides & Practice Tests</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        
+                                        <li class="menu-item menu-item-has-children has-megamenu">
+                                            <a href="#" class="menu-name" data-title="Logistics & Delivery Solutions"><i class="biolife-icon icon-grape"></i>Logistics & Delivery Solutions</a>
+                                            <div class="wrap-megamenu lg-width-900 md-width-640 background-mega-02">
+                                                <div class="mega-content">
+                                                    <div class="row">
+                                                        <!-- School Supply Delivery -->
+                                                        <div class="col-lg-4 col-md-4 sm-col-12 md-margin-bottom-83 xs-margin-bottom-25">
+                                                            <div class="wrap-custom-menu vertical-menu">
+                                                                <h4 class="menu-title">School Supply Delivery</h4>
+                                                                <ul class="menu">
+                                                                    <li><a href="#">Books & Stationery Shipping</a></li>
+                                                                    <li><a href="#">Bulk School Equipment Transport</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                        <!-- Secure Transportation -->
+                                                        <div class="col-lg-4 col-md-4 sm-col-12 lg-padding-left-23 xs-margin-bottom-36px md-margin-bottom-0">
+                                                            <div class="wrap-custom-menu vertical-menu">
+                                                                <h4 class="menu-title">Secure Transportation</h4>
+                                                                <ul class="menu">
+                                                                    <li><a href="#">Secure Exam Material Handling</a></li>
+                                                                    <li><a href="#">Sensitive Document Delivery</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                        <!-- School Bus & Fleet Management -->
+                                                        <div class="col-lg-4 col-md-4 sm-col-12 lg-padding-left-23 xs-margin-bottom-36px md-margin-bottom-0">
+                                                            <div class="wrap-custom-menu vertical-menu">
+                                                                <h4 class="menu-title">School Bus & Fleet Management</h4>
+                                                                <ul class="menu">
+                                                                    <li><a href="#">School Bus Leasing & Maintenance</a></li>
+                                                                    <li><a href="#">Student Transport Solutions</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-9 col-md-8 padding-top-2px">
+                        <div class="header-search-bar layout-01">
+                            <form action="#" class="form-search" name="desktop-seacrh" method="get">
+                                <input type="text" name="s" class="input-text" value="" placeholder="Search here...">
+                                <select name="category">
+                                    <option value="-1" selected>All Categories</option>
+                            <option value="academic_learning_resources">Academic & Learning Resources</option>
+                            <option value="school_operations_infrastructure">School Operations & Infrastructure</option>
+                            <option value="health_safety_security">Health, Safety & Security</option>
+                            <option value="food_catering">Food & Catering</option>
+                            <option value="school_uniforms_accessories">School Uniforms & Accessories</option>
+                            <option value="sports_physical_activities">Sports & Physical Activities</option>
+                            <option value="arts_creativity">Arts & Creativity</option>
+                            <option value="stem_clubs">STEM & Clubs</option>
+                            <option value="agriculture_environment">Agriculture & Environment</option>
+                            <option value="financial_payment_solutions">Financial & Payment Solutions</option>
+                            <option value="educational_support_services">Educational Support Services</option>
+                            <option value="logistics_delivery_solutions">Logistics & Delivery Solutions</option>
+                                </select>
+                                <button type="submit" class="btn-submit"><i class="biolife-icon icon-search"></i></button>
+                            </form>
+                        </div>
+                        <div class="live-info">
+                            <p class="telephone"><i class="fa fa-phone" aria-hidden="true"></i><b class="phone-number">(+254) 797100500</b></p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--Hero Section-->
+    <div class="hero-section hero-background">
+        <h1 class="page-title">Authentication</h1>
+    </div>
+
+    <!--Navigation section-->
+    <div class="container">
+        <nav class="biolife-nav">
+            <ul>
+                <li class="nav-item"><a href="index.html" class="permal-link">Home</a></li>
+                <li class="nav-item"><span class="current-page">Authentication</span></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="page-contain login-page">
+
+        <!-- Main content -->
+<div id="main-content" class="main-content">
+    <div class="container">
+        <div class="row">
+            <!--Form Container (for both Sign In and Sign Up)-->
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                <div class="signin-container" id="form-container">
+                    <!-- Sign In Form (default) -->
+                    <form id="signin-form" action="#" name="frm-login" method="post">
+                        <p class="form-row">
+                            <label for="fid-name">Email Address:<span class="requite">*</span></label>
+                            <input type="email" id="fid-name" name="name" value="" class="txt-input" required>
+                            <span class="error-message"></span>
+                        </p>
+                        <p class="form-row password-container">
+                            <label for="fid-pass">Password:<span class="requite">*</span></label>
+                            <div class="password-input-wrapper">
+                                <input type="password" id="fid-pass" name="password" value="" class="txt-input" required minlength="6">
+                                <span class="toggle-password" onclick="togglePasswordVisibility('fid-pass')">
+                                    👁️
+                                </span>
+                            </div>
+                            <span class="error-message"></span>
+                        </p>
+                        <p class="form-row wrap-btn">
+                            <button class="btn btn-submit btn-bold" type="submit">Sign in</button>
+                            <button class="btn btn-submit btn-bold" id="toggle-signup">Sign up</button>
+                            <a href="#" class="link-to-help">Forgot your password</a>
+                        </p>
+                            </form>
+                            
+                            <!-- Sign Up Form (hidden by default) -->
+<form id="signup-form" action="#" name="frm-signup" method="post" style="display: none;">
+    <p class="form-row">
+        <label for="fid-fullname">Full Name:<span class="requite">*</span></label>
+                            <input type="text" id="fid-fullname" name="fullname" value="" class="txt-input" required minlength="2">
+                            <span class="error-message"></span>
+    </p>
+    <p class="form-row">
+        <label for="fid-email">Email Address:<span class="requite">*</span></label>
+                            <input type="email" id="fid-email" name="email" value="" class="txt-input" required>
+                            <span class="error-message"></span>
+                        </p>
+                        <div class="form-group">
+                            <label for="fid-role">Role <span class="required">*</span></label>
+                            <select id="fid-role" name="role" class="form-control" required>
+                                <option value="">Select your role</option>
+                                <option value="student">Student</option>
+            <option value="tutor">Tutor</option>
+                                <option value="shopper">Shopper</option>
+                                <option value="school">School</option>
+                                <option value="parent_student">Parent/Student</option>
+        </select>
+                        </div>
+    <p class="form-row">
+        <label for="fid-phone">Phone Number:<span class="requite">*</span></label>
+                            <input type="tel" id="fid-phone" name="phone" value="" class="txt-input" required pattern="[0-9]{10,15}">
+                            <span class="error-message"></span>
+    </p>
+    <p class="form-row password-container">
+        <label for="fid-password">Password:<span class="requite">*</span></label>
+        <div class="password-input-wrapper">
+                                <input type="password" id="fid-password" name="password" value="" class="txt-input" required minlength="8">
+            <span class="toggle-password" onclick="togglePasswordVisibility('fid-password')">
+                                    👁️
+            </span>
+        </div>
+                            <span class="error-message"></span>
+    </p>
+    <p class="form-row wrap-btn">
+        <button class="btn btn-submit btn-bold" type="submit">Sign up</button>
+    </p>
+</form>
+                
+
+
+
+                            </div>
+                            </div>
+                            
+                            <!--Go to Register form-->
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <div class="register-in-container">
+                    <div class="intro">
+                        <h4 class="box-title" id="form-title">New Customer?</h4>
+                        <p class="sub-title" id="form-subtitle">Create an account with us and you'll be able to:</p>
+                        <ul class="lis">
+                            <li>Check out faster</li>
+                            <li>Save multiple shipping addresses</li>
+                            <li>Access your order history</li>
+                            <li>Track new orders</li>
+                            <li>Save items to your Wishlist</li>
+                        </ul>
+                        <a href="#" id="toggle-form" class="btn btn-bold">Create an account</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script>
+    // Function to toggle password visibility
+    function togglePasswordVisibility(inputId) {
+        const passwordInput = document.getElementById(inputId);
+        const toggleIcon = document.querySelector(`[onclick="togglePasswordVisibility('${inputId}')"]`);
+
+        if (passwordInput.type === 'password') {
+            passwordInput.type = 'text'; // Show password
+            toggleIcon.textContent = '👁️'; // Change icon to "open eye"
+        } else {
+            passwordInput.type = 'password'; // Hide password
+            toggleIcon.textContent = '👁️'; // Change icon to "closed eye"
+        }
+    }
+
+    // Toggle between Sign In and Sign Up forms
+    document.getElementById('toggle-form').addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent the default link behavior
+
+        const signinForm = document.getElementById('signin-form');
+        const signupForm = document.getElementById('signup-form');
+        const formTitle = document.getElementById('form-title');
+        const formSubtitle = document.getElementById('form-subtitle');
+        const toggleFormLink = document.getElementById('toggle-form');
+
+        if (signinForm.style.display === 'none') {
+            // Switch to Sign In form
+            signinForm.style.display = 'block';
+            signupForm.style.display = 'none';
+            formTitle.textContent = 'New Customer?';
+            formSubtitle.textContent = 'Create an account with us and you'll be able to:';
+            toggleFormLink.textContent = 'Create an account';
+        } else {
+            // Switch to Sign Up form
+            signinForm.style.display = 'none';
+            signupForm.style.display = 'block';
+            formTitle.textContent = 'Already have an account?';
+            formSubtitle.textContent = 'Log in to access your account and manage your orders.';
+            toggleFormLink.textContent = 'Log in';
+        }
+    });
+</script>
+
+
+
+    <!-- FOOTER -->
+    <footer id="footer" class="footer layout-03">
+        <div class="footer-content background-footer-03">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-9">
+                        <section class="footer-item">
+                            <a href="./index.html" class="logo footer-logo"><img
+                                    src="images/My_Bidhaa_Final_Logoo-removebg-preview.png"
+                                    alt="MyBidhaa logo" width="135" height="36"></a>
+                            <div class="footer-phone-info">
+                                <i class="biolife-icon icon-head-phone"></i>
+                                <p class="r-info">
+                                            <span>Got Questions ?</span>
+                                            <span><a href="tel:+254797100500">(+254) 797 100 500</a></span>
+                                        </p>
+                            </div>
+                            <div class="newsletter-block layout-01">
+                                <h4 class="title">Newsletter Signup</h4>
+                                <div class="form-content">
+                                    <form action="#" name="new-letter-foter">
+                                        <input type="email" class="input-text email" value=""
+                                            placeholder="Your email here...">
+                                        <button type="submit" class="bnt-submit" name="ok">Sign up</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div
+                        class="col-lg-4 col-md-4 col-sm-6 md-margin-top-5px sm-margin-top-50px xs-margin-top-40px">
+                        <section class="footer-item">
+                                    <h3 class="section-title">GO TO</h3>
+                                    <div class="row">
+                                        <div class="col-lg-6 col-sm-6 col-xs-6">
+                                            <div class="wrap-custom-menu vertical-menu-2">
+                                                <ul class="menu">
+                                                    <li><a href="pages/about-us.html">About Us</a></li>
+                                                    <li><a href="documents/termsAndConditions MyBidhaa.pdf" onclick="document.getElementById('pdfModal').style.display='block'">Privacy Policy</a></li>
+                                                    <li><a href="documents/ReturnPolicy.pdf" onclick="document.getElementById('returnPolicyModal').style.display='block'">Return Policy</a></li>
+                                                    <li><a href="pages/contact.html">Contacts Us</a></li>
+                                                </ul>
+                                            </div>
+                                </div>
+                                <div class="col-lg-6 col-sm-6 col-xs-6">
+                                    <div class="wrap-custom-menu vertical-menu-2">
+                                        <ul class="menu">
+                                            <li><a href="#"></a></li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div
+                        class="col-lg-4 col-md-4 col-sm-6 md-margin-top-5px sm-margin-top-50px xs-margin-top-40px">
+                        <section class="footer-item">
+                            <h3 class="section-title">Our Offices</h3>
+                            <div class="contact-info-block footer-layout xs-padding-top-10px">
+                                <ul class="contact-lines">
+                                    <li>
+                                        <p class="info-item">
+                                            <i class="biolife-icon icon-location"></i>
+                                            <b class="desc">Funzi Road, Industrial Area, Nairobi, Kenya </b>
+                                        </p>
+                                    </li>
+                                    <li>
+                                                <p class="info-item">
+                                                    <i class="biolife-icon icon-phone"></i>
+                                                    <b class="desc">Phone: 
+                                                        <a href="tel:+254797100500" style="color:inherit; text-decoration:none;">
+                                                            (+254) 797 100 500
+                                                        </a>
+                                                    </b>
+                                                </p>
+                                            </li>
+                                    <li>
+                                        <p class="info-item">
+                                            <i class="biolife-icon icon-letter"></i>
+                                            <b class="desc">Email: <a href="mailto:hello@mybidhaa.com">hello@mybidhaa.com</a></b>
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p class="info-item">
+                                            <i class="biolife-icon icon-clock"></i>
+                                            <b class="desc">Hours: 7 Days a week from 8:00 am</b>
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="biolife-social inline">
+                                        <ul class="socials">
+                                            <li><a href="https://x.com/MyBidhaa" title="twitter" class="socail-btn" target="_blank"><i class="fa fa-twitter"
+                                                aria-hidden="true"></i></a></li>
+                                        <li><a href="https://www.facebook.com/Myb1dhaa/" title="facebook" class="socail-btn" target="_blank"><i
+                                                class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                        <li><a href="#" title="youtube" class="socail-btn" target="_blank"><i class="fa fa-youtube"
+                                                aria-hidden="true"></i></a></li>
+                                        <li><a href="https://www.instagram.com/mybidhaa/" title="instagram" class="socail-btn" target="_blank"><i
+                                                class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                                        
+                                        </ul>
+                                    </div>
+                        </section>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="separator sm-margin-top-62px xs-margin-top-40px"></div>
+                    </div>
+                    <div class="col-lg-6 col-sm-6 col-xs-12">
+                        <div class="copy-right-text">
+                            <p><a> © 2025 MyBidhaa. All rights reserved</a></p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-sm-6 col-xs-12">
+                        <div class="payment-methods">
+                            <ul>
+                                <li><a href="#" class="payment-link"><img src="images/card1.jpg"
+                                            width="51" height="36" alt=""></a></li>
+                                <li><a href="#" class="payment-link"><img src="images/card2.jpg"
+                                            width="51" height="36" alt=""></a></li>
+                                
+                                <li><a href="#" class="payment-link"><img src="images/card5.jpg"
+                                            width="51" height="36" alt=""></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!--Footer For Mobile-->
+    <div class="mobile-footer">
+        <div class="mobile-footer-inner">
+            <div class="mobile-block block-menu-main">
+                <a class="menu-bar menu-toggle btn-toggle" data-object="open-mobile-menu" href="#        
+">
+                    <span class="fa fa-bars"></span>
+                    <span class="text">Menu</span>
+                </a>
+            </div>
+            <div class="mobile-block block-sidebar">
+                <a class="menu-bar filter-toggle btn-toggle" data-object="open-mobile-filter" href="#        
+">
+                    <i class="fa fa-sliders" aria-hidden="true"></i>
+                    <span class="text">Sidebar</span>
+                </a>
+            </div>
+            <div class="mobile-block block-minicart">
+                <a class="link-to-cart" href="#">
+                    <span class="fa fa-shopping-bag" aria-hidden="true"></span>
+                    <span class="text">Cart</span>
+                </a>
+            </div>
+            <div class="mobile-block block-global">
+                <a class="menu-bar myaccount-toggle btn-toggle" data-object="global-panel-opened" href="#        
+">
+                    <span class="fa fa-globe"></span>
+                    <span class="text">Account</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="mobile-block-global">
+        <div class="biolife-mobile-panels">
+            <span class="biolife-current-panel-title">My Account</span>
+            <a class="biolife-close-btn" data-object="global-panel-opened" href="#">&times;</a>
+        </div>
+        <div class="block-global-contain">
+            <div class="glb-item my-account">
+                <b class="title">My Account</b>
+                <ul class="list">
+                    <li class="list-item"><a href="login.html">Login/register</a></li>
+                    <li class="list-item"><a href="checkout.html">Checkout</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scroll Top Button -->
+    <a class="btn-scroll-top"><i class="biolife-icon icon-left-arrow"></i></a>
+
+            <script>
+                var url = 'https://wati-integration-prod-service.clare.ai/v2/watiWidget.js?75459';
+                var s = document.createElement('script');
+                s.type = 'text/javascript';
+                s.async = true;
+                s.src = url;
+                var options = {
+                "enabled":true,
+                "chatButtonSetting":{
+                    "backgroundColor":"#622c84",
+                    "ctaText":"Chat with us",
+                    "borderRadius":"25",
+                    "marginLeft": "20",
+                    "marginRight": "20",
+                    "marginBottom": "20",
+                    "ctaIconWATI":false,
+                    "position":"right"
+                },
+                "brandSetting":{
+                    "brandName":"MyBidhaa",
+                    "brandSubTitle":"undefined",
+                    "brandImg":"https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg",
+                    "welcomeText":"Hi there!\nHow can I help you?",
+                    "messageText":"Hello, I was using the website and I need your help",
+                    "backgroundColor":"#622c84",
+                    "ctaText":"Chat with us",
+                    "borderRadius":"25",
+                    "autoShow":false,
+                    "phoneNumber":"254797100500"
+                }
+                };
+                s.onload = function() {
+                    CreateWhatsappChatWidget(options);
+                };
+                var x = document.getElementsByTagName('script')[0];
+                x.parentNode.insertBefore(s, x);
+            </script>
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.countdown.min.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/jquery.nicescroll.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/biolife.framework.js"></script>
+            <script src="js/functions.js"></script>
+    <script src="../js/auth.js"></script>
+            <script>
+        // Store the current page URL if we're not already on the login page
+        if (window.location.pathname !== '/pages/login.html') {
+            localStorage.setItem('redirectAfterLogin', window.location.href);
+        }
+    </script>
+</body>
+
+</html>

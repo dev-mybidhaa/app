@@ -1,0 +1,281 @@
+C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe, Version: 8.0.41 (MySQL Community Server - GPL). started with:
+TCP Port: 0, Named Pipe: MySQL
+Time                 Id Command    Argument
+C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe, Version: 8.0.41 (MySQL Community Server - GPL). started with:
+TCP Port: 3306, Named Pipe: MySQL
+Time                 Id Command    Argument
+C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe, Version: 8.0.41 (MySQL Community Server - GPL). started with:
+TCP Port: 3306, Named Pipe: MySQL
+Time                 Id Command    Argument
+C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe, Version: 8.0.41 (MySQL Community Server - GPL). started with:
+TCP Port: 3306, Named Pipe: MySQL
+Time                 Id Command    Argument
+C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe, Version: 8.0.41 (MySQL Community Server - GPL). started with:
+TCP Port: 3306, Named Pipe: MySQL
+Time                 Id Command    Argument
+# Time: 2025-03-04T08:18:44.246096Z
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 16.299895  Lock_time: 0.000011 Rows_sent: 3  Rows_examined: 14
+use longhorn;
+SET timestamp=1741076307;
+SELECT TABLE_COMMENT "comment",TABLE_NAME "name",TABLE_ROWS "table_rows",`AUTO_INCREMENT` "auto_increment",
+        row_format "row_format",DATA_LENGTH "data_length",INDEX_LENGTH "index_length",TABLE_COLLATION "collation",
+        TABLE_TYPE "view_group",`ENGINE` engine
+        FROM information_schema.TABLES  WHERE TABLE_SCHEMA = 'longhorn' and TABLE_TYPE<>'VIEW' ORDER BY TABLE_NAME;
+C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe, Version: 8.0.41 (MySQL Community Server - GPL). started with:
+TCP Port: 3306, Named Pipe: MySQL
+Time                 Id Command    Argument
+C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe, Version: 8.0.41 (MySQL Community Server - GPL). started with:
+TCP Port: 3306, Named Pipe: MySQL
+Time                 Id Command    Argument
+C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe, Version: 8.0.41 (MySQL Community Server - GPL). started with:
+TCP Port: 3306, Named Pipe: MySQL
+Time                 Id Command    Argument
+C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe, Version: 8.0.41 (MySQL Community Server - GPL). started with:
+TCP Port: 3306, Named Pipe: MySQL
+Time                 Id Command    Argument
+C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe, Version: 8.0.41 (MySQL Community Server - GPL). started with:
+TCP Port: 3306, Named Pipe: MySQL
+Time                 Id Command    Argument
+C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe, Version: 8.0.41 (MySQL Community Server - GPL). started with:
+TCP Port: 3306, Named Pipe: MySQL
+Time                 Id Command    Argument
+C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe, Version: 8.0.41 (MySQL Community Server - GPL). started with:
+TCP Port: 3306, Named Pipe: MySQL
+Time                 Id Command    Argument
+C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe, Version: 8.0.41 (MySQL Community Server - GPL). started with:
+TCP Port: 3306, Named Pipe: MySQL
+Time                 Id Command    Argument
+C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe, Version: 8.0.41 (MySQL Community Server - GPL). started with:
+TCP Port: 3306, Named Pipe: MySQL
+Time                 Id Command    Argument
+C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe, Version: 8.0.41 (MySQL Community Server - GPL). started with:
+TCP Port: 3306, Named Pipe: MySQL
+Time                 Id Command    Argument
+C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe, Version: 8.0.41 (MySQL Community Server - GPL). started with:
+TCP Port: 3306, Named Pipe: MySQL
+Time                 Id Command    Argument
+C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe, Version: 8.0.41 (MySQL Community Server - GPL). started with:
+TCP Port: 3306, Named Pipe: MySQL
+Time                 Id Command    Argument
+C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe, Version: 8.0.41 (MySQL Community Server - GPL). started with:
+TCP Port: 3306, Named Pipe: MySQL
+Time                 Id Command    Argument
+C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe, Version: 8.0.41 (MySQL Community Server - GPL). started with:
+TCP Port: 3306, Named Pipe: MySQL
+Time                 Id Command    Argument
+C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe, Version: 8.0.41 (MySQL Community Server - GPL). started with:
+TCP Port: 3306, Named Pipe: MySQL
+Time                 Id Command    Argument
+C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe, Version: 8.0.41 (MySQL Community Server - GPL). started with:
+TCP Port: 3306, Named Pipe: MySQL
+Time                 Id Command    Argument
+C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe, Version: 8.0.41 (MySQL Community Server - GPL). started with:
+TCP Port: 3306, Named Pipe: MySQL
+Time                 Id Command    Argument
+# Time: 2025-03-20T07:37:09.876334Z
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:   106
+# Query_time: 13.798847  Lock_time: 0.000006 Rows_sent: 0  Rows_examined: 0
+use bidhaa_db;
+SET timestamp=1742456216;
+select * from admin LIMIT 100;
+C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe, Version: 8.0.41 (MySQL Community Server - GPL). started with:
+TCP Port: 3306, Named Pipe: MySQL
+Time                 Id Command    Argument
+C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe, Version: 8.0.41 (MySQL Community Server - GPL). started with:
+TCP Port: 3306, Named Pipe: MySQL
+Time                 Id Command    Argument
+# Time: 2025-03-21T09:59:55.636954Z
+# User@Host: root[root] @ localhost [127.0.0.1]  Id:    29
+# Query_time: 28.868402  Lock_time: 0.000091 Rows_sent: 0  Rows_examined: 0
+use bidhaa_db;
+SET timestamp=1742551166;
+drop TABLE IF EXISTS books;
+C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe, Version: 8.0.41 (MySQL Community Server - GPL). started with:
+TCP Port: 3306, Named Pipe: MySQL
+Time                 Id Command    Argument
+C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe, Version: 8.0.41 (MySQL Community Server - GPL). started with:
+TCP Port: 3306, Named Pipe: MySQL
+Time                 Id Command    Argument
+C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe, Version: 8.0.41 (MySQL Community Server - GPL). started with:
+TCP Port: 3306, Named Pipe: MySQL
+Time                 Id Command    Argument
+# Time: 2025-04-02T08:54:10.445215Z
+# User@Host: longhorn[longhorn] @ localhost [127.0.0.1]  Id:    15
+# Query_time: 10.068988  Lock_time: 0.000005 Rows_sent: 0  Rows_examined: 10004
+use bidhaa_db;
+SET timestamp=1743584040;
+UPDATE books 
+SET image_url = REPLACE(image_url, '../public/books/', '/images/books/');
+C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe, Version: 8.0.41 (MySQL Community Server - GPL). started with:
+TCP Port: 3306, Named Pipe: MySQL
+Time                 Id Command    Argument
+# Time: 2025-04-04T06:30:40.191334Z
+# User@Host: longhorn[longhorn] @ localhost [127.0.0.1]  Id:    74
+# Query_time: 12.207840  Lock_time: 0.000175 Rows_sent: 13  Rows_examined: 54
+use bidhaa_db;
+SET timestamp=1743748227;
+SELECT TABLE_COMMENT "comment",TABLE_NAME "name",TABLE_ROWS "table_rows",`AUTO_INCREMENT` "auto_increment",
+        row_format "row_format",DATA_LENGTH "data_length",INDEX_LENGTH "index_length",TABLE_COLLATION "collation",
+        TABLE_TYPE "view_group",`ENGINE` engine
+        FROM information_schema.TABLES  WHERE TABLE_SCHEMA = 'bidhaa_db' and TABLE_TYPE<>'VIEW' ORDER BY TABLE_NAME;
+# Time: 2025-04-07T06:34:25.920149Z
+# User@Host: root[root] @ localhost [::1]  Id:   129
+# Query_time: 11.330202  Lock_time: 0.000147 Rows_sent: 13  Rows_examined: 54
+SET timestamp=1744007654;
+SHOW TABLES;
+# Time: 2025-04-07T06:34:41.564552Z
+# User@Host: root[root] @ localhost [::1]  Id:   129
+# Query_time: 10.432437  Lock_time: 0.000063 Rows_sent: 1  Rows_examined: 0
+SET timestamp=1744007671;
+SELECT COUNT(*) AS total FROM books;
+C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe, Version: 8.0.41 (MySQL Community Server - GPL). started with:
+TCP Port: 3306, Named Pipe: MySQL
+Time                 Id Command    Argument
+C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe, Version: 8.0.41 (MySQL Community Server - GPL). started with:
+TCP Port: 3306, Named Pipe: MySQL
+Time                 Id Command    Argument
+C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe, Version: 8.0.41 (MySQL Community Server - GPL). started with:
+TCP Port: 3306, Named Pipe: MySQL
+Time                 Id Command    Argument
+C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe, Version: 8.0.41 (MySQL Community Server - GPL). started with:
+TCP Port: 3306, Named Pipe: MySQL
+Time                 Id Command    Argument
+# Time: 2025-04-14T23:00:07.874269Z
+# User@Host: longhorn[longhorn] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 59.337278  Lock_time: 0.000070 Rows_sent: 13  Rows_examined: 54
+use bidhaa_db;
+SET timestamp=1744671548;
+SELECT TABLE_COMMENT "comment",TABLE_NAME "name",TABLE_ROWS "table_rows",`AUTO_INCREMENT` "auto_increment",
+        row_format "row_format",DATA_LENGTH "data_length",INDEX_LENGTH "index_length",TABLE_COLLATION "collation",
+        TABLE_TYPE "view_group",`ENGINE` engine
+        FROM information_schema.TABLES  WHERE TABLE_SCHEMA = 'bidhaa_db' and TABLE_TYPE<>'VIEW' ORDER BY TABLE_NAME;
+C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe, Version: 8.0.41 (MySQL Community Server - GPL). started with:
+TCP Port: 3306, Named Pipe: MySQL
+Time                 Id Command    Argument
+C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe, Version: 8.0.41 (MySQL Community Server - GPL). started with:
+TCP Port: 3306, Named Pipe: MySQL
+Time                 Id Command    Argument
+# Time: 2025-04-17T07:22:21.137012Z
+# User@Host: longhorn[longhorn] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 19.728406  Lock_time: 0.000020 Rows_sent: 13  Rows_examined: 54
+use bidhaa_db;
+SET timestamp=1744874521;
+SELECT TABLE_COMMENT "comment",TABLE_NAME "name",TABLE_ROWS "table_rows",`AUTO_INCREMENT` "auto_increment",
+        row_format "row_format",DATA_LENGTH "data_length",INDEX_LENGTH "index_length",TABLE_COLLATION "collation",
+        TABLE_TYPE "view_group",`ENGINE` engine
+        FROM information_schema.TABLES  WHERE TABLE_SCHEMA = 'bidhaa_db' and TABLE_TYPE<>'VIEW' ORDER BY TABLE_NAME;
+C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe, Version: 8.0.41 (MySQL Community Server - GPL). started with:
+TCP Port: 3306, Named Pipe: MySQL
+Time                 Id Command    Argument
+C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe, Version: 8.0.41 (MySQL Community Server - GPL). started with:
+TCP Port: 3306, Named Pipe: MySQL
+Time                 Id Command    Argument
+C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe, Version: 8.0.41 (MySQL Community Server - GPL). started with:
+TCP Port: 3306, Named Pipe: MySQL
+Time                 Id Command    Argument
+# Time: 2025-04-24T06:40:09.230043Z
+# User@Host: longhorn[longhorn] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 15.928527  Lock_time: 0.000063 Rows_sent: 15  Rows_examined: 62
+use bidhaa_db;
+SET timestamp=1745476793;
+SELECT TABLE_COMMENT "comment",TABLE_NAME "name",TABLE_ROWS "table_rows",`AUTO_INCREMENT` "auto_increment",
+        row_format "row_format",DATA_LENGTH "data_length",INDEX_LENGTH "index_length",TABLE_COLLATION "collation",
+        TABLE_TYPE "view_group",`ENGINE` engine
+        FROM information_schema.TABLES  WHERE TABLE_SCHEMA = 'bidhaa_db' and TABLE_TYPE<>'VIEW' ORDER BY TABLE_NAME;
+C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe, Version: 8.0.41 (MySQL Community Server - GPL). started with:
+TCP Port: 3306, Named Pipe: MySQL
+Time                 Id Command    Argument
+# Time: 2025-04-25T07:22:16.435474Z
+# User@Host: longhorn[longhorn] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 17.757798  Lock_time: 0.000064 Rows_sent: 15  Rows_examined: 62
+use bidhaa_db;
+SET timestamp=1745565718;
+SELECT TABLE_COMMENT "comment",TABLE_NAME "name",TABLE_ROWS "table_rows",`AUTO_INCREMENT` "auto_increment",
+        row_format "row_format",DATA_LENGTH "data_length",INDEX_LENGTH "index_length",TABLE_COLLATION "collation",
+        TABLE_TYPE "view_group",`ENGINE` engine
+        FROM information_schema.TABLES  WHERE TABLE_SCHEMA = 'bidhaa_db' and TABLE_TYPE<>'VIEW' ORDER BY TABLE_NAME;
+C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe, Version: 8.0.41 (MySQL Community Server - GPL). started with:
+TCP Port: 3306, Named Pipe: MySQL
+Time                 Id Command    Argument
+C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe, Version: 8.0.41 (MySQL Community Server - GPL). started with:
+TCP Port: 3306, Named Pipe: MySQL
+Time                 Id Command    Argument
+C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe, Version: 8.0.41 (MySQL Community Server - GPL). started with:
+TCP Port: 3306, Named Pipe: MySQL
+Time                 Id Command    Argument
+C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe, Version: 8.0.41 (MySQL Community Server - GPL). started with:
+TCP Port: 3306, Named Pipe: MySQL
+Time                 Id Command    Argument
+# Time: 2025-04-29T00:26:17.562930Z
+# User@Host: longhorn[longhorn] @ localhost [127.0.0.1]  Id:     9
+# Query_time: 19.926942  Lock_time: 0.000018 Rows_sent: 16  Rows_examined: 66
+use bidhaa_db;
+SET timestamp=1745886357;
+SELECT TABLE_COMMENT "comment",TABLE_NAME "name",TABLE_ROWS "table_rows",`AUTO_INCREMENT` "auto_increment",
+        row_format "row_format",DATA_LENGTH "data_length",INDEX_LENGTH "index_length",TABLE_COLLATION "collation",
+        TABLE_TYPE "view_group",`ENGINE` engine
+        FROM information_schema.TABLES  WHERE TABLE_SCHEMA = 'bidhaa_db' and TABLE_TYPE<>'VIEW' ORDER BY TABLE_NAME;
+C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe, Version: 8.0.41 (MySQL Community Server - GPL). started with:
+TCP Port: 3306, Named Pipe: MySQL
+Time                 Id Command    Argument
+C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe, Version: 8.0.41 (MySQL Community Server - GPL). started with:
+TCP Port: 3306, Named Pipe: MySQL
+Time                 Id Command    Argument
+C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe, Version: 8.0.41 (MySQL Community Server - GPL). started with:
+TCP Port: 3306, Named Pipe: MySQL
+Time                 Id Command    Argument
+C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe, Version: 8.0.41 (MySQL Community Server - GPL). started with:
+TCP Port: 3306, Named Pipe: MySQL
+Time                 Id Command    Argument
+C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe, Version: 8.0.41 (MySQL Community Server - GPL). started with:
+TCP Port: 3306, Named Pipe: MySQL
+Time                 Id Command    Argument
+C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe, Version: 8.0.41 (MySQL Community Server - GPL). started with:
+TCP Port: 3306, Named Pipe: MySQL
+Time                 Id Command    Argument
+C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe, Version: 8.0.41 (MySQL Community Server - GPL). started with:
+TCP Port: 3306, Named Pipe: MySQL
+Time                 Id Command    Argument
+C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe, Version: 8.0.41 (MySQL Community Server - GPL). started with:
+TCP Port: 3306, Named Pipe: MySQL
+Time                 Id Command    Argument
+C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe, Version: 8.0.41 (MySQL Community Server - GPL). started with:
+TCP Port: 3306, Named Pipe: MySQL
+Time                 Id Command    Argument
+C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe, Version: 8.0.41 (MySQL Community Server - GPL). started with:
+TCP Port: 3306, Named Pipe: MySQL
+Time                 Id Command    Argument
+C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe, Version: 8.0.41 (MySQL Community Server - GPL). started with:
+TCP Port: 3306, Named Pipe: MySQL
+Time                 Id Command    Argument
+C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe, Version: 8.0.41 (MySQL Community Server - GPL). started with:
+TCP Port: 3306, Named Pipe: MySQL
+Time                 Id Command    Argument
+C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe, Version: 8.0.41 (MySQL Community Server - GPL). started with:
+TCP Port: 3306, Named Pipe: MySQL
+Time                 Id Command    Argument
+C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe, Version: 8.0.41 (MySQL Community Server - GPL). started with:
+TCP Port: 3306, Named Pipe: MySQL
+Time                 Id Command    Argument
+# Time: 2025-05-06T06:22:25.314631Z
+# User@Host: longhorn[longhorn] @ localhost [127.0.0.1]  Id:     8
+# Query_time: 20.808048  Lock_time: 0.000056 Rows_sent: 16  Rows_examined: 66
+use bidhaa_db;
+SET timestamp=1746512524;
+SELECT TABLE_COMMENT "comment",TABLE_NAME "name",TABLE_ROWS "table_rows",`AUTO_INCREMENT` "auto_increment",
+        row_format "row_format",DATA_LENGTH "data_length",INDEX_LENGTH "index_length",TABLE_COLLATION "collation",
+        TABLE_TYPE "view_group",`ENGINE` engine
+        FROM information_schema.TABLES  WHERE TABLE_SCHEMA = 'bidhaa_db' and TABLE_TYPE<>'VIEW' ORDER BY TABLE_NAME;
+C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe, Version: 8.0.41 (MySQL Community Server - GPL). started with:
+TCP Port: 3306, Named Pipe: MySQL
+Time                 Id Command    Argument
+C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe, Version: 8.0.41 (MySQL Community Server - GPL). started with:
+TCP Port: 3306, Named Pipe: MySQL
+Time                 Id Command    Argument
+C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe, Version: 8.0.41 (MySQL Community Server - GPL). started with:
+TCP Port: 3306, Named Pipe: MySQL
+Time                 Id Command    Argument
+C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe, Version: 8.0.41 (MySQL Community Server - GPL). started with:
+TCP Port: 3306, Named Pipe: MySQL
+Time                 Id Command    Argument
