@@ -1,12 +1,12 @@
-,IMAGE URL,ITEM NAME,PRICE,QTY,RESTOCK LEVEL
-1,https://www.mybidhaa.co.ke/food_images/1734349436.jpg,SINGLE SLIDE,34000,100,3
-2,https://www.mybidhaa.co.ke/food_images/1734349616.jpg,SWING 2 SET,22000,100,3
-3,https://www.mybidhaa.co.ke/food_images/1734350139.jpg,MERRY GO ROUND 5 SET,48000,100,3
-4,https://www.mybidhaa.co.ke/food_images/1734350247.jpg,SWING 3 SET,28000,100,3
-5,https://www.mybidhaa.co.ke/food_images/1734350417.jpg,SWING WITH 4 SET,33000,100,3
-6,https://www.mybidhaa.co.ke/food_images/1734350538.jpg,SMALL HOUSE,22000,100,3
-7,https://www.mybidhaa.co.ke/food_images/1734350780.jpg,DOUBLE HOUSE,50000,100,3
-8,https://www.mybidhaa.co.ke/food_images/1734350989.jpg,GREEN HOUSE SLIDE,120000,100,3
-9,https://www.mybidhaa.co.ke/food_images/1734351118.jpg,DOUBLE HOUSE SLIDE,160000,100,3
-10,https://www.mybidhaa.co.ke/food_images/1734351214.jpg,COLOURFUL SWINGS,33000,100,3
-11,https://www.mybidhaa.co.ke/food_images/1738056939.jpg,Slide With Swing Combined,56000,5,2
+,name,image_url,price,,
+,SINGLE SLIDE,https://www.mybidhaa.co.ke/food_images/1734349436.jpg,34000,,
+,SWING 2 SET,https://www.mybidhaa.co.ke/food_images/1734349616.jpg,22000,,
+,MERRY GO ROUND 5 SET,https://www.mybidhaa.co.ke/food_images/1734350139.jpg,48000,,
+,SWING 3 SET,https://www.mybidhaa.co.ke/food_images/1734350247.jpg,28000,,
+,SWING WITH 4 SET,https://www.mybidhaa.co.ke/food_images/1734350417.jpg,33000,,
+,SMALL HOUSE,https://www.mybidhaa.co.ke/food_images/1734350538.jpg,22000,,
+,DOUBLE HOUSE,https://www.mybidhaa.co.ke/food_images/1734350780.jpg,50000,,
+,GREEN HOUSE SLIDE,https://www.mybidhaa.co.ke/food_images/1734350989.jpg,120000,,
+,DOUBLE HOUSE SLIDE,https://www.mybidhaa.co.ke/food_images/1734351118.jpg,160000,,
+,COLOURFUL SWINGS,https://www.mybidhaa.co.ke/food_images/1734351214.jpg,33000,,
+,Slide With Swing Combined,https://www.mybidhaa.co.ke/food_images/1738056939.jpg,56000,,
