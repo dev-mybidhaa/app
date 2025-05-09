@@ -14565,3 +14565,53 @@ body.open-quickview-block .biolife-quickview-block{
         display: none !important;
     }
 }
+.product-thumb {
+    width: 100%; /* Adjust container width as needed */
+    height: 200px; /* Fixed height (same as your original) */
+    overflow: hidden; /* Ensures no overflow if image is larger */
+    display: flex; /* Helps with centering */
+    align-items: center; /* Vertically centers the image */
+    justify-content: center; /* Horizontally centers the image */
+}
+
+.product-thumnail {
+    max-width: 100%; /* Prevents image from exceeding container */
+    max-height: 100%; /* Prevents image from exceeding container */
+    width: auto; /* Maintains aspect ratio */
+    height: auto; /* Maintains aspect ratio */
+    object-fit: contain; /* Fits image inside container without cropping */
+    /* Optional: Add a subtle border or shadow */
+    border: 1px solid #eee;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background: #ffffff; /* Change to match your theme */
+    padding: 0px 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Ensures it's above other content */
+}
+/* Preloader styles */
+#biof-loading {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+.biof-loading-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+.biof-loading-center img {
+    width: 200px; /* Adjust size as needed */
+    height: auto;
+}
