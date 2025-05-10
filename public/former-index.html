@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
+
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,7 +19,60 @@
     <link rel="stylesheet" href="css/slick.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/main-color04.css">
+    <style>.product-thumb {
+        width: 100%; /* Adjust container width as needed */
+        height: 200px; /* Fixed height (same as your original) */
+        overflow: hidden; /* Ensures no overflow if image is larger */
+        display: flex; /* Helps with centering */
+        align-items: center; /* Vertically centers the image */
+        justify-content: center; /* Horizontally centers the image */
+    }
     
+    .product-thumnail {
+        max-width: 100%; /* Prevents image from exceeding container */
+        max-height: 100%; /* Prevents image from exceeding container */
+        width: auto; /* Maintains aspect ratio */
+        height: auto; /* Maintains aspect ratio */
+        object-fit: contain; /* Fits image inside container without cropping */
+        /* Optional: Add a subtle border or shadow */
+        border: 1px solid #eee;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }</style>
+    <style>
+        header {
+            position: sticky;
+            top: 0;
+            width: 100%;
+            background: #ffffff; /* Change to match your theme */
+            padding: 0px 20px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            z-index: 1000; /* Ensures it's above other content */
+        }
+    </style>
+    <style>
+        /* Preloader styles */
+        #biof-loading {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+        }
+        .biof-loading-center {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+        }
+        .biof-loading-center img {
+            width: 200px; /* Adjust size as needed */
+            height: auto;
+        }
+    </style>
     
 </head>
 
@@ -26,7 +81,7 @@
     <!-- Preloader -->
     <div id="biof-loading">
         <div class="biof-loading-center">
-            <img src="images/preloader.gif" alt="Loading...">
+            <img src="images/preloader.gif" alt="Loading..."> <!-- Replace with actual GIF path -->
         </div>
     </div>
 
@@ -120,7 +175,7 @@
                                                     <h4 class="menu-title">Academic & Learning Resources</h4>
                                                     <ul class="menu">
                                                         <li><a href="shop.html">School Supplies</a></li>
-<li><a href="pages/shop.html">Library Books</a></li>
+<li><a href="shop.html">Library Books</a></li>
 <li><a href="shop.html">Classroom Kits</a></li>
 <li><a href="shop.html">STEM Learning Kits</a></li>
 <li><a href="shop.html">Educational Posters</a></li>
@@ -173,7 +228,7 @@
                                     </div>
                                 </li>
                                 <li class="menu-item">
-                                    <a href="./pages/tutors.html" class="menu-name" data-title="Pages"  rel="noopener noreferrer">Tutors</a>
+                                    <a href="https://tutors.mybidhaa.com" class="menu-name" data-title="Pages" target="_blank" rel="noopener noreferrer">Tutors</a>
                                 </li>
                                 <li class="menu-item">
                                     <a href="http://supplier.mybidhaa.com/" class="menu-name" data-title="Pages" target="_blank" rel="noopener noreferrer">Supplier</a>
@@ -220,28 +275,71 @@
 
 
                             <div class="minicart-block">
-    <div class="minicart-contain">
-        <a href="#" class="link-to">
-            <span class="">
-                <img src="./images/cart icon.png" alt="Cart" width="45" height="45">
-                <span class="qty">0</span>
-            </span>
-            <span class="title">Cart -</span>
-            <span class="sub-total">KES 0.00</span>
-        </a>
-        <div class="cart-content">
-            <div class="cart-inner">
-                <ul class="products">
-                    <!-- Dynamic content will appear here -->
-                </ul>
-                <p class="btn-control">
-                    <a href="pages/shopping-cart.html" class="btn view-cart" id="view-cart-btn">view cart</a>
-                    <a href="pages/checkout.html" class="btn checkout-btn" id="checkout-btn">checkout</a>
-                </p>
-            </div>
-        </div>
-    </div>
-</div>
+                                <div class="minicart-contain">
+                                    <a href="#" class="link-to">
+                                        <span class="">
+                                            <img src="images/cart icon.png" alt="Cart" width="45" height="45"> <!-- Replace with actual cart image path -->
+                                            <span class="qty">2</span>
+                                            </span>
+                                        <span class="title">Cart -</span>
+                                        <span class="sub-total">KES 0.00</span>
+                                    </a>
+                                    <div class="cart-content">
+                                        <div class="cart-inner">
+                                            <ul class="products">
+                                                <li>
+                                                    <div class="minicart-item">
+                                                        <div class="thumb">
+                                                            <a href="#"><img src="images/products/Mentor engl.jpg" width="90" height="90" alt="National Fresh"></a>
+                                                        </div>
+                                                        <div class="left-info">
+                                                            <div class="product-title"><a href="#" class="product-name">MENTOR ENGLISH GRADE 5</a></div>
+                                                            <div class="price">
+                                                                <ins><span class="price-amount"><span class="currencySymbol">KES</span>85.00</span></ins>
+                                                                
+                                                            </div>
+                                                            <div class="qty">
+                                                                <label for="cart[id123][qty]">Qty:</label>
+                                                                <input type="number" class="input-qty" name="cart[id123][qty]" id="cart[id123][qty]" value="1" disabled>
+                                                            </div>
+                                                        </div>
+                                                        <div class="action">
+                                                            <a href="#" class="edit"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                                                            <a href="#" class="remove"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="minicart-item">
+                                                        <div class="thumb">
+                                                            <a href="#"><img src="images/products/Mentor engl.jpg" width="90" height="90" alt="National Fresh"></a>
+                                                        </div>
+                                                        <div class="left-info">
+                                                            <div class="product-title"><a href="#" class="product-name">MENTOR ENGLISH GRADE 5</a></div>
+                                                            <div class="price">
+                                                                <ins><span class="price-amount"><span class="currencySymbol">KES</span>85.00</span></ins>
+                                                                
+                                                            </div>
+                                                            <div class="qty">
+                                                                <label for="cart[id124][qty]">Qty:</label>
+                                                                <input type="number" class="input-qty" name="cart[id124][qty]" id="cart[id124][qty]" value="1" disabled>
+                                                            </div>
+                                                        </div>
+                                                        <div class="action">
+                                                            <a href="#" class="edit"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                                                            <a href="#" class="remove"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                            <p class="btn-control">
+                                                <a href="pages/shopping-cart.html" class="btn view-cart" id="view-cart-btn">view cart</a>
+                                                <a href="pages/checkout.html" class="btn checkout-btn" id="checkout-btn">checkout</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="mobile-menu-toggle">
                                 <a class="btn-toggle" data-object="open-mobile-menu" href="#">
                                     <span></span>
@@ -2072,19 +2170,47 @@
                 </div>
             </div>
 
-            <!-- Add this to your HTML where you want the button to appear -->
-<div class="whatsapp-float" onclick="openWhatsApp()">
-    <div class="whatsapp-icon">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48">
-        <path fill="#25D366" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-      </svg>
-    </div>
-    <span class="whatsapp-text">Need Help?</span>
-  </div>
-
             <!-- Scroll Top Button -->
             <a class="btn-scroll-top"><i class="biolife-icon icon-left-arrow"></i></a>
 
+
+            <script>
+                var url = 'https://wati-integration-prod-service.clare.ai/v2/watiWidget.js?75459';
+                var s = document.createElement('script');
+                s.type = 'text/javascript';
+                s.async = true;
+                s.src = url;
+                var options = {
+                "enabled":true,
+                "chatButtonSetting":{
+                    "backgroundColor":"#622c84",
+                    "ctaText":"Chat with us",
+                    "borderRadius":"25",
+                    "marginLeft": "20",
+                    "marginRight": "20",
+                    "marginBottom": "50",
+                    "ctaIconWATI":false,
+                    "position":"left"
+                },
+                "brandSetting": {
+    "brandName": "MyBidhaa",
+    "brandSubTitle": "undefined",
+    "brandImg": "images/my.png",
+    "welcomeText": "Hi there!\nHow can I help you?",
+    "messageText": "Hello, I was using the website and I need your help",
+    "backgroundColor": "#622c84",
+    "ctaText": "Chat with us",
+    "borderRadius": "25",
+    "autoShow": false,
+    "phoneNumber": "254797100500"
+}
+                };
+                s.onload = function() {
+                    CreateWhatsappChatWidget(options);
+                };
+                var x = document.getElementsByTagName('script')[0];
+                x.parentNode.insertBefore(s, x);
+            </script>
 
             <script src="js/jquery-3.4.1.min.js"></script>
             <script src="js/bootstrap.min.js"></script>
@@ -2094,11 +2220,204 @@
             <script src="js/slick.min.js"></script>
             <script src="js/biolife.framework.js"></script>
             <script src="js/functions.js"></script>
-            <script src="js/whatsapp.js"></script>
-            <script src="js/preloader.js"></script>
-            <script src="js/cart.js"></script>
+            <script>
+                // Hide preloader when page fully loads
+                window.addEventListener("load", function() {
+                    document.getElementById("biof-loading").style.display = "none";
+                    document.getElementById("content").style.display = "block";
+                });
+            </script>
             
+            <script>document.addEventListener('DOMContentLoaded', function() {
+                // Initialize cart in localStorage if it doesn't exist
+                if (!localStorage.getItem('cart')) {
+                    localStorage.setItem('cart', JSON.stringify([]));
+                }
             
+                // Add click event to all "Add to Cart" buttons
+                document.querySelectorAll('.add-to-cart-btn').forEach(button => {
+                    button.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        
+                        // Get product details from the clicked item
+                        const productItem = this.closest('.product-item');
+                        const productName = productItem.querySelector('.pr-name').textContent.trim();
+                        const productPrice = parseFloat(
+                            productItem.querySelector('.price-amount').textContent
+                                .replace('KES', '')
+                                .replace(',', '') // Handle comma in price (1,300 → 1300)
+                                .trim()
+                        );
+                        const productImage = productItem.querySelector('.product-thumnail').src;
+                        const productCategory = productItem.querySelector('.categories').textContent.trim();
+                        
+                        // Add to cart
+                        addToCart({
+                            name: productName,
+                            price: productPrice,
+                            image: productImage,
+                            category: productCategory
+                        });
+                        
+                        // Show visual feedback
+                        showAddToCartFeedback(this);
+                    });
+                });
+            
+                // Function to add item to cart
+                function addToCart(product) {
+                    const cart = JSON.parse(localStorage.getItem('cart'));
+                    const existingItem = cart.find(item => item.name === product.name);
+                    
+                    if (existingItem) {
+                        existingItem.quantity += 1;
+                    } else {
+                        product.quantity = 1;
+                        cart.push(product);
+                    }
+                    
+                    localStorage.setItem('cart', JSON.stringify(cart));
+                    updateCartDisplay();
+                }
+            
+                // Update cart display (works with your existing HTML structure)
+                function updateCartDisplay() {
+                    const cart = JSON.parse(localStorage.getItem('cart'));
+                    const cartItemsContainer = document.querySelector('.minicart-contain .products');
+                    const cartQuantity = document.querySelector('.minicart-contain .qty');
+                    const cartSubtotal = document.querySelector('.minicart-contain .sub-total');
+                    
+                    // Calculate totals
+                    let totalQuantity = 0;
+                    let subtotal = 0;
+                    
+                    cart.forEach(item => {
+                        totalQuantity += item.quantity;
+                        subtotal += item.price * item.quantity;
+                    });
+                    
+                    // Update cart header
+                    if (cartQuantity) cartQuantity.textContent = totalQuantity;
+                    if (cartSubtotal) cartSubtotal.textContent = `KES ${subtotal.toFixed(2)}`;
+                    
+                    // Update cart items list
+                    if (cartItemsContainer) {
+                        cartItemsContainer.innerHTML = '';
+                        
+                        cart.forEach(item => {
+                            const cartItemHTML = `
+                                <li>
+                                    <div class="minicart-item">
+                                        <div class="thumb">
+                                            <a href="#"><img src="${item.image}" width="90" height="90" alt="${item.name}"></a>
+                                        </div>
+                                        <div class="left-info">
+                                            <div class="product-title"><a href="#" class="product-name">${item.name}</a></div>
+                                            <div class="price">
+                                                <ins><span class="price-amount"><span class="currencySymbol">KES</span>${item.price.toFixed(2)}</span></ins>
+                                            </div>
+                                            <div class="qty">
+                                                <label>Qty: ${item.quantity}</label>
+                                            </div>
+                                        </div>
+                                        <div class="action">
+                                            <a href="#" class="remove" data-name="${item.name}"><i class="fa fa-trash-o"></i></a>
+                                        </div>
+                                    </div>
+                                </li>
+                            `;
+                            cartItemsContainer.insertAdjacentHTML('beforeend', cartItemHTML);
+                        });
+                        
+                        // Add event listeners to remove buttons
+                        document.querySelectorAll('.remove').forEach(button => {
+                            button.addEventListener('click', function(e) {
+                                e.preventDefault();
+                                removeFromCart(this.dataset.name);
+                            });
+                        });
+                    }
+                }
+            
+                // Remove item from cart
+                function removeFromCart(name) {
+                    let cart = JSON.parse(localStorage.getItem('cart'));
+                    cart = cart.filter(item => item.name !== name);
+                    localStorage.setItem('cart', JSON.stringify(cart));
+                    updateCartDisplay();
+                }
+            
+                // Show visual feedback when item is added
+                function showAddToCartFeedback(button) {
+                    const originalHTML = button.innerHTML;
+                    button.innerHTML = '<i class="fa fa-check"></i> Added!';
+                    button.classList.add('added');
+                    
+                    setTimeout(() => {
+                        button.innerHTML = originalHTML;
+                        button.classList.remove('added');
+                    }, 2000);
+                }
+            
+                // Toggle cart visibility
+                document.querySelector('.minicart-contain .link-to')?.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    document.querySelector('.minicart-contain .cart-content').classList.toggle('show');
+                });
+            
+                // Initialize cart display
+                updateCartDisplay();
+            });</script>
+            <script>// Add this to your existing cart.js file
+function setupViewCartButton() {
+    const viewCartBtn = document.querySelector('.view-cart');
+    if (viewCartBtn) {
+        viewCartBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            // Save cart data to localStorage before navigating
+            localStorage.setItem('cart', JSON.stringify(cart));
+            // Navigate to shopping cart page
+            window.location.href = 'pages/shopping-cart.html';
+        });
+    }
+}
+
+// Call this function in your DOMContentLoaded event
+document.addEventListener('DOMContentLoaded', function() {
+    // ... your existing code ...
+    setupViewCartButton();
+});</script>
+<script>document.addEventListener('DOMContentLoaded', function() {
+    // View Cart Button
+    const viewCartBtn = document.getElementById('view-cart-btn');
+    if (viewCartBtn) {
+        viewCartBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            // Ensure cart is saved before navigating
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            localStorage.setItem('cart', JSON.stringify(cart));
+            window.location.href = 'pages/shopping-cart.html';
+        });
+    }
+
+    // Checkout Button
+    const checkoutBtn = document.getElementById('checkout-btn');
+    if (checkoutBtn) {
+        checkoutBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            
+            if (cart.length === 0) {
+                alert('Your cart is empty. Please add items before checkout.');
+                return;
+            }
+            
+            // Save cart and proceed to checkout
+            localStorage.setItem('cart', JSON.stringify(cart));
+            window.location.href = 'pages/checkout.html';
+        });
+    }
+});</script>
 <!-- Place this before </body> -->
 <div id="pdfModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7); z-index:1000;">
     <button onclick="document.getElementById('pdfModal').style.display='none'" style="position:absolute; top:20px; right:20px; background:red; color:white; border:none; padding:10px;">Close</button>
@@ -2122,6 +2441,8 @@
         height="100%" 
     />
 </div>
+<!-- Category Loader -->
+<script src="js/category-loader.js"></script>
 
 </body>
 
