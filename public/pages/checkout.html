@@ -26,7 +26,7 @@
     <!-- Preloader -->
     <div id="biof-loading">
         <div class="biof-loading-center">
-            <img src="images/preloader.gif" alt="Loading..."> <!-- Replace with actual GIF path -->
+            <img src="images/preloader.gif" alt="Loading..."> 
         </div>
     </div>
 
@@ -139,7 +139,7 @@
                                     </div>
                                 </li>
                                 <li class="menu-item">
-                                    <a href="./tutors.html" class="menu-name" data-title="Pages" target="_blank" rel="noopener noreferrer">Tutors</a>
+                                    <a href="./tutors.html" class="menu-name" data-title="Pages"rel="noopener noreferrer">Tutors</a>
                                 <li class="menu-item">
                                     <a href="http://supplier.mybidhaa.com/" class="menu-name" data-title="Pages" target="_blank" rel="noopener noreferrer">Supplier</a>
                                 </li>
@@ -177,72 +177,28 @@
                             </div>
                             
                             <div class="minicart-block">
-                                <div class="minicart-contain">
-                                    <a href="#" class="link-to">
-                                        <span class="">
-                                            <img src="images/cart icon.png" alt="Cart" width="45" height="45"> <!-- Replace with actual cart image path -->
-                                            <span class="qty">2</span>
-                                            </span>
-                                         <span class="title">Cart </span>
-
-                                        <span class="sub-total">KES 0.00</span>
-                                    </a>
-                                    <div class="cart-content">
-                                        <div class="cart-inner">
-                                            <ul class="products">
-                                                <li>
-                                                    <div class="minicart-item">
-                                                        <div class="thumb">
-                                                            <a href="#"><img src="images/products/Mentor engl.jpg" width="90" height="90" alt="National Fresh"></a>
-                                                        </div>
-                                                        <div class="left-info">
-                                                            <div class="product-title"><a href="#" class="product-name">MENTOR ENGLISH GRADE 5</a></div>
-                                                            <div class="price">
-                                                                <ins><span class="price-amount"><span class="currencySymbol">KES</span>85.00</span></ins>
-                                                                
-                                                            </div>
-                                                            <div class="qty">
-                                                                <label for="cart[id123][qty]">Qty:</label>
-                                                                <input type="number" class="input-qty" name="cart[id123][qty]" id="cart[id123][qty]" value="1" disabled>
-                                                            </div>
-                                                        </div>
-                                                        <div class="action">
-                                                            <a href="#" class="edit"><i class="fa fa-pencil" aria-hidden="true"></i></a>
-                                                            <a href="#" class="remove"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="minicart-item">
-                                                        <div class="thumb">
-                                                            <a href="#"><img src="images/products/Mentor engl.jpg" width="90" height="90" alt="National Fresh"></a>
-                                                        </div>
-                                                        <div class="left-info">
-                                                            <div class="product-title"><a href="#" class="product-name">MENTOR ENGLISH GRADE 5</a></div>
-                                                            <div class="price">
-                                                                <ins><span class="price-amount"><span class="currencySymbol">KES</span>85.00</span></ins>
-                                                                
-                                                            </div>
-                                                            <div class="qty">
-                                                                <label for="cart[id124][qty]">Qty:</label>
-                                                                <input type="number" class="input-qty" name="cart[id124][qty]" id="cart[id124][qty]" value="1" disabled>
-                                                            </div>
-                                                        </div>
-                                                        <div class="action">
-                                                            <a href="#" class="edit"><i class="fa fa-pencil" aria-hidden="true"></i></a>
-                                                            <a href="#" class="remove"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                            <p class="btn-control">
-                                                <a href="shopping-cart.html" class="btn view-cart" id="view-cart-btn">view cart</a>
-                                                <a href="checkout.html" class="btn checkout-btn" id="checkout-btn">checkout</a>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+    <div class="minicart-contain">
+        <a href="#" class="link-to">
+            <span class="">
+                <img src="./images/cart icon.png" alt="Cart" width="45" height="45">
+                <span class="qty">0</span>
+            </span>
+            <span class="title">Cart -</span>
+            <span class="sub-total">KES 0.00</span>
+        </a>
+        <div class="cart-content">
+            <div class="cart-inner">
+                <ul class="products">
+                    <!-- Dynamic content will appear here -->
+                </ul>
+                <p class="btn-control">
+                    <a href="pages/shopping-cart.html" class="btn view-cart" id="view-cart-btn">view cart</a>
+                    <a href="pages/checkout.html" class="btn checkout-btn" id="checkout-btn">checkout</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
                             <div class="mobile-menu-toggle">
                                 <a class="btn-toggle" data-object="open-mobile-menu" href="#">
                                     <span></span>
@@ -896,654 +852,466 @@
     <div class="container">
         <nav class="biolife-nav">
             <ul>
-                <li class="nav-item"><a href="index.html" class="permal-link">Home</a></li>
+                <li class="nav-item"><a href="/public/index.html" class="permal-link">Home</a></li>
                 <li class="nav-item"><span class="current-page">ShoppingCart</span></li>
             </ul>
         </nav>
     </div>
 
-    <div class="page-contain checkout">
-        <!-- Main content -->
-        <div id="main-content" class="main-content">
-            <div class="container sm-margin-top-37px">
-                <div class="row">
-                    <!--checkout progress box-->
-                    <div class="col-lg-7 col-md-7 col-sm-6 col-xs-12">
-                        <div class="checkout-progress-wrap">
-                            <ul class="steps">
-                                <li class="step 1st">
-                                    <div class="checkout-act active" id="step-customer">
-                                        <h3 class="title-box"><span class="number">1</span>Customer</h3>
-                                        <div class="box-content">
-                                            <p class="txt-desc">Checking out as a <a class="pmlink" href="#">Guest?</a> You'll be able to save your details to create an account with us later.</p>
-                                            <div class="login-on-checkout">
-                                                <form action="#" name="frm-login" method="post" id="guest-form">
-                                                    <p class="form-row">
-                                                        <label for="input_email">Email Address</label>
-                                                        <input type="email" name="email" id="input_email" value="" placeholder="Your email">
-                                                        <button type="button" id="continue-as-guest" class="btn">Continue As Guest</button>
-                                                    </p>
-                                                    <p class="form-row">
-                                                        <input type="checkbox" name="subscribe" id="input_subscribe">
-                                                        <label for="input_subscribe">Subscribe to our newsletter</label>
-                                                    </p>
-                                                    <p class="msg">Already have an account? <a href="login.html" class="link-forward">Sign in now</a></p>
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="step 2nd">
-                                    <div class="checkout-act" id="step-shipping">
-                                        <h3 class="title-box"><span class="number">2</span>Shipping</h3>
-                                        <div class="box-content" style="display: none;">
-                                            <form id="shipping-form">
-                                                <div class="form-row">
-                                                    <label for="delivery-type">Delivery Type</label>
-                                                    <select id="delivery-type" name="delivery-type" class="form-control">
-                                                        <option value="">Select delivery type</option>
-                                                        <option value="Doorstep">Doorstep</option>
-                                                        <option value="School">School</option>
-                                                        <option value="Pick up">Pick up</option>
-                                                    </select>
-                                                </div>
-                                                <div class="form-row">
-                                                    <label for="county">County</label>
-                                                    <select id="county" name="county" class="form-control">
-                                                        <option value="">Select county</option>
-                                                        <option value="Nairobi">Nairobi</option>
-                                                        <option value="Mombasa">Mombasa</option>
-                                                        <option value="Kisumu">Kisumu</option>
-                                                        <option value="Nakuru">Nakuru</option>
-                                                        <option value="Kiambu">Kiambu</option>
-                                                        <option value="Uasin Gishu">Uasin Gishu</option>
-                                                        <option value="Machakos">Machakos</option>
-                                                        <option value="Kajiado">Kajiado</option>
-                                                        <option value="Bungoma">Bungoma</option>
-                                                        <option value="Kakamega">Kakamega</option>
-                                                        <option value="Kilifi">Kilifi</option>
-                                                        <option value="Nyeri">Nyeri</option>
-                                                        <option value="Laikipia">Laikipia</option>
-                                                        <option value="Kirinyaga">Kirinyaga</option>
-                                                        <option value="Busia">Busia</option>
-                                                        <option value="Embu">Embu</option>
-                                                        <option value="Garissa">Garissa</option>
-                                                        <option value="Homa Bay">Homa Bay</option>
-                                                        <option value="Isiolo">Isiolo</option>
-                                                        <option value="Kericho">Kericho</option>
-                                                        <option value="Kisii">Kisii</option>
-                                                        <option value="Kitui">Kitui</option>
-                                                        <option value="Kwale">Kwale</option>
-                                                        <option value="Lamu">Lamu</option>
-                                                        <option value="Makueni">Makueni</option>
-                                                        <option value="Mandera">Mandera</option>
-                                                        <option value="Marsabit">Marsabit</option>
-                                                        <option value="Meru">Meru</option>
-                                                        <option value="Migori">Migori</option>
-                                                        <option value="Murang'a">Murang'a</option>
-                                                        <option value="Nandi">Nandi</option>
-                                                        <option value="Narok">Narok</option>
-                                                        <option value="Nyamira">Nyamira</option>
-                                                        <option value="Nyandarua">Nyandarua</option>
-                                                        <option value="Samburu">Samburu</option>
-                                                        <option value="Siaya">Siaya</option>
-                                                        <option value="Taita Taveta">Taita Taveta</option>
-                                                        <option value="Tana River">Tana River</option>
-                                                        <option value="Tharaka-Nithi">Tharaka-Nithi</option>
-                                                        <option value="Trans Nzoia">Trans Nzoia</option>
-                                                        <option value="Turkana">Turkana</option>
-                                                        <option value="Vihiga">Vihiga</option>
-                                                        <option value="Wajir">Wajir</option>
-                                                        <option value="West Pokot">West Pokot</option>
-                                                        <option value="Baringo">Baringo</option>
-                                                        <option value="Bomet">Bomet</option>
-                                                        <option value="Elgeyo-Marakwet">Elgeyo-Marakwet</option>
-                                                    </select>
-                                                </div>
-                                                <div class="form-row">
-                                                    <label for="town">Town/Province</label>
-                                                    <select id="town" name="town" class="form-control">
-                                                        <option value="">Select town/province first</option>
-                                                    </select>
-                                                </div>
-                                                <div class="form-row">
-                                                    <label for="delivery-address">Delivery Address</label>
-                                                    <input type="text" id="delivery-address" name="delivery-address" class="form-control" placeholder="Street address">
-                                                </div>
-                                                <div class="form-row">
-                                                    <label for="estate-locality">Estate / Locality</label>
-                                                    <input type="text" id="estate-locality" name="estate-locality" class="form-control" placeholder="Estate or locality">
-                                                </div>
-                                                <div class="form-row">
-                                                    <label for="contact-person">Contact Person</label>
-                                                    <input type="text" id="contact-person" name="contact-person" class="form-control" placeholder="Full name">
-                                                </div>
-                                                <div class="form-row">
-                                                    <label for="phone-number">Phone Number</label>
-                                                    <input type="tel" id="phone-number" name="phone-number" class="form-control" placeholder="e.g. 0712345678">
-                                                </div>
-                                                <div class="form-row">
-                                                    <button type="button" id="proceed-to-payment" class="btn">Proceed to Payment</button>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="step 3rd">
-                                    <div class="checkout-act" id="step-payment">
-                                        <h3 class="title-box"><span class="number">3</span>Payment</h3>
-                                        <div class="box-content" style="display: none;">
-                                            <div class="payment-method">
-                                                <h4>M-Pesa Payment Details</h4>
-                                                <div class="mpesa-details">
-                                                    <img src="images/lipa na mpesa.jpg" alt="M-Pesa Payment Details">
-                                                    <div class="payment-instructions">
-                                                        <p><strong>Paybill Number:</strong> 329329</p>
-                                                        <p><strong>Account Number:</strong> 0104089035700</p>
-                                                        <p>Please make the payment and then submit your order</p>
-                                                    </div>
-                                                </div>
-                                                <div class="form-row">
-                                                    <button type="button" id="submit-order" class="btn">Submit Order</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
+    <!-- Modern Checkout Page -->
+<div class="modern-checkout">
+    <div class="checkout-container">
+        <!-- Checkout Progress -->
+        <div class="checkout-progress">
+            <div class="step active" id="step-customer">
+                <div class="step-number">1</div>
+                <div class="step-title">Customer</div>
+            </div>
+            <div class="step" id="step-shipping">
+                <div class="step-number">2</div>
+                <div class="step-title">Shipping</div>
+            </div>
+            <div class="step" id="step-payment">
+                <div class="step-number">3</div>
+                <div class="step-title">Payment</div>
+            </div>
+        </div>
+
+        <!-- Customer Section -->
+        <div class="checkout-section active" id="customer-section">
+            <h2>Customer Information</h2>
+            <form id="guest-form" class="checkout-form">
+                <div class="form-group">
+                    <label for="input_email">Email Address*</label>
+                    <input type="email" id="input_email" name="email" required>
+                    <div class="error-message" id="email-error"></div>
+                </div>
+                
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="input_subscribe" name="subscribe">
+                    <label for="input_subscribe">Subscribe to our newsletter</label>
+                </div>
+                
+                <button type="button" id="continue-as-guest" class="btn-primary">
+                    Continue As Guest
+                </button>
+                
+                <div class="form-footer">
+                    <p>Already have an account? <a href="login.html">Sign in now</a></p>
+                </div>
+            </form>
+        </div>
+
+        <!-- Shipping Section -->
+        <div class="checkout-section" id="shipping-section">
+            <h2>Shipping Details</h2>
+            <form id="shipping-form" class="checkout-form">
+                <div class="form-row">
+    <label for="delivery-address">Delivery Address*</label>
+    <input type="text" id="delivery-address" name="delivery-address" required placeholder="Enter delivery address">
+</div>
+
+<div class="form-row">
+    <label for="county">County*</label>
+    <select id="county" name="county" class="form-control" required>
+        <option value="">Select county</option>
+        <option value="Nairobi">Nairobi</option>
+        <option value="Mombasa">Mombasa</option>
+        <option value="Kisumu">Kisumu</option>
+        <option value="Nakuru">Nakuru</option>
+        <option value="Kiambu">Kiambu</option>
+        <option value="Uasin Gishu">Uasin Gishu</option>
+        <option value="Machakos">Machakos</option>
+        <option value="Kajiado">Kajiado</option>
+        <option value="Bungoma">Bungoma</option>
+        <option value="Kakamega">Kakamega</option>
+        <option value="Kilifi">Kilifi</option>
+        <option value="Nyeri">Nyeri</option>
+        <option value="Laikipia">Laikipia</option>
+        <option value="Kirinyaga">Kirinyaga</option>
+        <option value="Busia">Busia</option>
+        <option value="Embu">Embu</option>
+        <option value="Garissa">Garissa</option>
+        <option value="Homa Bay">Homa Bay</option>
+        <option value="Isiolo">Isiolo</option>
+        <option value="Kericho">Kericho</option>
+        <option value="Kisii">Kisii</option>
+        <option value="Kitui">Kitui</option>
+        <option value="Kwale">Kwale</option>
+        <option value="Lamu">Lamu</option>
+        <option value="Makueni">Makueni</option>
+        <option value="Mandera">Mandera</option>
+        <option value="Marsabit">Marsabit</option>
+        <option value="Meru">Meru</option>
+        <option value="Migori">Migori</option>
+        <option value="Murang'a">Murang'a</option>
+        <option value="Nandi">Nandi</option>
+        <option value="Narok">Narok</option>
+        <option value="Nyamira">Nyamira</option>
+        <option value="Nyandarua">Nyandarua</option>
+        <option value="Samburu">Samburu</option>
+        <option value="Siaya">Siaya</option>
+        <option value="Taita Taveta">Taita Taveta</option>
+        <option value="Tana River">Tana River</option>
+        <option value="Tharaka-Nithi">Tharaka-Nithi</option>
+        <option value="Trans Nzoia">Trans Nzoia</option>
+        <option value="Turkana">Turkana</option>
+        <option value="Vihiga">Vihiga</option>
+        <option value="Wajir">Wajir</option>
+        <option value="West Pokot">West Pokot</option>
+        <option value="Baringo">Baringo</option>
+        <option value="Bomet">Bomet</option>
+        <option value="Elgeyo-Marakwet">Elgeyo-Marakwet</option>
+    </select>
+</div>
+
+
+<div class="form-row">
+    <label for="delivery-address">Town/Province*</label>
+    <input type="text" id="Town/Province" name="Town/Province" required placeholder="Enter Town/Province">
+</div>
+
+<div class="form-group">
+                    <label for="delivery-address">Delivery Address*</label>
+                    <input type="text" id="delivery-address" name="delivery-address" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="contact-person">Contact Person*</label>
+                    <input type="text" id="contact-person" name="contact-person" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone-number">Phone Number*</label>
+                    <input type="tel" id="phone-number" name="phone-number" pattern="[0-9]{10}" required>
+                    <div class="error-message" id="phone-error"></div>
+                </div>
+
+                <button type="button" id="proceed-to-payment" class="btn-primary">
+                    Proceed to Payment
+                </button>
+            </form>
+        </div>
+
+        <!-- Payment Section -->
+        <div class="checkout-section" id="payment-section">
+            <h2>Payment Method</h2>
+            <div class="payment-method">
+                <div class="mpesa-payment">
+                    <img src="images/lipa na mpesa.jpg" alt="M-Pesa Payment">
+                    <div class="payment-details">
+                        <h3>Pay via M-Pesa</h3>
+                        <div class="payment-instruction">
+                            <span class="icon"><i class="fas fa-mobile-alt"></i></span>
+                            <span>Go to M-Pesa Menu</span>
                         </div>
-                    </div>
-    
-                    <!-- Order Summary -->
-                    <div class="col-lg-5 col-md-5 col-sm-6 col-xs-12 sm-padding-top-48px sm-margin-bottom-0 xs-margin-bottom-15px">
-                        <div class="order-summary sm-margin-bottom-80px">
-                            <div class="title-block">
-                                <h3 class="title">Order Summary</h3>
-                                <a href="shopping-cart.html" class="link-forward">Edit cart</a>
-                            </div>
-                            <div class="cart-list-box short-type">
-                                
-                                <ul class="cart-list">
-                                    <!-- Cart items will appear here -->
-                                </ul>
-                                <ul class="subtotal">
-                                    <li>
-                                        <div class="subtotal-line">
-                                            <b class="stt-name">Subtotal</b>
-                                            <span class="stt-price subtotal-amount">KES 0.00</span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="subtotal-line">
-                                            <b class="stt-name">Shipping</b>
-                                            <span class="stt-price shipping-amount">KES 0.00</span>
-                                        </div>
-                                    </li>
-                                    <li class="coupon-line">
-                                        <div class="subtotal-line coupon-container">
-                                            <div class="coupon-input-group">
-                                                <input type="text" class="coupon-input" placeholder="Enter coupon code">
-                                                <button class="coupon-btn">Apply</button>
-                                            </div>
-                                            <span class="coupon-message"></span>
-                                        </div>
-                                    </li>
-                                    <li class="discount-line" style="display: none;">
-                                        <div class="subtotal-line">
-                                            <b class="stt-name">Discount</b>
-                                            <span class="stt-price discount-amount">KES 0.00</span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="subtotal-line total-line">
-                                            <b class="stt-name">Total:</b>
-                                            <span class="stt-price total-amount">KES 0.00</span>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
+                        <div class="payment-instruction">
+                            <span class="icon"><i class="fas fa-wallet"></i></span>
+                            <span>Select Lipa na M-Pesa</span>
+                        </div>
+                        <div class="payment-instruction">
+                            <span class="icon"><i class="fas fa-store"></i></span>
+                            <span>select "Pochi La Biashara</span>
+                        </div>
+                        <div class="payment-instruction">
+                            <span class="icon"><i ></i></span>
+                            <span>Enter Phone Number <strong>0729000403</strong></span>
+                        </div>
+                        <div class="payment-instruction">
+                            <span class="icon"><i ></i></span>
+                            <span>Enter Amount <strong>x</strong></span>
+                        </div>
+                        <div class="payment-instruction">
+                            <span class="icon"><i ></i></span>
+                            <span>Enter PIN <strong>x</strong></span>
+                        </div>
+                        <div class="payment-instruction">
+                            <span class="icon"><i ></i></span>
+                            <span>SEND</span>
                         </div>
                     </div>
                 </div>
+
+                <button type="button" id="submit-order" class="btn-primary">
+                    <i class="fab fa-whatsapp"></i> Submit Order via WhatsApp
+                </button>
             </div>
         </div>
     </div>
+
+    <!-- Order Summary -->
+    <div class="order-summary">
+        <h3>Order Summary</h3>
+        <div class="cart-items">
+            <!-- Dynamically populated from cart -->
+        </div>
+        <div class="order-totals">
+            <div class="total-row">
+                <span>Subtotal</span>
+                <span class="subtotal-amount">KES 0.00</span>
+            </div>
+            <div class="total-row">
+                <span>Shipping</span>
+                <span class="shipping-amount">KES 0.00</span>
+            </div>
+            <div class="total-row grand-total">
+                <span>Total</span>
+                <span class="total-amount">KES 0.00</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+/* Modern Checkout Styles */
+.modern-checkout {
+    display: flex;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.checkout-container {
+    flex: 1;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    padding: 30px;
+}
+
+.checkout-progress {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.checkout-progress::before {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: #eee;
+    z-index: 1;
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.step-number {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #eee;
+    color: #999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.step.active .step-number {
+    background: #6B21A8;
+    color: white;
+}
+
+.step-title {
+    font-size: 14px;
+    color: #999;
+}
+
+.step.active .step-title {
+    color: #6B21A8;
+    font-weight: 500;
+}
+
+.checkout-section {
+    display: none;
+}
+
+.checkout-section.active {
+    display: block;
+}
+
+.checkout-form {
+    margin-top: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #333;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: border 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #6B21A8;
+    outline: none;
+}
+
+.error-message {
+    color: #EF4444;
+    font-size: 14px;
+    margin-top: 5px;
+    display: none;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.checkbox-group input {
+    width: auto;
+    margin-right: 10px;
+}
+
+.btn-primary {
+    background: #6B21A8;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    width: 100%;
+    transition: background 0.3s;
+}
+
+.btn-primary:hover {
+    background: #581C87;
+}
+
+.btn-primary i {
+    margin-right: 8px;
+}
+
+.form-footer {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.form-footer a {
+    color: #6B21A8;
+    text-decoration: none;
+}
+
+/* Order Summary Styles */
+.order-summary {
+    width: 350px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    padding: 25px;
+    align-self: flex-start;
+}
+
+.order-summary h3 {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.cart-items {
+    max-height: 300px;
+    overflow-y: auto;
+    margin-bottom: 20px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #f5f5f5;
+}
+
+.cart-item:last-child {
+    border-bottom: none;
+}
+
+.order-totals {
+    margin-top: 20px;
+}
+
+.total-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.grand-total {
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}
+
+/* Payment Section Styles */
+.mpesa-payment {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.mpesa-payment img {
+    max-width: 200px;
+    margin-bottom: 20px;
+}
+
+.payment-instruction {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    background: #f9f9f9;
+    border-radius: 6px;
+}
+
+.payment-instruction .icon {
+    margin-right: 10px;
+    color: #6B21A8;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .modern-checkout {
+        flex-direction: column;
+    }
     
-    <script>
-        // Town data with delivery fees
-        const townData = {
-            'Nairobi': [
-                { name: 'Dagoreti', fee: 250 },
-                { name: 'Embakasi', fee: 200 },
-                { name: 'Kasarani', fee: 220 },
-                { name: 'Langata', fee: 180 },
-                { name: 'Starehe', fee: 150 },
-                { name: 'Westlands', fee: 170 },
-                { name: 'Kibra', fee: 230 },
-                { name: 'Roysambu', fee: 240 }
-            ],
-            'Mombasa': [
-                { name: 'Nyali', fee: 270 },
-                { name: 'Kisauni', fee: 280 },
-                { name: 'Likoni', fee: 260 },
-                { name: 'Changamwe', fee: 290 }
-            ],
-            'Kisumu': [
-                { name: 'Kisumu Central', fee: 300 },
-                { name: 'Kisumu East', fee: 320 },
-                { name: 'Kisumu West', fee: 340 }
-            ],
-            'Nakuru': [
-                { name: 'Nakuru Town East', fee: 300 },
-                { name: 'Nakuru Town West', fee: 320 },
-                { name: 'Naivasha', fee: 350 }
-            ],
-            'Kiambu': [
-                { name: 'Thika', fee: 280 },
-                { name: 'Kiambu Town', fee: 260 },
-                { name: 'Ruiru', fee: 240 },
-                { name: 'Juja', fee: 250 }
-            ]
-        };
-    
-        // Default data for other counties
-        const defaultTowns = [
-            { name: 'Main Town', fee: 350 },
-            { name: 'Sub Town 1', fee: 400 },
-            { name: 'Sub Town 2', fee: 450 }
-        ];
-    
-        // Order summary data
-        let orderSummary = {
-            subtotal: 0,
-            shipping: 0,
-            discount: 0,
-            total: 0
-        };
-    
-        // DOM elements
-        const continueAsGuestBtn = document.getElementById('continue-as-guest');
-        const proceedToPaymentBtn = document.getElementById('proceed-to-payment');
-        const submitOrderBtn = document.getElementById('submit-order');
-        const countySelect = document.getElementById('county');
-        const townSelect = document.getElementById('town');
-    
-        // Step navigation
-        continueAsGuestBtn.addEventListener('click', function() {
-            // Get email value
-            const email = document.getElementById('input_email').value;
-            if (!email) {
-                alert('Please enter your email address to continue.');
-                return;
-            }
-            
-            // Move to shipping step
-            document.getElementById('step-customer').classList.remove('active');
-            document.getElementById('step-shipping').classList.add('active');
-            document.getElementById('step-shipping').querySelector('.box-content').style.display = 'block';
-        });
-    
-        proceedToPaymentBtn.addEventListener('click', function() {
-            // Validate shipping form
-            const shippingForm = document.getElementById('shipping-form');
-            const requiredFields = ['delivery-type', 'county', 'delivery-address', 'contact-person', 'phone-number'];
-            
-            let isValid = true;
-            requiredFields.forEach(field => {
-                const element = document.getElementById(field);
-                if (!element.value) {
-                    alert(`Please fill in the ${field.replace('-', ' ')} field.`);
-                    isValid = false;
-                    return;
-                }
-            });
-            
-            if (!isValid) return;
-            
-            // Move to payment step
-            document.getElementById('step-shipping').classList.remove('active');
-            document.getElementById('step-payment').classList.add('active');
-            document.getElementById('step-payment').querySelector('.box-content').style.display = 'block';
-        });
-    
-        submitOrderBtn.addEventListener('click', function() {
-            // Collect all order information
-            const email = document.getElementById('input_email').value;
-            const subscribed = document.getElementById('input_subscribe').checked;
-            
-            const deliveryType = document.getElementById('delivery-type').value;
-            const county = document.getElementById('county').value;
-            const town = document.getElementById('town').value;
-            const deliveryAddress = document.getElementById('delivery-address').value;
-            const estateLocality = document.getElementById('estate-locality').value;
-            const contactPerson = document.getElementById('contact-person').value;
-            const phoneNumber = document.getElementById('phone-number').value;
-            
-            // Prepare order data
-            const orderData = {
-                customer: {
-                    email,
-                    subscribed
-                },
-                shipping: {
-                    deliveryType,
-                    county,
-                    town,
-                    deliveryAddress,
-                    estateLocality,
-                    contactPerson,
-                    phoneNumber
-                },
-                summary: orderSummary
-            };
-            
-            // Generate WhatsApp message
-            const whatsappMessage = encodeURIComponent(`
-    *NEW ORDER DETAILS*
-    
-    *Customer Information:*
-    Email: ${email}
-    Newsletter Subscription: ${subscribed ? 'Yes' : 'No'}
-    
-    *Shipping Details:*
-    Delivery Type: ${deliveryType}
-    County: ${county}
-    Town/Province: ${town}
-    Delivery Address: ${deliveryAddress}
-    Estate/Locality: ${estateLocality}
-    Contact Person: ${contactPerson}
-    Phone Number: ${phoneNumber}
-    
-    *Order Summary:*
-    Subtotal: KES ${orderSummary.subtotal.toFixed(2)}
-    Shipping: KES ${orderSummary.shipping.toFixed(2)}
-    Total: KES ${orderSummary.total.toFixed(2)}
-            `);
-            
-            // Open WhatsApp with the order details
-            // Replace with your phone number (include country code without +)
-            window.open(`https://wa.me/254797100500?text=${whatsappMessage}`, '_blank');
-            
-            // Show confirmation message
-            alert('Thank you for your order! You will now be redirected to send the order details via WhatsApp.');
-        });
-    
-        // County and town selection
-        countySelect.addEventListener('change', function() {
-            const selectedCounty = this.value;
-            
-            if (selectedCounty) {
-                // Enable town selection
-                townSelect.disabled = false;
-                townSelect.innerHTML = '<option value="">Select town/province</option>';
-                
-                // Populate towns based on selected county
-                const towns = townData[selectedCounty] || defaultTowns;
-                
-                towns.forEach(town => {
-                    const option = document.createElement('option');
-                    option.value = town.name;
-                    option.textContent = `${town.name} - KES ${town.fee}`;
-                    option.dataset.fee = town.fee;
-                    townSelect.appendChild(option);
-                });
-            } else {
-                // Disable town selection if no county is selected
-                townSelect.disabled = true;
-                townSelect.innerHTML = '<option value="">Select town/province first</option>';
-                
-                // Reset shipping fee
-                updateShipping(0);
-            }
-        });
-    
-        townSelect.addEventListener('change', function() {
-            const selectedOption = this.options[this.selectedIndex];
-            
-            if (selectedOption && selectedOption.dataset.fee) {
-                // Update shipping fee
-                updateShipping(Number(selectedOption.dataset.fee));
-            } else {
-                // Reset shipping fee
-                updateShipping(0);
-            }
-        });
-    
-        // Update shipping fee and order total
-        function updateShipping(fee) {
-            orderSummary.shipping = fee;
-            orderSummary.total = orderSummary.subtotal + orderSummary.shipping - orderSummary.discount;
-            
-            // Update display
-            document.querySelector('.shipping-amount').textContent = `KES ${fee.toFixed(2)}`;
-            document.querySelector('.total-amount').textContent = `KES ${orderSummary.total.toFixed(2)}`;
-        }
-    
-        // Initialize with some sample data (simulate cart)
-        function initializeOrderSummary() {
-            // For demo purposes - simulate a cart with items
-            const cartItems = [
-                { name: 'Product 1', price: 1500, quantity: 2 },
-                { name: 'Product 2', price: 3000, quantity: 1 }
-            ];
-            
-            // Calculate subtotal
-            orderSummary.subtotal = cartItems.reduce((sum, item) => sum + (item.price * item.quantity), 0);
-            orderSummary.total = orderSummary.subtotal + orderSummary.shipping - orderSummary.discount;
-            
-            // Update display
-            document.querySelector('.number').textContent = `${cartItems.length} items`;
-            document.querySelector('.subtotal-amount').textContent = `KES ${orderSummary.subtotal.toFixed(2)}`;
-            document.querySelector('.total-amount').textContent = `KES ${orderSummary.total.toFixed(2)}`;
-            
-            // Populate cart items
-            const cartListElement = document.querySelector('.cart-list');
-            cartItems.forEach(item => {
-                const li = document.createElement('li');
-                li.innerHTML = `
-                    <div class="cart-item">
-                        <div class="item-info">
-                            <p class="item-name">${item.name}</p>
-                            <span class="item-quantity">Qty: ${item.quantity}</span>
-                            <span class="item-price">KES ${item.price.toFixed(2)}</span>
-                        </div>
-                    </div>
-                `;
-                cartListElement.appendChild(li);
-            });
-        }
-    
-        // Handle coupon application
-        document.querySelector('.coupon-btn').addEventListener('click', function() {
-            const couponInput = document.querySelector('.coupon-input');
-            const couponCode = couponInput.value.trim().toUpperCase();
-            const couponMessage = document.querySelector('.coupon-message');
-            const discountLine = document.querySelector('.discount-line');
-            const discountAmount = document.querySelector('.discount-amount');
-    
-            // Demo coupon codes
-            const validCoupons = {
-                'WELCOME10': 10, // 10% discount
-                'SAVE20': 20     // 20% discount
-            };
-    
-            if (couponCode && validCoupons[couponCode]) {
-                // Calculate discount
-                const discountPercentage = validCoupons[couponCode];
-                const discount = (orderSummary.subtotal * discountPercentage) / 100;
-                
-                // Update order summary
-                orderSummary.discount = discount;
-                orderSummary.total = orderSummary.subtotal + orderSummary.shipping - orderSummary.discount;
-                
-                // Update display
-                discountAmount.textContent = `- KES ${discount.toFixed(2)}`;
-                discountLine.style.display = 'block';
-                document.querySelector('.total-amount').textContent = `KES ${orderSummary.total.toFixed(2)}`;
-                
-                // Show success message
-                couponMessage.textContent = `${discountPercentage}% discount applied`;
-                couponMessage.style.color = 'green';
-            } else {
-                // Invalid coupon
-                couponMessage.textContent = 'Invalid coupon code';
-                couponMessage.style.color = 'red';
-                
-                // Reset discount
-                orderSummary.discount = 0;
-                orderSummary.total = orderSummary.subtotal + orderSummary.shipping;
-                discountLine.style.display = 'none';
-                document.querySelector('.total-amount').textContent = `KES ${orderSummary.total.toFixed(2)}`;
-            }
-        });
-    
-        // Initialize the order summary on page load
-        document.addEventListener('DOMContentLoaded', function() {
-            initializeOrderSummary();
-        });
-    </script>
-    
-    <style>
-        /* Basic form styling */
-        .form-row {
-            margin-bottom: 15px;
-        }
-        
-        .form-row label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: bold;
-        }
-        
-        .form-control {
-            width: 100%;
-            padding: 8px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-        }
-        
-        /* Checkout steps styling */
-        .steps {
-            list-style: none;
-            padding: 0;
-        }
-        
-        .checkout-act {
-            margin-bottom: 20px;
-            padding: 15px;
-            border: 1px solid #eee;
-            border-radius: 4px;
-        }
-        
-        .checkout-act.active {
-            border-color: #4CAF50;
-            box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
-        }
-        
-        .title-box {
-            margin-top: 0;
-            margin-bottom: 15px;
-            color: #333;
-        }
-        
-        .box-content {
-            padding: 10px 0;
-        }
-        
-        /* M-Pesa payment styling */
-        .mpesa-details {
-            text-align: center;
-            margin: 20px 0;
-        }
-        
-        .payment-instructions {
-            margin-top: 15px;
-        }
-        
-        /* Order summary styling */
-        .cart-item {
-            display: flex;
-            margin-bottom: 10px;
-            padding-bottom: 10px;
-            border-bottom: 1px solid #eee;
-        }
-        
-        .item-info {
-            flex: 1;
-        }
-        
-        .item-name {
-            margin: 0;
-            font-weight: bold;
-        }
-        
-        .item-quantity, .item-price {
-            display: inline-block;
-            margin-right: 10px;
-            color: #666;
-        }
-        
-        .subtotal {
-            list-style: none;
-            padding: 0;
-        }
-        
-        .subtotal-line {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 10px;
-        }
-        
-        .total-line {
-            font-size: 1.2em;
-            font-weight: bold;
-            border-top: 1px solid #ddd;
-            padding-top: 10px;
-        }
-        
-        /* Coupon styling */
-        .coupon-input-group {
-            display: flex;
-            margin-bottom: 5px;
-        }
-        
-        .coupon-input {
-            flex: 1;
-            padding: 8px;
-            border: 1px solid #ddd;
-            border-radius: 4px 0 0 4px;
-        }
-        
-        .coupon-btn {
-            padding: 8px 15px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 0 4px 4px 0;
-            cursor: pointer;
-        }
-        
-        .coupon-message {
-            display: block;
-            font-size: 0.9em;
-            margin-top: 5px;
-        }
-        
-        /* Button styling */
-        .btn {
-            padding: 10px 20px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 1em;
-        }
-        
-        .btn:hover {
-            background-color: #45a049;
-        }
-    </style>
+    .order-summary {
+        width: 100%;
+        margin-top: 30px;
+    }
+}
+</style>
+
 
     <!-- FOOTER -->
     <footer id="footer" class="footer layout-03">
@@ -1734,7 +1502,9 @@
     <script src="js/jquery.nicescroll.min.js"></script><script src="js/cart.js"></script>
     <script src="js/slick.min.js"></script>
     <script src="js/biolife.framework.js"></script>
-            <script src="js/functions.js"></script>
+    <script src="js/functions.js"></script>
+    <script src="js/cartcheckout.js"></script>
+    <script src="js/cart.js"></script>
             
 </body>
 

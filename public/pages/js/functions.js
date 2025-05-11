@@ -260,3 +260,76 @@
         }
     });
 })(jQuery);
+// Proceed to Payment button functionality
+document.getElementById('proceed-to-payment').addEventListener('click', function() {
+    const requiredFields = [
+        { id: 'delivery-type', name: 'Delivery Type' },
+        { id: 'county', name: 'County' },
+        { id: 'town', name: 'Town/Province' },
+        { id: 'delivery-address', name: 'Delivery Address' },
+        { id: 'contact-person', name: 'Contact Person' },
+        { id: 'phone-number', name: 'Phone Number' }
+    ];
+
+    let isValid = true;
+
+    // Validate required fields
+    requiredFields.forEach(field => {
+        const element = document.getElementById(field.id);
+        if (!element.value) {
+            alert(`Please fill in the ${field.name} field.`);
+            element.style.borderColor = '#ff0000';
+            isValid = false;
+        } else {
+            element.style.borderColor = '#ddd';
+        }
+    });
+
+    // Special phone number validation
+    const phoneNumber = document.getElementById('phone-number').value;
+    if (!/^[0-9]{10}$/.test(phoneNumber)) {
+        alert('Please enter a valid 10-digit phone number');
+        document.getElementById('phone-number').style.borderColor = '#ff0000';
+        isValid = false;
+    }
+
+    if (isValid) {
+        // Save shipping data
+        orderData.shipping = {
+            deliveryType: document.getElementById('delivery-type').value,
+            county: document.getElementById('county').value,
+            town: document.getElementById('town').value,
+            deliveryAddress: document.getElementById('delivery-address').value,
+            contactPerson: document.getElementById('contact-person').value,
+            phoneNumber: phoneNumber
+        };
+
+        // Move to payment section
+        document.getElementById('shipping-section').classList.remove('active');
+        document.getElementById('payment-section').classList.add('active');
+        document.getElementById('step-shipping').classList.remove('active');
+        document.getElementById('step-payment').classList.add('active');
+    }
+});
+// Initialize county/town selection
+document.getElementById('county').addEventListener('change', function() {
+    const county = this.value;
+    const townSelect = document.getElementById('town');
+    
+    townSelect.innerHTML = '<option value="">Select town/province</option>';
+    
+    if (county) {
+        townSelect.disabled = false;
+        const towns = townData[county] || [];
+        
+        towns.forEach(town => {
+            const option = document.createElement('option');
+            option.value = town.name;
+            option.textContent = town.name;
+            option.dataset.fee = town.fee;
+            townSelect.appendChild(option);
+        });
+    } else {
+        townSelect.disabled = true;
+    }
+});
