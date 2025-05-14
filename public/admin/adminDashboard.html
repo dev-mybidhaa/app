@@ -19,25 +19,26 @@
             font-family: 'Arial', sans-serif;
             background-color: var(--light-color);
             color: #333;
+            font-size: 13px !important;
         }
 
         .dashboard-container {
             display: grid;
-            grid-template-columns: 250px 1fr;
+            grid-template-columns: 180px 1fr !important;
             min-height: 100vh;
         }
 
         .sidebar {
             background-color: var(--primary-color);
-            padding: 20px;
+            padding: 10px !important;
             box-shadow: 2px 0 10px rgba(0,0,0,0.1);
         }
 
         .sidebar h2 {
-            margin-bottom: 30px;
+            margin-bottom: 18px !important;
             text-align: center;
             color: var(--accent-color);
-            font-size: 24px;
+            font-size: 16px !important;
         }
 
         .nav-links {
@@ -53,9 +54,10 @@
             color: var(--light-color);
             text-decoration: none;
             display: block;
-            padding: 12px 15px;
-            border-radius: 8px;
+            padding: 7px 10px !important;
+            border-radius: 6px !important;
             transition: all 0.3s ease;
+            font-size: 13px !important;
         }
 
         .nav-links a:hover {
@@ -64,30 +66,33 @@
         }
 
         .main-content {
-            padding: 30px;
+            padding: 14px;
             background-color: var(--light-color);
         }
 
         .dashboard-header {
-            margin-bottom: 30px;
+            margin-bottom: 14px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
         .dashboard-header h1 {
             color: var(--primary-color);
-            font-size: 32px;
+            font-size: 18px;
         }
 
         .stats-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 25px;
-            margin-bottom: 30px;
+            gap: 10px;
+            margin-bottom: 14px;
         }
 
         .stat-card {
             background-color: white;
-            padding: 25px;
-            border-radius: 15px;
+            padding: 10px;
+            border-radius: 8px;
             text-align: center;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
             transition: transform 0.3s ease;
@@ -99,27 +104,28 @@
 
         .stat-card h3 {
             color: var(--primary-color);
-            margin-bottom: 15px;
-            font-size: 18px;
+            margin-bottom: 7px;
+            font-size: 13px;
         }
 
         .stat-card p {
             color: var(--accent-color);
-            font-size: 24px;
+            font-size: 15px;
             font-weight: bold;
             margin: 0;
         }
 
         .recent-activity {
             background-color: white;
-            padding: 25px;
-            border-radius: 15px;
+            padding: 12px;
+            border-radius: 8px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
 
         .recent-activity h2 {
             color: var(--primary-color);
-            margin-bottom: 20px;
+            margin-bottom: 10px;
+            font-size: 15px;
         }
 
         .activity-list {
@@ -128,11 +134,12 @@
         }
 
         .activity-list li {
-            padding: 15px;
+            padding: 7px;
             border-bottom: 1px solid #eee;
             color: #444;
             display: flex;
             align-items: center;
+            font-size: 12px;
         }
 
         .activity-list li:before {
@@ -175,12 +182,12 @@
         .nav-links a[href="#team-tasks"]::before { content: "\1F465"; } /* 👥 */
         .nav-icon {
             display: inline-block;
-            margin-right: 10px;
-            width: 26px;
-            height: 26px;
+            margin-right: 6px;
+            width: 18px;
+            height: 18px;
             vertical-align: middle;
             object-fit: contain;
-            border-radius: 6px;
+            border-radius: 4px;
             background: #fff;
             box-shadow: 0 2px 8px rgba(98,44,132,0.07);
         }
@@ -188,15 +195,15 @@
 </head>
 <body>
     <!-- Header -->
-    <header style="position: sticky; top: 0; z-index: 100; background: var(--primary-color); color: #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); display: flex; align-items: center; justify-content: space-between; padding: 0 40px; height: 70px;">
+    <header style="position: sticky; top: 0; z-index: 100; background: var(--primary-color); color: #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); display: flex; align-items: center; justify-content: space-between; padding: 0 18px; height: 44px;">
         <div style="display: flex; align-items: center; gap: 16px;">
-            <img src="https://img.icons8.com/color/48/000000/admin-settings-male.png" alt="Logo" style="height: 40px; width: 40px; border-radius: 8px; background: #fff; padding: 4px;">
-            <span style="font-size: 1.7rem; font-weight: bold; letter-spacing: 1px; color: var(--accent-color);">E-Commerce Admin</span>
+            <img src="https://img.icons8.com/color/48/000000/admin-settings-male.png" alt="Logo" style="height: 24px; width: 24px; border-radius: 8px; background: #fff; padding: 2px;">
+            <span style="font-size: 1.1rem; font-weight: bold; letter-spacing: 1px; color: var(--accent-color);">E-Commerce Admin</span>
         </div>
         <div style="display: flex; align-items: center; gap: 24px;">
-            <span style="font-size: 1.1rem;">Welcome, Admin</span>
+            <span style="font-size: 13px;">Welcome, Admin</span>
             <div style="position: relative;">
-                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Profile" style="height: 42px; width: 42px; border-radius: 50%; border: 2px solid var(--accent-color); cursor: pointer;" onclick="document.getElementById('profileDropdown').classList.toggle('show');">
+                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Profile" style="height: 26px; width: 26px; border-radius: 50%; border: 1px solid var(--accent-color); cursor: pointer;" onclick="document.getElementById('profileDropdown').classList.toggle('show');">
                 <div id="profileDropdown" style="display: none; position: absolute; right: 0; top: 52px; background: #fff; color: #333; border-radius: 10px; box-shadow: 0 4px 16px rgba(0,0,0,0.13); min-width: 160px; overflow: hidden;">
                     <a href="#profile" style="display: block; padding: 12px 18px; text-decoration: none; color: #333; transition: background 0.2s;">Profile</a>
                     <a href="#settings" style="display: block; padding: 12px 18px; text-decoration: none; color: #333; transition: background 0.2s;">Settings</a>
@@ -252,78 +259,79 @@
         
         <div class="main-content">
             <!-- Modern Admin Hero Section -->
-            <div class="admin-hero" style="background: linear-gradient(120deg, #622C84 0%, #7d3da8 100%); color: #fff; padding: 48px 32px 32px 32px; border-radius: 0 0 32px 32px; box-shadow: 0 8px 32px rgba(98,44,132,0.12); display: flex; align-items: center; gap: 32px; position: relative; overflow: hidden; animation: fadeInDown 1s;">
+            <div class="admin-hero" style="background: linear-gradient(120deg, #622C84 0%, #7d3da8 100%); color: #fff; padding: 24px 16px 16px 16px; border-radius: 0 0 16px 16px; box-shadow: 0 8px 32px rgba(98,44,132,0.12); display: flex; align-items: center; gap: 16px; position: relative; overflow: hidden; animation: fadeInDown 1s;">
                 <div style="flex:1; min-width: 220px;">
-                    <h1 style="font-size: 2.5rem; font-weight: 700; margin-bottom: 12px; letter-spacing: 1px;">Welcome back, Admin!</h1>
-                    <p style="font-size: 1.2rem; opacity: 0.92;">Here's a quick overview and analytics for your e-commerce platform. Stay on top of your business with real-time insights and team updates.</p>
-                    <div style="margin-top: 24px; display: flex; gap: 18px;">
-                        <button class="modern-btn" style="background: var(--accent-color); color: #622C84; font-weight: 600; border: none; border-radius: 8px; padding: 12px 28px; font-size: 1.1rem; box-shadow: 0 2px 12px rgba(248,187,0,0.13); transition: background 0.2s, transform 0.2s; cursor: pointer;">Create Report</button>
-                        <button class="modern-btn" style="background: #fff; color: #622C84; font-weight: 600; border: none; border-radius: 8px; padding: 12px 28px; font-size: 1.1rem; box-shadow: 0 2px 12px rgba(255,255,255,0.13); transition: background 0.2s, transform 0.2s; cursor: pointer;">Invite Staff</button>
+                    <h1 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 6px; letter-spacing: 1px;">Welcome back, Admin!</h1>
+                    <p style="font-size: 1rem; opacity: 0.92;">Here's a quick overview and analytics for your e-commerce platform. Stay on top of your business with real-time insights and team updates.</p>
+                    <div style="margin-top: 12px; display: flex; gap: 9px;">
+                        <button class="modern-btn" style="background: var(--accent-color); color: #622C84; font-weight: 600; border: none; border-radius: 6px; padding: 6px 14px; font-size: 12px; box-shadow: 0 2px 12px rgba(248,187,0,0.13); transition: background 0.2s, transform 0.2s; cursor: pointer;">Create Report</button>
+                        <button class="modern-btn" style="background: #fff; color: #622C84; font-weight: 600; border: none; border-radius: 6px; padding: 6px 14px; font-size: 12px; box-shadow: 0 2px 12px rgba(255,255,255,0.13); transition: background 0.2s, transform 0.2s; cursor: pointer;">Invite Staff</button>
                     </div>
+
                 </div>
                 <div style="flex:1; min-width: 220px; display: flex; justify-content: flex-end; align-items: center;">
-                    <img src="https://assets10.lottiefiles.com/packages/lf20_ktwnwv5m.json" alt="Admin Analytics" style="width: 260px; max-width: 100%; border-radius: 18px; box-shadow: 0 4px 24px rgba(0,0,0,0.08); background: #fff;" onerror="this.src='https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=400&q=80'">
+                    <img src="https://assets10.lottiefiles.com/packages/lf20_ktwnwv5m.json" alt="Admin Analytics" style="width: 130px; max-width: 100%; border-radius: 9px; box-shadow: 0 4px 24px rgba(0,0,0,0.08); background: #fff;" onerror="this.src='https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=400&q=80'">
                 </div>
                 <!-- Animated SVG or Lottie can be used here for extra flair -->
             </div>
 
             <!-- Notification/Profile Bar (fixed at top of main-content) -->
-            <div class="admin-profile-bar" style="position: sticky; top: 0; z-index: 10; background: #fff; box-shadow: 0 2px 12px rgba(98,44,132,0.07); display: flex; align-items: center; justify-content: flex-end; padding: 10px 32px; gap: 18px; border-radius: 0 0 18px 18px; animation: fadeIn 1.2s;">
-                <div style="margin-right: auto; font-weight: 600; color: #622C84; font-size: 1.1rem; letter-spacing: 0.5px;">Dashboard</div>
+            <div class="admin-profile-bar" style="position: sticky; top: 0; z-index: 10; background: #fff; box-shadow: 0 2px 12px rgba(98,44,132,0.07); display: flex; align-items: center; justify-content: flex-end; padding: 6px 16px; gap: 9px; border-radius: 0 0 9px 9px; animation: fadeIn 1.2s;">
+                <div style="margin-right: auto; font-weight: 600; color: #622C84; font-size: 13px; letter-spacing: 0.5px;">Dashboard</div>
                 <button style="background: none; border: none; cursor: pointer; position: relative;">
-                    <span style="font-size: 1.5rem; color: #F8BB00;">514</span>
+                    <span style="font-size: 13px; color: #F8BB00;">514</span>
                     <span style="position: absolute; top: 2px; right: 2px; background: #F8BB00; color: #fff; border-radius: 50%; font-size: 0.8rem; padding: 2px 6px;">3</span>
                 </button>
-                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Profile" style="height: 38px; width: 38px; border-radius: 50%; border: 2px solid var(--accent-color);">
-                <span style="font-weight: 500; color: #333;">Admin</span>
-                <button style="background: var(--primary-color); color: #fff; border: none; border-radius: 6px; padding: 7px 18px; font-size: 1rem; font-weight: 600; margin-left: 8px; cursor: pointer;">Logout</button>
+                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Profile" style="height: 20px; width: 20px; border-radius: 50%; border: 1px solid var(--accent-color);">
+                <span style="font-weight: 500; color: #333; font-size: 12px;">Admin</span>
+                <button style="background: var(--primary-color); color: #fff; border: none; border-radius: 6px; padding: 6px 14px; font-size: 12px; font-weight: 600; margin-left: 4px; cursor: pointer;">Logout</button>
             </div>
 
-            <div class="dashboard-header" style="display: flex; justify-content: space-between; align-items: center;">
+            <div class="dashboard-header">
                 <h1>Dashboard Overview</h1>
-                <button style="background: var(--primary-color); color: #fff; border: none; padding: 10px 22px; border-radius: 8px; font-size: 16px; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: background 0.2s;">Export Report</button>
+                <button style="background: var(--primary-color); color: #fff; border: none; padding: 6px 14px; border-radius: 6px; font-size: 12px; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: background 0.2s;">Export Report</button>
             </div>
             
             <div class="stats-grid">
                 <div class="stat-card">
                     <h3>Total Users</h3>
                     <p>1,234</p>
-                    <span style="color: green; font-size: 14px;">+5% this week</span>
+                    <span style="color: green; font-size: 12px;">+5% this week</span>
                 </div>
                 <div class="stat-card">
                     <h3>Total Orders</h3>
                     <p>567</p>
-                    <span style="color: green; font-size: 14px;">+12% this week</span>
+                    <span style="color: green; font-size: 12px;">+12% this week</span>
                 </div>
                 <div class="stat-card">
                     <h3>Revenue</h3>
                     <p>$12,345</p>
-                    <span style="color: green; font-size: 14px;">+8% this week</span>
+                    <span style="color: green; font-size: 12px;">+8% this week</span>
                 </div>
                 <div class="stat-card">
                     <h3>Active Products</h3>
                     <p>89</p>
-                    <span style="color: orange; font-size: 14px;">-2% this week</span>
+                    <span style="color: orange; font-size: 12px;">-2% this week</span>
                 </div>
                 <div class="stat-card">
                     <h3>System Health</h3>
                     <p style="color: green;">Online</p>
-                    <span style="color: #888; font-size: 14px;">All services operational</span>
+                    <span style="color: #888; font-size: 12px;">All services operational</span>
                 </div>
             </div>
 
-            <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 30px; margin-top: 30px;">
+            <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 15px; margin-top: 15px;">
                 <!-- Sales Trends Chart Placeholder -->
-                <div style="background: #fff; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); padding: 25px;">
-                    <h2 style="color: var(--primary-color); margin-bottom: 18px;">Sales Trends</h2>
-                    <div style="height: 220px; display: flex; align-items: center; justify-content: center; color: #bbb; font-size: 18px; border: 2px dashed #eee; border-radius: 10px;">
+                <div style="background: #fff; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); padding: 12px;">
+                    <h2 style="color: var(--primary-color); margin-bottom: 9px; font-size: 15px;">Sales Trends</h2>
+                    <div style="height: 110px; display: flex; align-items: center; justify-content: center; color: #bbb; font-size: 12px; border: 2px dashed #eee; border-radius: 5px;">
                         [Sales Chart Placeholder]
                     </div>
                 </div>
                 <!-- Top Products -->
-                <div style="background: #fff; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); padding: 25px;">
-                    <h2 style="color: var(--primary-color); margin-bottom: 18px;">Top Products</h2>
-                    <ol style="padding-left: 20px; color: #444;">
+                <div style="background: #fff; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); padding: 12px;">
+                    <h2 style="color: var(--primary-color); margin-bottom: 9px; font-size: 15px;">Top Products</h2>
+                    <ol style="padding-left: 10px; color: #444; font-size: 12px;">
                         <li>Wireless Headphones <span style="color: var(--accent-color); font-weight: bold;">$2,300</span></li>
                         <li>Smart Watch <span style="color: var(--accent-color); font-weight: bold;">$1,950</span></li>
                         <li>Bluetooth Speaker <span style="color: var(--accent-color); font-weight: bold;">$1,700</span></li>
@@ -333,57 +341,57 @@
                 </div>
             </div>
 
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 30px;">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 15px;">
                 <!-- Recent Orders -->
-                <div style="background: #fff; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); padding: 25px;">
-                    <h2 style="color: var(--primary-color); margin-bottom: 18px;">Recent Orders</h2>
+                <div style="background: #fff; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); padding: 12px;">
+                    <h2 style="color: var(--primary-color); margin-bottom: 9px; font-size: 15px;">Recent Orders</h2>
                     <table style="width: 100%; border-collapse: collapse;">
                         <thead>
                             <tr style="background: var(--light-color); color: var(--primary-color);">
-                                <th style="padding: 8px; text-align: left;">Order #</th>
-                                <th style="padding: 8px; text-align: left;">Customer</th>
-                                <th style="padding: 8px; text-align: left;">Amount</th>
-                                <th style="padding: 8px; text-align: left;">Status</th>
+                                <th style="padding: 4px; text-align: left; font-size: 12px;">Order #</th>
+                                <th style="padding: 4px; text-align: left; font-size: 12px;">Customer</th>
+                                <th style="padding: 4px; text-align: left; font-size: 12px;">Amount</th>
+                                <th style="padding: 4px; text-align: left; font-size: 12px;">Status</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td style="padding: 8px;">12345</td>
-                                <td style="padding: 8px;">John Doe</td>
-                                <td style="padding: 8px;">$299</td>
-                                <td style="padding: 8px;"><span style="color: green; font-weight: bold;">Completed</span></td>
+                                <td style="padding: 4px; font-size: 12px;">12345</td>
+                                <td style="padding: 4px; font-size: 12px;">John Doe</td>
+                                <td style="padding: 4px; font-size: 12px;">$299</td>
+                                <td style="padding: 4px; font-size: 12px;"><span style="color: green; font-weight: bold;">Completed</span></td>
                             </tr>
                             <tr>
-                                <td style="padding: 8px;">12346</td>
-                                <td style="padding: 8px;">Jane Smith</td>
-                                <td style="padding: 8px;">$159</td>
-                                <td style="padding: 8px;"><span style="color: orange; font-weight: bold;">Pending</span></td>
+                                <td style="padding: 4px; font-size: 12px;">12346</td>
+                                <td style="padding: 4px; font-size: 12px;">Jane Smith</td>
+                                <td style="padding: 4px; font-size: 12px;">$159</td>
+                                <td style="padding: 4px; font-size: 12px;"><span style="color: orange; font-weight: bold;">Pending</span></td>
                             </tr>
                             <tr>
-                                <td style="padding: 8px;">12347</td>
-                                <td style="padding: 8px;">Alice Lee</td>
-                                <td style="padding: 8px;">$499</td>
-                                <td style="padding: 8px;"><span style="color: green; font-weight: bold;">Completed</span></td>
+                                <td style="padding: 4px; font-size: 12px;">12347</td>
+                                <td style="padding: 4px; font-size: 12px;">Alice Lee</td>
+                                <td style="padding: 4px; font-size: 12px;">$499</td>
+                                <td style="padding: 4px; font-size: 12px;"><span style="color: green; font-weight: bold;">Completed</span></td>
                             </tr>
                             <tr>
-                                <td style="padding: 8px;">12348</td>
-                                <td style="padding: 8px;">Bob Brown</td>
-                                <td style="padding: 8px;">$89</td>
-                                <td style="padding: 8px;"><span style="color: red; font-weight: bold;">Cancelled</span></td>
+                                <td style="padding: 4px; font-size: 12px;">12348</td>
+                                <td style="padding: 4px; font-size: 12px;">Bob Brown</td>
+                                <td style="padding: 4px; font-size: 12px;">$89</td>
+                                <td style="padding: 4px; font-size: 12px;"><span style="color: red; font-weight: bold;">Cancelled</span></td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
                 <!-- User Growth Chart Placeholder -->
-                <div style="background: #fff; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); padding: 25px;">
-                    <h2 style="color: var(--primary-color); margin-bottom: 18px;">User Growth</h2>
-                    <div style="height: 180px; display: flex; align-items: center; justify-content: center; color: #bbb; font-size: 18px; border: 2px dashed #eee; border-radius: 10px;">
+                <div style="background: #fff; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); padding: 12px;">
+                    <h2 style="color: var(--primary-color); margin-bottom: 9px; font-size: 15px;">User Growth</h2>
+                    <div style="height: 90px; display: flex; align-items: center; justify-content: center; color: #bbb; font-size: 12px; border: 2px dashed #eee; border-radius: 5px;">
                         [User Growth Chart Placeholder]
                     </div>
                 </div>
             </div>
 
-            <div class="recent-activity" style="margin-top: 30px;">
+            <div class="recent-activity" style="margin-top: 15px;">
                 <h2>Recent Activity</h2>
                 <ul class="activity-list">
                     <li>New user registration - John Doe</li>
@@ -395,85 +403,85 @@
             </div>
 
             <!-- Team/Member Status Table Section -->
-            <div id="team-section" class="team-section modern-section" style="margin: 48px 0 0 0; border-top: 4px solid #F8BB00; box-shadow: none; background: none; border-radius: 0; padding: 36px 32px 0 32px; opacity: 0; transform: translateY(40px); transition: opacity 0.7s cubic-bezier(.4,2,.6,1), transform 0.7s cubic-bezier(.4,2,.6,1);">
-                <h2 style="color: #622C84; font-size: 2rem; font-weight: 700; margin-bottom: 18px;">Team Members</h2>
+            <div id="team-section" class="team-section modern-section" style="margin: 24px 0 0 0; border-top: 4px solid #F8BB00; box-shadow: none; background: none; border-radius: 0; padding: 18px 8px 0 8px; opacity: 0; transform: translateY(40px); transition: opacity 0.7s cubic-bezier(.4,2,.6,1), transform 0.7s cubic-bezier(.4,2,.6,1);">
+                <h2 style="color: #622C84; font-size: 15px; font-weight: 700; margin-bottom: 9px;">Team Members</h2>
                 <div style="overflow-x: auto;">
-                    <table id="team-table" style="width: 100%; border-collapse: separate; border-spacing: 0 12px; background: none;">
+                    <table id="team-table" style="width: 100%; border-collapse: separate; border-spacing: 0 6px; background: none;">
                         <thead>
                             <tr style="background: none;">
-                                <th style="text-align: left; color: #622C84; font-size: 1.1rem; padding: 10px 8px;">Profile</th>
-                                <th style="text-align: left; color: #622C84; font-size: 1.1rem; padding: 10px 8px;">Name</th>
-                                <th style="text-align: left; color: #622C84; font-size: 1.1rem; padding: 10px 8px;">Role</th>
-                                <th style="text-align: left; color: #622C84; font-size: 1.1rem; padding: 10px 8px;">Status</th>
-                                <th style="text-align: left; color: #622C84; font-size: 1.1rem; padding: 10px 8px;">Last Active</th>
-                                <th style="text-align: left; color: #622C84; font-size: 1.1rem; padding: 10px 8px;">Current Task</th>
-                                <th style="text-align: left; color: #622C84; font-size: 1.1rem; padding: 10px 8px;">Contact</th>
+                                <th style="text-align: left; color: #622C84; font-size: 12px; padding: 6px 4px;">Profile</th>
+                                <th style="text-align: left; color: #622C84; font-size: 12px; padding: 6px 4px;">Name</th>
+                                <th style="text-align: left; color: #622C84; font-size: 12px; padding: 6px 4px;">Role</th>
+                                <th style="text-align: left; color: #622C84; font-size: 12px; padding: 6px 4px;">Status</th>
+                                <th style="text-align: left; color: #622C84; font-size: 12px; padding: 6px 4px;">Last Active</th>
+                                <th style="text-align: left; color: #622C84; font-size: 12px; padding: 6px 4px;">Current Task</th>
+                                <th style="text-align: left; color: #622C84; font-size: 12px; padding: 6px 4px;">Contact</th>
                             </tr>
                         </thead>
                         <tbody id="team-tbody">
                             <!-- Team members will be rendered here by JS -->
                         </tbody>
                     </table>
-                    <div style="text-align: center; margin-top: 18px;">
-                        <button id="see-more-btn" class="modern-btn" style="padding: 10px 32px; font-size: 1rem;">See More</button>
+                    <div style="text-align: center; margin-top: 9px;">
+                        <button id="see-more-btn" class="modern-btn" style="padding: 6px 18px; font-size: 12px; border-radius: 6px;">See More</button>
                     </div>
                 </div>
             </div>
 
             <!-- Quick Actions Section -->
-            <div class="modern-section" style="margin: 36px 0 0 0; display: flex; gap: 32px; flex-wrap: wrap;">
-                <div style="flex: 1 1 220px; min-width: 220px; max-width: 260px; background: #fff; border-radius: 14px; box-shadow: 0 2px 12px rgba(98,44,132,0.07); padding: 28px 18px; text-align: center; transition: transform 0.2s;">
-                    <div style="font-size: 2.2rem; color: #F8BB00; margin-bottom: 10px;">💰</div>
-                    <div style="font-weight: 600; color: #622C84; margin-bottom: 8px;">Generate Quotation</div>
-                    <button class="modern-btn" style="background: var(--accent-color); color: #622C84; font-weight: 600; border: none; border-radius: 8px; padding: 10px 22px; font-size: 1rem; margin-top: 8px; cursor: pointer;">Create Quotation</button>
+            <div class="modern-section" style="margin: 18px 0 0 0; display: flex; gap: 16px; flex-wrap: wrap;">
+                <div style="flex: 1 1 220px; min-width: 220px; max-width: 260px; background: #fff; border-radius: 8px; box-shadow: 0 2px 12px rgba(98,44,132,0.07); padding: 14px 9px; text-align: center; transition: transform 0.2s;">
+                    <div style="font-size: 1.5rem; color: #F8BB00; margin-bottom: 5px;">💰</div>
+                    <div style="font-weight: 600; color: #622C84; margin-bottom: 4px; font-size: 12px;">Generate Quotation</div>
+                    <button class="modern-btn" style="background: var(--accent-color); color: #622C84; font-weight: 600; border: none; border-radius: 6px; padding: 6px 14px; font-size: 12px; margin-top: 4px; cursor: pointer;">Create Quotation</button>
                 </div>
-                <div style="flex: 1 1 220px; min-width: 220px; max-width: 260px; background: #fff; border-radius: 14px; box-shadow: 0 2px 12px rgba(98,44,132,0.07); padding: 28px 18px; text-align: center; transition: transform 0.2s;">
-                    <div style="font-size: 2.2rem; color: #F8BB00; margin-bottom: 10px;">💳</div>
-                    <div style="font-weight: 600; color: #622C84; margin-bottom: 8px;">Generate Invoice</div>
-                    <button class="modern-btn" style="background: var(--accent-color); color: #622C84; font-weight: 600; border: none; border-radius: 8px; padding: 10px 22px; font-size: 1rem; margin-top: 8px; cursor: pointer;">Create Invoice</button>
+                <div style="flex: 1 1 220px; min-width: 220px; max-width: 260px; background: #fff; border-radius: 8px; box-shadow: 0 2px 12px rgba(98,44,132,0.07); padding: 14px 9px; text-align: center; transition: transform 0.2s;">
+                    <div style="font-size: 1.5rem; color: #F8BB00; margin-bottom: 5px;">💳</div>
+                    <div style="font-weight: 600; color: #622C84; margin-bottom: 4px; font-size: 12px;">Generate Invoice</div>
+                    <button class="modern-btn" style="background: var(--accent-color); color: #622C84; font-weight: 600; border: none; border-radius: 6px; padding: 6px 14px; font-size: 12px; margin-top: 4px; cursor: pointer;">Create Invoice</button>
                 </div>
-                <div style="flex: 1 1 220px; min-width: 220px; max-width: 260px; background: #fff; border-radius: 14px; box-shadow: 0 2px 12px rgba(98,44,132,0.07); padding: 28px 18px; text-align: center; transition: transform 0.2s;">
-                    <div style="font-size: 2.2rem; color: #F8BB00; margin-bottom: 10px;">✍️</div>
-                    <div style="font-weight: 600; color: #622C84; margin-bottom: 8px;">Log Task</div>
-                    <button class="modern-btn" style="background: var(--accent-color); color: #622C84; font-weight: 600; border: none; border-radius: 8px; padding: 10px 22px; font-size: 1rem; margin-top: 8px; cursor: pointer;" onclick="document.getElementById('logTaskModal').style.display='block'">Log Task</button>
+                <div style="flex: 1 1 220px; min-width: 220px; max-width: 260px; background: #fff; border-radius: 8px; box-shadow: 0 2px 12px rgba(98,44,132,0.07); padding: 14px 9px; text-align: center; transition: transform 0.2s;">
+                    <div style="font-size: 1.5rem; color: #F8BB00; margin-bottom: 5px;">✍️</div>
+                    <div style="font-weight: 600; color: #622C84; margin-bottom: 4px; font-size: 12px;">Log Task</div>
+                    <button class="modern-btn" style="background: var(--accent-color); color: #622C84; font-weight: 600; border: none; border-radius: 6px; padding: 6px 14px; font-size: 12px; margin-top: 4px; cursor: pointer;" onclick="document.getElementById('logTaskModal').style.display='block'">Log Task</button>
                 </div>
-                <div style="flex: 1 1 220px; min-width: 220px; max-width: 260px; background: #fff; border-radius: 14px; box-shadow: 0 2px 12px rgba(98,44,132,0.07); padding: 28px 18px; text-align: center; transition: transform 0.2s;">
-                    <div style="font-size: 2.2rem; color: #F8BB00; margin-bottom: 10px;">👥</div>
-                    <div style="font-weight: 600; color: #622C84; margin-bottom: 8px;">Team Tasks</div>
-                    <button class="modern-btn" style="background: var(--accent-color); color: #622C84; font-weight: 600; border: none; border-radius: 8px; padding: 10px 22px; font-size: 1rem; margin-top: 8px; cursor: pointer;" onclick="document.getElementById('teamTasksModal').style.display='block'">View Tasks</button>
+                <div style="flex: 1 1 220px; min-width: 220px; max-width: 260px; background: #fff; border-radius: 8px; box-shadow: 0 2px 12px rgba(98,44,132,0.07); padding: 14px 9px; text-align: center; transition: transform 0.2s;">
+                    <div style="font-size: 1.5rem; color: #F8BB00; margin-bottom: 5px;">👥</div>
+                    <div style="font-weight: 600; color: #622C84; margin-bottom: 4px; font-size: 12px;">Team Tasks</div>
+                    <button class="modern-btn" style="background: var(--accent-color); color: #622C84; font-weight: 600; border: none; border-radius: 6px; padding: 6px 14px; font-size: 12px; margin-top: 4px; cursor: pointer;" onclick="document.getElementById('teamTasksModal').style.display='block'">View Tasks</button>
                 </div>
             </div>
 
             <!-- Log Task Modal (simple UI) -->
             <div id="logTaskModal" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.4); z-index:1000; align-items:center; justify-content:center;">
-                <div style="background:#fff; border-radius:12px; padding:32px 24px; max-width:400px; margin:60px auto; box-shadow:0 4px 24px rgba(98,44,132,0.13);">
-                    <h3 style="color:#622C84; margin-bottom:18px;">Log a New Task</h3>
-                    <input type="text" placeholder="Task Title" style="width:100%; padding:10px; border-radius:6px; border:1px solid #eee; margin-bottom:12px;">
-                    <textarea placeholder="Task Details" style="width:100%; padding:10px; border-radius:6px; border:1px solid #eee; margin-bottom:12px;"></textarea>
-                    <button class="modern-btn" style="background: var(--primary-color); color: #fff; font-weight: 600; border: none; border-radius: 8px; padding: 10px 22px; font-size: 1rem; margin-right: 8px; cursor: pointer;">Save Task</button>
-                    <button onclick="document.getElementById('logTaskModal').style.display='none'" style="background: #eee; color: #622C84; border: none; border-radius: 8px; padding: 10px 22px; font-size: 1rem; cursor: pointer;">Cancel</button>
+                <div style="background:#fff; border-radius:8px; padding:16px 12px; max-width:200px; margin:30px auto; box-shadow:0 4px 24px rgba(98,44,132,0.13);">
+                    <h3 style="color:#622C84; margin-bottom:9px; font-size: 15px;">Log a New Task</h3>
+                    <input type="text" placeholder="Task Title" style="width:100%; padding:6px; border-radius:6px; border:1px solid #eee; margin-bottom:6px; font-size: 12px;">
+                    <textarea placeholder="Task Details" style="width:100%; padding:6px; border-radius:6px; border:1px solid #eee; margin-bottom:6px; font-size: 12px;"></textarea>
+                    <button class="modern-btn" style="background: var(--primary-color); color: #fff; font-weight: 600; border: none; border-radius: 6px; padding: 6px 14px; font-size: 12px; margin-right: 4px; cursor: pointer;">Save Task</button>
+                    <button onclick="document.getElementById('logTaskModal').style.display='none'" style="background: #eee; color: #622C84; border: none; border-radius: 6px; padding: 6px 14px; font-size: 12px; cursor: pointer;">Cancel</button>
                 </div>
             </div>
 
             <!-- Team Tasks Modal (simple UI) -->
             <div id="teamTasksModal" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.4); z-index:1000; align-items:center; justify-content:center;">
-                <div style="background:#fff; border-radius:12px; padding:32px 24px; max-width:500px; margin:60px auto; box-shadow:0 4px 24px rgba(98,44,132,0.13);">
-                    <h3 style="color:#622C84; margin-bottom:18px;">Team Tasks</h3>
+                <div style="background:#fff; border-radius:8px; padding:16px 12px; max-width:250px; margin:30px auto; box-shadow:0 4px 24px rgba(98,44,132,0.13);">
+                    <h3 style="color:#622C84; margin-bottom:9px; font-size: 15px;">Team Tasks</h3>
                     <ul style="list-style:none; padding:0; margin:0;">
-                        <li style="margin-bottom:12px; border-bottom:1px solid #eee; padding-bottom:8px;"><b>Jane Smith:</b> Update product catalog <span style="color:green; font-size:0.95em;">[In Progress]</span></li>
-                        <li style="margin-bottom:12px; border-bottom:1px solid #eee; padding-bottom:8px;"><b>John Doe:</b> Review new orders <span style="color:orange; font-size:0.95em;">[Pending]</span></li>
-                        <li style="margin-bottom:12px; border-bottom:1px solid #eee; padding-bottom:8px;"><b>Alex Kim:</b> System backup <span style="color:green; font-size:0.95em;">[Completed]</span></li>
+                        <li style="margin-bottom:6px; border-bottom:1px solid #eee; padding-bottom:4px;"><b>Jane Smith:</b> Update product catalog <span style="color:green; font-size:0.95em;">[In Progress]</span></li>
+                        <li style="margin-bottom:6px; border-bottom:1px solid #eee; padding-bottom:4px;"><b>John Doe:</b> Review new orders <span style="color:orange; font-size:0.95em;">[Pending]</span></li>
+                        <li style="margin-bottom:6px; border-bottom:1px solid #eee; padding-bottom:4px;"><b>Alex Kim:</b> System backup <span style="color:green; font-size:0.95em;">[Completed]</span></li>
                     </ul>
-                    <button onclick="document.getElementById('teamTasksModal').style.display='none'" style="background: #eee; color: #622C84; border: none; border-radius: 8px; padding: 10px 22px; font-size: 1rem; cursor: pointer; margin-top: 12px;">Close</button>
+                    <button onclick="document.getElementById('teamTasksModal').style.display='none'" style="background: #eee; color: #622C84; border: none; border-radius: 6px; padding: 6px 14px; font-size: 12px; cursor: pointer; margin-top: 6px;">Close</button>
                 </div>
             </div>
         </div>
     </div>
     <!-- Footer -->
-    <footer style="background: var(--primary-color); color: #fff; text-align: center; padding: 22px 0 18px 0; font-size: 1rem; margin-top: 40px; box-shadow: 0 -2px 8px rgba(0,0,0,0.06);">
-        <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px;">
+    <footer style="background: var(--primary-color); color: #fff; text-align: center; padding: 11px 0 9px 0; font-size: 12px; margin-top: 20px; box-shadow: 0 -2px 8px rgba(0,0,0,0.06);">
+        <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 6px;">
             <span>&copy; 2024 E-Commerce Admin. All rights reserved.</span>
-            <div style="display: flex; gap: 18px;">
+            <div style="display: flex; gap: 9px;">
                 <a href="#dashboard" style="color: var(--accent-color); text-decoration: none;">Dashboard</a>
                 <a href="#users" style="color: var(--accent-color); text-decoration: none;">Users</a>
                 <a href="#products" style="color: var(--accent-color); text-decoration: none;">Products</a>
@@ -529,18 +537,18 @@
         const m = teamMembers[i];
         const tr = document.createElement('tr');
         tr.style.background = '#fff';
-        tr.style.borderRadius = '12px';
+        tr.style.borderRadius = '8px';
         tr.style.boxShadow = '0 2px 12px rgba(98,44,132,0.07)';
         tr.innerHTML = `
-          <td style="padding: 12px 8px;"><img src="${m.avatar}" alt="${m.name}" style="width: 48px; height: 48px; border-radius: 50%;"></td>
-          <td style="font-weight: 600; color: #622C84;">${m.name}</td>
-          <td style="color: #888;">${m.role}</td>
-          <td style="display: flex; align-items: center; gap: 6px; color: ${m.statusColor};">
+          <td style="padding: 6px 4px;"><img src="${m.avatar}" alt="${m.name}" style="width: 28px; height: 28px; border-radius: 50%;"></td>
+          <td style="font-weight: 600; color: #622C84; font-size: 12px;">${m.name}</td>
+          <td style="color: #888; font-size: 12px;">${m.role}</td>
+          <td style="display: flex; align-items: center; gap: 6px; color: ${m.statusColor}; font-size: 12px;">
             <span style="display: inline-block; width: 10px; height: 10px; background: ${m.statusColor}; border-radius: 50%;"></span>${m.status}
           </td>
-          <td>${m.lastActive}</td>
-          <td>${m.task}</td>
-          <td><a href="mailto:${m.email}" style="color: #622C84; text-decoration: underline;">Email</a></td>
+          <td style="font-size: 12px;">${m.lastActive}</td>
+          <td style="font-size: 12px;">${m.task}</td>
+          <td><a href="mailto:${m.email}" style="color: #622C84; text-decoration: underline; font-size: 12px;">Email</a></td>
         `;
         tbody.appendChild(tr);
       }
@@ -571,4 +579,5 @@
     </script>
 </body>
 </html>
+
 
