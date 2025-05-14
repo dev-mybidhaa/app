@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Reports Dashboard</title>
     <link href="https://fonts.googleapis.com/css?family=Arial:400,600,700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <style>
         :root {
             --primary-color: #622C84;
@@ -19,22 +21,23 @@
             font-family: 'Arial', sans-serif;
             background-color: var(--light-color);
             color: #333;
+            font-size: 13px !important;
         }
         .dashboard-container {
             display: grid;
-            grid-template-columns: 250px 1fr;
+            grid-template-columns: 180px 1fr !important;
             min-height: 100vh;
         }
         .sidebar {
             background-color: var(--primary-color);
-            padding: 20px;
+            padding: 10px !important;
             box-shadow: 2px 0 10px rgba(0,0,0,0.1);
         }
         .sidebar h2 {
-            margin-bottom: 30px;
+            margin-bottom: 18px !important;
             text-align: center;
             color: var(--accent-color);
-            font-size: 24px;
+            font-size: 16px !important;
         }
         .nav-links {
             list-style: none;
@@ -47,9 +50,10 @@
             color: var(--light-color);
             text-decoration: none;
             display: block;
-            padding: 12px 15px;
-            border-radius: 8px;
+            padding: 7px 10px !important;
+            border-radius: 6px !important;
             transition: all 0.3s ease;
+            font-size: 13px !important;
         }
         .nav-links a:hover, .nav-links a.active {
             background-color: var(--hover-color);
@@ -86,53 +90,56 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 0 40px;
-            height: 70px;
+            padding: 0 18px;
+            height: 44px;
         }
         .main-content {
-            padding: 30px;
+            padding: 14px;
             background-color: var(--light-color);
         }
         .dashboard-header {
-            margin-bottom: 30px;
+            margin-bottom: 14px;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
         .dashboard-header h1 {
             color: var(--primary-color);
-            font-size: 32px;
+            font-size: 18px;
         }
         .reports-section {
             background: #fff;
-            border-radius: 16px;
-            box-shadow: 0 2px 16px rgba(98,44,132,0.07);
-            padding: 32px;
-            margin-bottom: 32px;
+            border-radius: 8px;
+            box-shadow: 0 2px 12px rgba(98,44,132,0.07);
+            padding: 14px 9px;
+            margin-bottom: 18px;
         }
         .reports-section h2 {
             color: var(--primary-color);
-            margin-bottom: 18px;
+            margin-bottom: 9px;
+            font-size: 15px;
         }
         .reports-section label {
             font-weight: 600;
             margin-right: 8px;
+            font-size: 13px;
         }
         .reports-section input[type="date"] {
             padding: 6px 10px;
             border-radius: 6px;
             border: 1px solid #eee;
             margin: 0 4px;
+            font-size: 12px;
         }
         .modern-btn {
             background: var(--accent-color);
             color: #622C84;
             font-weight: 600;
             border: none;
-            border-radius: 8px;
-            padding: 10px 22px;
-            font-size: 1rem;
-            margin-top: 8px;
+            border-radius: 6px;
+            padding: 6px 14px;
+            font-size: 12px;
+            margin-top: 4px;
             cursor: pointer;
             transition: background 0.2s, color 0.2s, transform 0.2s;
         }
@@ -144,12 +151,13 @@
         table {
             width: 100%;
             border-collapse: collapse;
-            margin-top: 18px;
+            margin-top: 12px;
         }
         th, td {
             border: 1px solid #eee;
-            padding: 10px 8px;
+            padding: 6px 4px;
             text-align: left;
+            font-size: 12px;
         }
         th {
             background: var(--light-color);
@@ -159,15 +167,15 @@
             background: var(--primary-color);
             color: #fff;
             text-align: center;
-            padding: 22px 0 18px 0;
-            font-size: 1rem;
-            margin-top: 40px;
+            padding: 11px 0 9px 0;
+            font-size: 12px;
+            margin-top: 20px;
             box-shadow: 0 -2px 8px rgba(0,0,0,0.06);
         }
         .footer a {
             color: var(--accent-color);
             text-decoration: none;
-            margin: 0 10px;
+            margin: 0 6px;
         }
         @media (max-width: 900px) {
             .dashboard-container {
@@ -180,14 +188,50 @@
         }
         .nav-icon {
             display: inline-block;
-            margin-right: 10px;
-            width: 26px;
-            height: 26px;
+            margin-right: 6px;
+            width: 18px;
+            height: 18px;
             vertical-align: middle;
             object-fit: contain;
-            border-radius: 6px;
+            border-radius: 4px;
+            background: none;
+            box-shadow: none;
+        }
+        .report-card {
             background: #fff;
-            box-shadow: 0 2px 8px rgba(98,44,132,0.07);
+            border-radius: 8px;
+            box-shadow: 0 2px 12px rgba(98,44,132,0.07);
+            padding: 14px 9px;
+            margin-bottom: 18px;
+            animation: fadeIn 1.2s;
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.7s cubic-bezier(.4,2,.6,1), transform 0.7s cubic-bezier(.4,2,.6,1);
+        }
+        .report-card.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .animated-counter {
+            font-size: 22px;
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-bottom: 2px;
+            transition: color 0.3s;
+        }
+        .progress-bar {
+            height: 8px;
+            border-radius: 4px;
+            background: #eee;
+            overflow: hidden;
+            margin-top: 4px;
+        }
+        .progress-bar-inner {
+            height: 100%;
+            border-radius: 4px;
+            background: var(--accent-color);
+            width: 0;
+            transition: width 1.2s cubic-bezier(.4,2,.6,1);
         }
     </style>
 </head>
@@ -196,7 +240,7 @@
     <header>
         <div style="display: flex; align-items: center; gap: 16px;">
             <img src="https://img.icons8.com/color/48/000000/admin-settings-male.png" alt="Logo" style="height: 40px; width: 40px; border-radius: 8px; background: #fff; padding: 4px;">
-            <span style="font-size: 1.7rem; font-weight: bold; letter-spacing: 1px; color: var(--accent-color);">E-Commerce Admin</span>
+            <span style="font-size: 1.7rem; font-weight: bold; letter-spacing: 1px; color: var(--accent-color);">MyBidhaa Admin</span>
         </div>
         <div style="display: flex; align-items: center; gap: 24px;">
             <span style="font-size: 1.1rem;">Welcome, Admin</span>
@@ -230,44 +274,153 @@
             <div class="dashboard-header">
                 <h1>Reports Dashboard</h1>
             </div>
-            <div class="reports-section">
-                <h2>Sales Reports</h2>
-                <p>View and export detailed sales, orders, and user activity reports. Filter by date, product, or user.</p>
-                <div style="margin: 24px 0;">
-                    <label for="report-date">Select Date Range:</label>
-                    <input type="date" id="report-date-start"> to <input type="date" id="report-date-end">
-                    <button class="modern-btn" style="margin-left: 12px;">Generate</button>
+            <!-- Filter Bar -->
+            <div id="filter-bar" style="display: flex; flex-wrap: wrap; gap: 10px; align-items: center; background: #fff; border-radius: 8px; box-shadow: 0 2px 12px rgba(98,44,132,0.07); padding: 8px 12px 8px 12px; margin-bottom: 16px;">
+                <label for="filter-month" style="font-size: 14px; color: #622C84; font-weight: 600;">Month:</label>
+                <select id="filter-month" style="font-size: 14px; border-radius: 6px; border: 1px solid #eee; padding: 6px 10px;">
+                    <option>January</option><option>February</option><option>March</option><option>April</option><option>May</option><option>June</option><option>July</option><option>August</option><option>September</option><option>October</option><option>November</option><option>December</option>
+                </select>
+                <label for="filter-year" style="font-size: 14px; color: #622C84; font-weight: 600;">Year:</label>
+                <select id="filter-year" style="font-size: 14px; border-radius: 6px; border: 1px solid #eee; padding: 6px 10px;">
+                    <option>2024</option><option>2023</option><option>2022</option>
+                </select>
+                <label for="filter-employee" style="font-size: 14px; color: #622C84; font-weight: 600;">Employee:</label>
+                <select id="filter-employee" style="font-size: 14px; border-radius: 6px; border: 1px solid #eee; padding: 6px 10px;">
+                    <option>All</option><option>John Doe</option><option>Jane Smith</option><option>Alex Kim</option>
+                </select>
+                <label for="filter-category" style="font-size: 14px; color: #622C84; font-weight: 600;">Product Category:</label>
+                <select id="filter-category" style="font-size: 14px; border-radius: 6px; border: 1px solid #eee; padding: 6px 10px;">
+                    <option>All</option><option>Electronics</option><option>Wearables</option><option>Accessories</option><option>Home</option><option>Other</option>
+                </select>
+                <label for="filter-status" style="font-size: 14px; color: #622C84; font-weight: 600;">Order Status:</label>
+                <select id="filter-status" style="font-size: 14px; border-radius: 6px; border: 1px solid #eee; padding: 6px 10px;">
+                    <option>All</option><option>Completed</option><option>Pending</option><option>Cancelled</option>
+                </select>
+                <label for="filter-department" style="font-size: 14px; color: #622C84; font-weight: 600;">Department:</label>
+                <select id="filter-department" style="font-size: 14px; border-radius: 6px; border: 1px solid #eee; padding: 6px 10px;">
+                    <option>All</option><option>Sales</option><option>Support</option><option>Tech</option><option>Marketing</option><option>HR</option>
+                </select>
+                <label for="filter-customer-type" style="font-size: 14px; color: #622C84; font-weight: 600;">Customer Type:</label>
+                <select id="filter-customer-type" style="font-size: 14px; border-radius: 6px; border: 1px solid #eee; padding: 6px 10px;">
+                    <option>All</option><option>New</option><option>Returning</option><option>VIP</option>
+                </select>
+    
+                <label for="filter-revenue-min" style="font-size: 14px; color: #622C84; font-weight: 600;">Revenue Range:</label>
+                <input id="filter-revenue-min" type="number" placeholder="Min" style="width: 70px; font-size: 14px; border-radius: 6px; border: 1px solid #eee; padding: 6px 8px;">
+                <span style="font-size: 14px; color: #888;">-</span>
+                <input id="filter-revenue-max" type="number" placeholder="Max" style="width: 70px; font-size: 14px; border-radius: 6px; border: 1px solid #eee; padding: 6px 8px;">
+                <label for="filter-region" style="font-size: 14px; color: #622C84; font-weight: 600;">Region:</label>
+                <select id="filter-region" style="font-size: 14px; border-radius: 6px; border: 1px solid #eee; padding: 6px 10px;">
+                    <option>All</option><option>Nairobi</option><option>Mombasa</option><option>Kisumu</option><option>Eldoret</option><option>Other</option>
+                </select>
+                <button id="filter-btn" class="modern-btn" style="margin-left: 8px; font-size: 14px; padding: 8px 18px;">Filter</button>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 15px; margin-bottom: 18px;">
+                <!-- Sales Overview Chart -->
+                <div class="report-card" id="sales-card">
+                    <h2 style="font-size: 15px; color: var(--primary-color);">Sales Overview</h2>
+                    <canvas id="salesChart" height="90"></canvas>
                 </div>
-                <table>
+                <!-- Revenue Breakdown -->
+                <div class="report-card" id="revenue-card">
+                    <h2 style="font-size: 15px; color: var(--primary-color);">Revenue Breakdown</h2>
+                    <canvas id="revenueChart" height="90"></canvas>
+                </div>
+                <!-- User Activity -->
+                <div class="report-card" id="user-card">
+                    <h2 style="font-size: 15px; color: var(--primary-color);">User Activity</h2>
+                    <canvas id="userChart" height="90"></canvas>
+                </div>
+                <!-- Order Status Counters -->
+                <div class="report-card" id="order-status-card">
+                    <h2 style="font-size: 15px; color: var(--primary-color);">Order Status</h2>
+                    <div style="display: flex; gap: 18px;">
+                        <div style="text-align: center;">
+                            <div class="animated-counter" id="completedCounter">0</div>
+                            <div style="font-size: 12px; color: green;">Completed</div>
+                        </div>
+                        <div style="text-align: center;">
+                            <div class="animated-counter" id="pendingCounter">0</div>
+                            <div style="font-size: 12px; color: orange;">Pending</div>
+                        </div>
+                        <div style="text-align: center;">
+                            <div class="animated-counter" id="cancelledCounter">0</div>
+                            <div style="font-size: 12px; color: red;">Cancelled</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Employee Performance Report -->
+                <div class="report-card" id="employee-performance-card">
+                    <h2 style="font-size: 15px; color: var(--primary-color);">Employee Performance</h2>
+                    <canvas id="employeeChart" height="90"></canvas>
+                    <table style="width: 100%; border-collapse: separate; border-spacing: 0 6px; background: none; margin-top: 8px;">
+                        <thead>
+                            <tr style="background: none;">
+                                <th style="font-size: 12px;">Avatar</th>
+                                <th style="font-size: 12px;">Name</th>
+                                <th style="font-size: 12px;">Tasks Completed</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><img src="https://randomuser.me/api/portraits/men/45.jpg" style="width: 22px; height: 22px; border-radius: 50%;"></td>
+                                <td style="font-size: 12px;">John Doe</td>
+                                <td style="font-size: 12px;">34</td>
+                            </tr>
+                            <tr>
+                                <td><img src="https://randomuser.me/api/portraits/women/65.jpg" style="width: 22px; height: 22px; border-radius: 50%;"></td>
+                                <td style="font-size: 12px;">Jane Smith</td>
+                                <td style="font-size: 12px;">29</td>
+                            </tr>
+                            <tr>
+                                <td><img src="https://randomuser.me/api/portraits/men/75.jpg" style="width: 22px; height: 22px; border-radius: 50%;"></td>
+                                <td style="font-size: 12px;">Alex Kim</td>
+                                <td style="font-size: 12px;">27</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- Top Products Table with Progress Bars -->
+            <div class="report-card" id="top-products-card">
+                <h2 style="font-size: 15px; color: var(--primary-color);">Top Products</h2>
+                <table style="width: 100%; border-collapse: separate; border-spacing: 0 6px; background: none;">
                     <thead>
-                        <tr>
-                            <th>Report</th>
-                            <th>Date</th>
-                            <th>Status</th>
-                            <th>Download</th>
+                        <tr style="background: none;">
+                            <th style="font-size: 12px;">Product</th>
+                            <th style="font-size: 12px;">Sales</th>
+                            <th style="font-size: 12px;">Progress</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Monthly Sales</td>
-                            <td>2024-06</td>
-                            <td><span style="color: green; font-weight: bold;">Ready</span></td>
-                            <td><button class="modern-btn">Download PDF</button></td>
+                            <td style="font-size: 12px; display: flex; align-items: center; gap: 7px;"><img src="https://cdn-icons-png.flaticon.com/512/1170/1170576.png" style="width: 22px; height: 22px; border-radius: 4px;">Wireless Headphones</td>
+                            <td style="font-size: 12px;">Ksh 2,300</td>
+                            <td style="width: 120px;"><div class="progress-bar"><div class="progress-bar-inner" data-width="90"></div></div></td>
                         </tr>
                         <tr>
-                            <td>User Registrations</td>
-                            <td>2024-06</td>
-                            <td><span style="color: green; font-weight: bold;">Ready</span></td>
-                            <td><button class="modern-btn">Download PDF</button></td>
+                            <td style="font-size: 12px; display: flex; align-items: center; gap: 7px;"><img src="https://cdn-icons-png.flaticon.com/512/1041/1041916.png" style="width: 22px; height: 22px; border-radius: 4px;">Smart Watch</td>
+                            <td style="font-size: 12px;">Ksh 1,950</td>
+                            <td style="width: 120px;"><div class="progress-bar"><div class="progress-bar-inner" data-width="75"></div></div></td>
+                        </tr>
+                        <tr>
+                            <td style="font-size: 12px; display: flex; align-items: center; gap: 7px;"><img src="https://cdn-icons-png.flaticon.com/512/3133/3133142.png" style="width: 22px; height: 22px; border-radius: 4px;">Bluetooth Speaker</td>
+                            <td style="font-size: 12px;">Ksh 1,700</td>
+                            <td style="width: 120px;"><div class="progress-bar"><div class="progress-bar-inner" data-width="60"></div></div></td>
                         </tr>
                     </tbody>
                 </table>
+            </div>
+            <!-- Fun Lottie Animation -->
+            <div class="report-card" style="text-align: center; background: #f8f8ff;">
+                <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_ktwnwv5m.json" background="transparent" speed="1" style="width: 120px; height: 120px; margin: 0 auto;" loop autoplay></lottie-player>
+                <div style="font-size: 13px; color: #622C84; margin-top: 6px;">Enjoy your interactive reports!</div>
             </div>
         </div>
     </div>
     <footer class="footer">
         <div>
-            &copy; 2024 E-Commerce Admin. All rights reserved.
+            &copy; 2024 MyBidhaa Admin. All rights reserved.
             <span style="margin-left: 18px;">
                 <a href="../adminDashboard.html">Dashboard</a>
                 <a href="#users">Users</a>
@@ -277,5 +430,172 @@
             </span>
         </div>
     </footer>
+    <script>
+    // Animate cards on scroll
+    const cards = document.querySelectorAll('.report-card');
+    const observer = new window.IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.15 }
+    );
+    cards.forEach(card => observer.observe(card));
+
+    // Chart.js charts
+    const salesChart = new Chart(document.getElementById('salesChart').getContext('2d'), {
+      type: 'line',
+      data: {
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+        datasets: [{
+          label: 'Sales (Ksh)',
+          data: [1200, 1900, 3000, 2500, 3200, 4100],
+          borderColor: '#36A2EB',
+          backgroundColor: 'rgba(54,162,235,0.13)',
+          tension: 0.4,
+          fill: true,
+          pointRadius: 4,
+          pointBackgroundColor: '#F8BB00',
+        }]
+      },
+      options: {
+        plugins: { legend: { display: false } },
+        animation: { duration: 1200 },
+        scales: { x: { grid: { display: false } }, y: { beginAtZero: true, grid: { color: '#eee' } } }
+      }
+    });
+    const revenueChart = new Chart(document.getElementById('revenueChart').getContext('2d'), {
+      type: 'doughnut',
+      data: {
+        labels: ['Electronics', 'Wearables', 'Accessories', 'Home', 'Other'],
+        datasets: [{
+          data: [4200, 2100, 1300, 900, 700],
+          backgroundColor: [
+            '#F8BB00',
+            '#36A2EB',
+            '#4BC0C0',
+            '#FF6384',
+            '#7d3da8'
+          ],
+          borderWidth: 1
+        }]
+      },
+      options: {
+        plugins: { legend: { position: 'bottom' } },
+        animation: { animateScale: true, duration: 1200 }
+      }
+    });
+    const userChart = new Chart(document.getElementById('userChart').getContext('2d'), {
+      type: 'line',
+      data: {
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+        datasets: [{
+          label: 'New Users',
+          data: [200, 350, 400, 320, 500, 600],
+          borderColor: '#4BC0C0',
+          backgroundColor: 'rgba(75,192,192,0.13)',
+          tension: 0.4,
+          fill: true,
+          pointRadius: 4,
+          pointBackgroundColor: '#FF6384',
+        }]
+      },
+      options: {
+        plugins: { legend: { display: false } },
+        animation: { duration: 1200 },
+        scales: { x: { grid: { display: false } }, y: { beginAtZero: true, grid: { color: '#eee' } } }
+      }
+    });
+    // Animated counters
+    function animateCounter(id, end, duration, color) {
+      const el = document.getElementById(id);
+      let start = 0;
+      const step = Math.ceil(end / (duration / 16));
+      function update() {
+        start += step;
+        if (start >= end) {
+          el.textContent = end;
+          if (color) el.style.color = color;
+        } else {
+          el.textContent = start;
+          requestAnimationFrame(update);
+        }
+      }
+      update();
+    }
+    animateCounter('completedCounter', 124, 900, 'green');
+    animateCounter('pendingCounter', 32, 900, 'orange');
+    animateCounter('cancelledCounter', 7, 900, 'red');
+    // Animate progress bars
+    window.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.progress-bar-inner').forEach(bar => {
+        setTimeout(() => {
+          bar.style.width = bar.getAttribute('data-width') + '%';
+        }, 400);
+      });
+    });
+    // Employee Performance Chart
+    const employeeChart = new Chart(document.getElementById('employeeChart').getContext('2d'), {
+      type: 'bar',
+      data: {
+        labels: ['John Doe', 'Jane Smith', 'Alex Kim'],
+        datasets: [
+          {
+            label: 'Tasks Completed',
+            data: [34, 29, 27],
+            backgroundColor: ['#36A2EB', '#F8BB00', '#4BC0C0'],
+            borderRadius: 6,
+            maxBarThickness: 18
+          },
+          {
+            label: 'Tickets Resolved',
+            data: [18, 22, 15],
+            backgroundColor: ['#FF6384', '#7d3da8', '#43a047'],
+            borderRadius: 6,
+            maxBarThickness: 18
+          },
+          {
+            label: 'Sales Closed',
+            data: [7, 5, 9],
+            backgroundColor: ['#ff9800', '#36A2EB', '#c62828'],
+            borderRadius: 6,
+            maxBarThickness: 18
+          }
+        ]
+      },
+      options: {
+        plugins: { legend: { position: 'bottom' } },
+        animation: { duration: 1200 },
+        scales: {
+          x: { grid: { display: false } },
+          y: { beginAtZero: true, grid: { color: '#eee' } }
+        }
+      }
+    });
+    // Filter feature: update charts and employee table with random demo data
+    function getRandomInt(min, max) { return Math.floor(Math.random() * (max - min + 1)) + min; }
+    document.getElementById('filter-btn').onclick = function() {
+      // Simulate new data for charts
+      salesChart.data.datasets[0].data = Array.from({length: 6}, () => getRandomInt(1000, 5000));
+      salesChart.update();
+      revenueChart.data.datasets[0].data = Array.from({length: 5}, () => getRandomInt(500, 5000));
+      revenueChart.update();
+      userChart.data.datasets[0].data = Array.from({length: 6}, () => getRandomInt(100, 800));
+      userChart.update();
+      employeeChart.data.datasets.forEach(ds => {
+        ds.data = Array.from({length: 3}, () => getRandomInt(5, 40));
+      });
+      employeeChart.update();
+      // Update employee table
+      const empRows = document.querySelectorAll('#employee-performance-card tbody tr');
+      empRows.forEach(row => {
+        row.children[2].textContent = getRandomInt(10, 40);
+      });
+    };
+    </script>
 </body>
 </html>
