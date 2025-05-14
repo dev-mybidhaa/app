@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Reports Dashboard</title>
+    <link href="https://fonts.googleapis.com/css?family=Arial:400,600,700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #622C84;
+            --secondary-color: #7d3da8;
+            --accent-color: #F8BB00;
+            --light-color: #F3F3F3;
+            --hover-color: #8f46bf;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: var(--light-color);
+            color: #333;
+        }
+        .dashboard-container {
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            min-height: 100vh;
+        }
+        .sidebar {
+            background-color: var(--primary-color);
+            padding: 20px;
+            box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+        }
+        .sidebar h2 {
+            margin-bottom: 30px;
+            text-align: center;
+            color: var(--accent-color);
+            font-size: 24px;
+        }
+        .nav-links {
+            list-style: none;
+            padding: 0;
+        }
+        .nav-links li {
+            margin-bottom: 15px;
+        }
+        .nav-links a {
+            color: var(--light-color);
+            text-decoration: none;
+            display: block;
+            padding: 12px 15px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        .nav-links a:hover, .nav-links a.active {
+            background-color: var(--hover-color);
+            transform: translateX(5px);
+        }
+        .nav-links a::before {
+            display: inline-block;
+            margin-right: 10px;
+            font-size: 1.1em;
+            vertical-align: middle;
+        }
+        .nav-links a[href="#dashboard"]::before { content: "\1F4CA"; }
+        .nav-links a[href="#users"]::before { content: "\1F465"; }
+        .nav-links a[href="#products"]::before { content: "\1F381"; }
+        .nav-links a[href="#orders"]::before { content: "\1F4E6"; }
+        .nav-links a[href="#settings"]::before { content: "\2699"; }
+        .nav-links a[href="#analytics"]::before { content: "\1F4C8"; }
+        .nav-links a[href="#reports"]::before { content: "\1F4C4"; }
+        .nav-links a[href="#marketing"]::before { content: "\1F4F1"; }
+        .nav-links a[href="#inventory"]::before { content: "\1F4DD"; }
+        .nav-links a[href="#support"]::before { content: "\1F4AC"; }
+        .nav-links a[href="#documentation"]::before { content: "\1F4D6"; }
+        .nav-links a[href="#quotation"]::before { content: "\1F4B0"; }
+        .nav-links a[href="#invoice"]::before { content: "\1F4B3"; }
+        .nav-links a[href="#log-task"]::before { content: "\270D"; }
+        .nav-links a[href="#team-tasks"]::before { content: "\1F465"; }
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: var(--primary-color);
+            color: #fff;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 40px;
+            height: 70px;
+        }
+        .main-content {
+            padding: 30px;
+            background-color: var(--light-color);
+        }
+        .dashboard-header {
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .dashboard-header h1 {
+            color: var(--primary-color);
+            font-size: 32px;
+        }
+        .reports-section {
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 2px 16px rgba(98,44,132,0.07);
+            padding: 32px;
+            margin-bottom: 32px;
+        }
+        .reports-section h2 {
+            color: var(--primary-color);
+            margin-bottom: 18px;
+        }
+        .reports-section label {
+            font-weight: 600;
+            margin-right: 8px;
+        }
+        .reports-section input[type="date"] {
+            padding: 6px 10px;
+            border-radius: 6px;
+            border: 1px solid #eee;
+            margin: 0 4px;
+        }
+        .modern-btn {
+            background: var(--accent-color);
+            color: #622C84;
+            font-weight: 600;
+            border: none;
+            border-radius: 8px;
+            padding: 10px 22px;
+            font-size: 1rem;
+            margin-top: 8px;
+            cursor: pointer;
+            transition: background 0.2s, color 0.2s, transform 0.2s;
+        }
+        .modern-btn:hover {
+            background: #fff;
+            color: var(--primary-color);
+            transform: scale(1.04);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 18px;
+        }
+        th, td {
+            border: 1px solid #eee;
+            padding: 10px 8px;
+            text-align: left;
+        }
+        th {
+            background: var(--light-color);
+            color: var(--primary-color);
+        }
+        .footer {
+            background: var(--primary-color);
+            color: #fff;
+            text-align: center;
+            padding: 22px 0 18px 0;
+            font-size: 1rem;
+            margin-top: 40px;
+            box-shadow: 0 -2px 8px rgba(0,0,0,0.06);
+        }
+        .footer a {
+            color: var(--accent-color);
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        @media (max-width: 900px) {
+            .dashboard-container {
+                grid-template-columns: 1fr;
+            }
+            .sidebar {
+                grid-row: 1;
+                margin-bottom: 20px;
+            }
+        }
+        .nav-icon {
+            display: inline-block;
+            margin-right: 10px;
+            width: 26px;
+            height: 26px;
+            vertical-align: middle;
+            object-fit: contain;
+            border-radius: 6px;
+            background: #fff;
+            box-shadow: 0 2px 8px rgba(98,44,132,0.07);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div style="display: flex; align-items: center; gap: 16px;">
+            <img src="https://img.icons8.com/color/48/000000/admin-settings-male.png" alt="Logo" style="height: 40px; width: 40px; border-radius: 8px; background: #fff; padding: 4px;">
+            <span style="font-size: 1.7rem; font-weight: bold; letter-spacing: 1px; color: var(--accent-color);">E-Commerce Admin</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 24px;">
+            <span style="font-size: 1.1rem;">Welcome, Admin</span>
+            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Profile" style="height: 42px; width: 42px; border-radius: 50%; border: 2px solid var(--accent-color);">
+            <span style="font-weight: 500; color: #fff;">Admin</span>
+            <button style="background: var(--accent-color); color: #622C84; border: none; border-radius: 6px; padding: 7px 18px; font-size: 1rem; font-weight: 600; margin-left: 8px; cursor: pointer;">Logout</button>
+        </div>
+    </header>
+    <div class="dashboard-container">
+        <div class="sidebar">
+            <h2>Admin Panel</h2>
+            <ul class="nav-links">
+                <li><a href="#"><img class="nav-icon" src="https://cdn-icons-png.flaticon.com/512/1828/1828919.png" alt="Dashboard"/>Dashboard</a></li>
+                <li><a href="#"><img class="nav-icon" src="https://cdn-icons-png.flaticon.com/512/747/747376.png" alt="Users"/>Users</a></li>
+                <li><a href="#"><img class="nav-icon" src="https://cdn-icons-png.flaticon.com/512/1170/1170576.png" alt="Products"/>Products</a></li>
+                <li><a href="#"><img class="nav-icon" src="https://cdn-icons-png.flaticon.com/512/1041/1041916.png" alt="Orders"/>Orders</a></li>
+                <li><a href="#"><img class="nav-icon" src="https://cdn-icons-png.flaticon.com/512/3524/3524636.png" alt="Settings"/>Settings</a></li>
+                <li><a href="#"><img class="nav-icon" src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Analytics"/>Analytics</a></li>
+                <li><a href="#" class="active"><img class="nav-icon" src="https://cdn-icons-png.flaticon.com/512/2991/2991148.png" alt="Reports"/>Reports</a></li>
+                <li><a href="#"><img class="nav-icon" src="https://cdn-icons-png.flaticon.com/512/906/906334.png" alt="Marketing"/>Marketing</a></li>
+                <li><a href="#"><img class="nav-icon" src="https://cdn-icons-png.flaticon.com/512/2921/2921822.png" alt="Inventory"/>Inventory</a></li>
+                <li><a href="#"><img class="nav-icon" src="https://cdn-icons-png.flaticon.com/512/1828/1828970.png" alt="Support"/>Support</a></li>
+                <li><a href="#"><img class="nav-icon" src="https://cdn-icons-png.flaticon.com/512/1828/1828961.png" alt="Documentation"/>Documentation</a></li>
+                <li><a href="#"><img class="nav-icon" src="https://cdn-icons-png.flaticon.com/512/3135/3135712.png" alt="Quotation"/>Generate Quotation</a></li>
+                <li><a href="#"><img class="nav-icon" src="https://cdn-icons-png.flaticon.com/512/1256/1256650.png" alt="Invoice"/>Generate Invoice</a></li>
+                <li><a href="#"><img class="nav-icon" src="https://cdn-icons-png.flaticon.com/512/1828/1828911.png" alt="Log Task"/>Log Task</a></li>
+                <li><a href="#"><img class="nav-icon" src="https://cdn-icons-png.flaticon.com/512/1946/1946429.png" alt="Team Tasks"/>Team Tasks</a></li>
+            </ul>
+        </div>
+        <div class="main-content">
+            <div class="dashboard-header">
+                <h1>Reports Dashboard</h1>
+            </div>
+            <div class="reports-section">
+                <h2>Sales Reports</h2>
+                <p>View and export detailed sales, orders, and user activity reports. Filter by date, product, or user.</p>
+                <div style="margin: 24px 0;">
+                    <label for="report-date">Select Date Range:</label>
+                    <input type="date" id="report-date-start"> to <input type="date" id="report-date-end">
+                    <button class="modern-btn" style="margin-left: 12px;">Generate</button>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Report</th>
+                            <th>Date</th>
+                            <th>Status</th>
+                            <th>Download</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Monthly Sales</td>
+                            <td>2024-06</td>
+                            <td><span style="color: green; font-weight: bold;">Ready</span></td>
+                            <td><button class="modern-btn">Download PDF</button></td>
+                        </tr>
+                        <tr>
+                            <td>User Registrations</td>
+                            <td>2024-06</td>
+                            <td><span style="color: green; font-weight: bold;">Ready</span></td>
+                            <td><button class="modern-btn">Download PDF</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div>
+            &copy; 2024 E-Commerce Admin. All rights reserved.
+            <span style="margin-left: 18px;">
+                <a href="../adminDashboard.html">Dashboard</a>
+                <a href="#users">Users</a>
+                <a href="#products">Products</a>
+                <a href="#orders">Orders</a>
+                <a href="#settings">Settings</a>
+            </span>
+        </div>
+    </footer>
+</body>
+</html>
