@@ -1,176 +1,165 @@
+// Cart.js
+// This script manages the shopping cart functionality, including adding items, displaying the cart, and handling checkout.
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialize cart in localStorage
-    if (!localStorage.getItem('cart')) {
-        localStorage.setItem('cart', JSON.stringify([]));
+    // ======================
+    // 1. SAFE CART MANAGEMENT
+    // ======================
+    function getCart() {
+        try {
+            const cartData = localStorage.getItem('cart');
+            // Double-check we have a valid array
+            const cart = cartData ? JSON.parse(cartData) : [];
+            return Array.isArray(cart) ? cart : [];
+        } catch (e) {
+            console.error("Cart data corrupted, resetting:", e);
+            return [];
+        }
     }
 
-    // Generate unique product IDs based on content
-    function generateProductId(productItem) {
-        const name = productItem.querySelector('.pr-name').textContent.trim();
-        const category = productItem.querySelector('.categories').textContent.trim();
-        const price = productItem.querySelector('.price-amount').textContent.trim();
-        return 'prod-' + md5(name + category + price).substr(0, 8);
+    function saveCart(cart) {
+        if (!Array.isArray(cart)) {
+            console.warn("Attempted to save non-array cart data");
+            cart = [];
+        }
+        localStorage.setItem('cart', JSON.stringify(cart));
     }
 
-    // Simple MD5 function for generating consistent IDs
-    function md5(string) {
-        return string.split('').reduce(function(a, b) {
-            a = ((a << 5) - a) + b.charCodeAt(0);
-            return a & a;
-        }, 0);
+    // Initialize cart with empty array if needed
+    if (!localStorage.getItem('cart') || !Array.isArray(JSON.parse(localStorage.getItem('cart')))) {
+        saveCart([]);
     }
 
-    // Single event listener for all add-to-cart buttons
-    document.addEventListener('click', function(e) {
-        const addToCartBtn = e.target.closest('.add-to-cart-btn');
-        if (!addToCartBtn) return;
+    // ======================
+    // 2. ADD TO CART HANDLERS
+    // ======================
+    document.querySelectorAll('.add-to-cart-btn').forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const productItem = this.closest('.product-item');
+            if (!productItem) {
+                console.error("Couldn't find product container");
+                return;
+            }
 
-        e.preventDefault();
-        e.stopPropagation();
-        
-        const productItem = addToCartBtn.closest('.product-item');
-        const productId = generateProductId(productItem);
-        const productName = productItem.querySelector('.pr-name').textContent.trim();
-        const productPrice = parseFloat(
-            productItem.querySelector('.price-amount').textContent
-                .replace('KES', '')
-                .replace(/,/g, '')
-                .trim()
-        );
-        const productImage = productItem.querySelector('.product-thumnail').src;
-        const productCategory = productItem.querySelector('.categories').textContent.trim();
-        
-        addToCart({
-            id: productId,
-            name: productName,
-            price: productPrice,
-            image: productImage,
-            category: productCategory
+            const getSafeText = (selector, fallback = '') => {
+                const el = productItem.querySelector(selector);
+                return el?.textContent?.trim() || fallback;
+            };
+
+            const product = {
+                name: getSafeText('.pr-name', 'Unnamed Product'),
+                price: parseFloat(getSafeText('.price-amount', '0').replace(/KES|,/g, '')) || 0,
+                image: productItem.querySelector('.product-thumnail')?.src || 'images/placeholder.jpg',
+                category: getSafeText('.categories', 'General')
+            };
+
+            addToCart(product);
+            showAddToCartFeedback(this);
         });
-        
-        showAddToCartFeedback(addToCartBtn);
     });
 
-    // Cart management functions
     function addToCart(product) {
-        const cart = JSON.parse(localStorage.getItem('cart'));
-        const existingIndex = cart.findIndex(item => item.id === product.id);
-        
-        if (existingIndex >= 0) {
-            cart[existingIndex].quantity += 1;
+        const cart = getCart();
+        const existingItem = cart.find(item => 
+            item.name.toLowerCase() === product.name.toLowerCase()
+        );
+
+        if (existingItem) {
+            existingItem.quantity += 1;
         } else {
-            product.quantity = 1;
-            cart.push(product);
+            cart.push({
+                ...product,
+                quantity: 1
+            });
         }
-        
-        localStorage.setItem('cart', JSON.stringify(cart));
+
+        saveCart(cart);
         updateCartDisplay();
     }
 
+    // ======================
+    // 3. CART DISPLAY SYSTEM
+    // ======================
     function updateCartDisplay() {
-        const cart = JSON.parse(localStorage.getItem('cart'));
+        const cart = getCart(); // Always returns an array
         const cartItemsContainer = document.querySelector('.minicart-contain .products');
         const cartQuantity = document.querySelector('.minicart-contain .qty');
         const cartSubtotal = document.querySelector('.minicart-contain .sub-total');
-        
-        let totalQuantity = 0;
-        let subtotal = 0;
-        
-        cart.forEach(item => {
-            totalQuantity += item.quantity;
-            subtotal += item.price * item.quantity;
-        });
-        
+
+        // Calculate totals safely
+        const { totalQuantity, subtotal } = cart.reduce((acc, item) => {
+            const quantity = Number.isInteger(item.quantity) ? item.quantity : 1;
+            const price = typeof item.price === 'number' ? item.price : 0;
+            return {
+                totalQuantity: acc.totalQuantity + quantity,
+                subtotal: acc.subtotal + (price * quantity)
+            };
+        }, { totalQuantity: 0, subtotal: 0 });
+
+        // Update UI elements if they exist
         if (cartQuantity) cartQuantity.textContent = totalQuantity;
         if (cartSubtotal) cartSubtotal.textContent = `KES ${subtotal.toFixed(2)}`;
-        
+
+        // Update cart items list
         if (cartItemsContainer) {
-            cartItemsContainer.innerHTML = '';
-            
-            cart.forEach(item => {
-                const cartItemHTML = `
-                    <li>
-                        <div class="minicart-item">
-                            <div class="thumb">
-                                <a href="#"><img src="${item.image}" width="90" height="90" alt="${item.name}"></a>
+            cartItemsContainer.innerHTML = cart.map(item => `
+                <li>
+                    <div class="minicart-item">
+                        <div class="thumb">
+                            <a href="#">
+                                <img src="${item.image}" 
+                                     onerror="this.src='images/placeholder.jpg'"
+                                     width="90" height="90" 
+                                     alt="${item.name}">
+                            </a>
+                        </div>
+                        <div class="left-info">
+                            <div class="product-title">
+                                <a href="#" class="product-name">${item.name}</a>
                             </div>
-                            <div class="left-info">
-                                <div class="product-title"><a href="#" class="product-name">${item.name}</a></div>
-                                <div class="price">
-                                    <ins><span class="price-amount"><span class="currencySymbol">KES</span>${item.price.toFixed(2)}</span></ins>
-                                </div>
-                                <div class="qty">
-                                    <label>Qty:</label>
-                                    <input type="number" class="input-qty" value="${item.quantity}" min="1" data-id="${item.id}" disabled>
-                                </div>
+                            <div class="price">
+                                <ins>
+                                    <span class="price-amount">
+                                        <span class="currencySymbol">KES</span>${item.price.toFixed(2)}
+                                    </span>
+                                </ins>
                             </div>
-                            <div class="action">
-                                <a href="#" class="edit"><i class="fa fa-pencil" aria-hidden="true"></i></a>
-                                <a href="#" class="remove" data-id="${item.id}"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+                            <div class="qty">
+                                <label>Qty: ${item.quantity}</label>
                             </div>
                         </div>
-                    </li>
-                `;
-                cartItemsContainer.insertAdjacentHTML('beforeend', cartItemHTML);
+                        <div class="action">
+                            <a href="#" class="remove" data-name="${item.name}">
+                                <i class="fa fa-trash-o"></i>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+            `).join('');
+
+            // Add remove handlers
+            document.querySelectorAll('.remove').forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    removeFromCart(this.dataset.name);
+                });
             });
         }
     }
 
-    // Handle remove item clicks
-    document.addEventListener('click', function(e) {
-        const removeBtn = e.target.closest('.remove');
-        if (removeBtn) {
-            e.preventDefault();
-            removeFromCart(removeBtn.dataset.id);
-        }
-    });
-
-    function removeFromCart(id) {
-        let cart = JSON.parse(localStorage.getItem('cart'));
-        cart = cart.filter(item => item.id !== id);
-        localStorage.setItem('cart', JSON.stringify(cart));
+    // ======================
+    // 4. HELPER FUNCTIONS
+    // ======================
+    function removeFromCart(name) {
+        const cart = getCart().filter(item => item.name !== name);
+        saveCart(cart);
         updateCartDisplay();
     }
 
-    // Handle edit quantity clicks
-    document.addEventListener('click', function(e) {
-        const editBtn = e.target.closest('.edit');
-        if (editBtn) {
-            e.preventDefault();
-            const qtyInput = editBtn.closest('.minicart-item').querySelector('.input-qty');
-            qtyInput.disabled = !qtyInput.disabled;
-            if (!qtyInput.disabled) {
-                qtyInput.focus();
-            } else {
-                updateCartItemQuantity(qtyInput.dataset.id, parseInt(qtyInput.value));
-            }
-        }
-    });
-
-    // Handle quantity changes
-    document.addEventListener('change', function(e) {
-        if (e.target.classList.contains('input-qty') && !e.target.disabled) {
-            updateCartItemQuantity(e.target.dataset.id, parseInt(e.target.value));
-        }
-    });
-
-    function updateCartItemQuantity(id, newQuantity) {
-        if (newQuantity < 1) {
-            removeFromCart(id);
-            return;
-        }
-
-        const cart = JSON.parse(localStorage.getItem('cart'));
-        const item = cart.find(item => item.id === id);
-        if (item) {
-            item.quantity = newQuantity;
-            localStorage.setItem('cart', JSON.stringify(cart));
-            updateCartDisplay();
-        }
-    }
-
-    // Visual feedback when adding to cart
     function showAddToCartFeedback(button) {
+        if (!button) return;
+        
         const originalHTML = button.innerHTML;
         button.innerHTML = '<i class="fa fa-check"></i> Added!';
         button.classList.add('added');
@@ -181,12 +170,30 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 2000);
     }
 
+    // ======================
+    // 5. EVENT LISTENERS
+    // ======================
     // Toggle cart visibility
     document.querySelector('.minicart-contain .link-to')?.addEventListener('click', function(e) {
         e.preventDefault();
-        document.querySelector('.minicart-contain .cart-content').classList.toggle('show');
+        document.querySelector('.minicart-contain .cart-content')?.classList.toggle('show');
     });
 
-    // Initialize cart on page load
+    // Navigation buttons
+    document.getElementById('view-cart-btn')?.addEventListener('click', function(e) {
+        e.preventDefault();
+        window.location.href = 'pages/shopping-cart.html';
+    });
+
+    document.getElementById('checkout-btn')?.addEventListener('click', function(e) {
+        e.preventDefault();
+        if (getCart().length === 0) {
+            alert('Your cart is empty. Please add items before checkout.');
+            return;
+        }
+        window.location.href = 'pages/checkout.html';
+    });
+
+    // Initialize
     updateCartDisplay();
 });
