@@ -61,7 +61,7 @@
     <!-- Preloader -->
     <div id="biof-loading">
         <div class="biof-loading-center">
-            <img src="images/preloader.gif" alt="Loading..."> <!-- Replace with actual GIF path -->
+            <img src="images/preloader.gif" alt="Loading..."> 
         </div>
     </div>
 
@@ -174,7 +174,7 @@
                                     </div>
                                 </li>
                                 <li class="menu-item">
-                                    <a href="./tutors.html" class="menu-name" data-title="Pages" target="_blank" rel="noopener noreferrer">Tutors</a>
+                                    <a href="./tutors.html" class="menu-name" data-title="Pages"rel="noopener noreferrer">Tutors</a>
                                 <li class="menu-item">
                                     <a href="http://supplier.mybidhaa.com/" class="menu-name" data-title="Pages" target="_blank" rel="noopener noreferrer">Supplier</a>
                                 </li>
@@ -212,72 +212,28 @@
                             </div>
                             
                             <div class="minicart-block">
-                                <div class="minicart-contain">
-                                    <a href="#" class="link-to">
-                                        <span class="">
-                                            <img src="images/cart icon.png" alt="Cart" width="45" height="45"> <!-- Replace with actual cart image path -->
-                                            <span class="qty">2</span>
-                                            </span>
-                                         <span class="title">Cart </span>
-
-                                        <span class="sub-total">KES 0.00</span>
-                                    </a>
-                                    <div class="cart-content">
-                                        <div class="cart-inner">
-                                            <ul class="products">
-                                                <li>
-                                                    <div class="minicart-item">
-                                                        <div class="thumb">
-                                                            <a href="#"><img src="images/products/Mentor engl.jpg" width="90" height="90" alt="National Fresh"></a>
-                                                        </div>
-                                                        <div class="left-info">
-                                                            <div class="product-title"><a href="#" class="product-name">MENTOR ENGLISH GRADE 5</a></div>
-                                                            <div class="price">
-                                                                <ins><span class="price-amount"><span class="currencySymbol">KES</span>85.00</span></ins>
-                                                                
-                                                            </div>
-                                                            <div class="qty">
-                                                                <label for="cart[id123][qty]">Qty:</label>
-                                                                <input type="number" class="input-qty" name="cart[id123][qty]" id="cart[id123][qty]" value="1" disabled>
-                                                            </div>
-                                                        </div>
-                                                        <div class="action">
-                                                            <a href="#" class="edit"><i class="fa fa-pencil" aria-hidden="true"></i></a>
-                                                            <a href="#" class="remove"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="minicart-item">
-                                                        <div class="thumb">
-                                                            <a href="#"><img src="images/products/Mentor engl.jpg" width="90" height="90" alt="National Fresh"></a>
-                                                        </div>
-                                                        <div class="left-info">
-                                                            <div class="product-title"><a href="#" class="product-name">MENTOR ENGLISH GRADE 5</a></div>
-                                                            <div class="price">
-                                                                <ins><span class="price-amount"><span class="currencySymbol">KES</span>85.00</span></ins>
-                                                                
-                                                            </div>
-                                                            <div class="qty">
-                                                                <label for="cart[id124][qty]">Qty:</label>
-                                                                <input type="number" class="input-qty" name="cart[id124][qty]" id="cart[id124][qty]" value="1" disabled>
-                                                            </div>
-                                                        </div>
-                                                        <div class="action">
-                                                            <a href="#" class="edit"><i class="fa fa-pencil" aria-hidden="true"></i></a>
-                                                            <a href="#" class="remove"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                            <p class="btn-control">
-                                                <a href="shopping-cart.html" class="btn view-cart" id="view-cart-btn">view cart</a>
-                                                <a href="checkout.html" class="btn checkout-btn" id="checkout-btn">checkout</a>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+    <div class="minicart-contain">
+        <a href="#" class="link-to">
+            <span class="">
+                <img src="./images/cart icon.png" alt="Cart" width="45" height="45">
+                <span class="qty">0</span>
+            </span>
+            <span class="title">Cart -</span>
+            <span class="sub-total">KES 0.00</span>
+        </a>
+        <div class="cart-content">
+            <div class="cart-inner">
+                <ul class="products">
+                    <!-- Dynamic content will appear here -->
+                </ul>
+                <p class="btn-control">
+                    <a href="pages/shopping-cart.html" class="btn view-cart" id="view-cart-btn">view cart</a>
+                    <a href="pages/checkout.html" class="btn checkout-btn" id="checkout-btn">checkout</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
                             <div class="mobile-menu-toggle">
                                 <a class="btn-toggle" data-object="open-mobile-menu" href="#">
                                     <span></span>
@@ -931,7 +887,7 @@
     <div class="container">
         <nav class="biolife-nav">
             <ul>
-                <li class="nav-item"><a href="index.html" class="permal-link">Home</a></li>
+                <li class="nav-item"><a href="/public/index.html" class="permal-link">Home</a></li>
                 <li class="nav-item"><span class="current-page">Authentication</span></li>
             </ul>
         </nav>

@@ -502,7 +502,7 @@ body{
     width: 20px;
     height: 20px;
     background-color: #05a503;
-    float: left;
+    /* float: left; */
     margin-right: 20px;
     margin-top: 65px;
     -moz-border-radius: 50% 50% 50% 50%;
@@ -2172,7 +2172,7 @@ body.open-mobile-search .header-area.layout-02{
 .contain-product .info .categories{
     display: block;
     font-size: 15px;
-    color: #f7bd0d;
+    color: #6B21A8;
     text-align: center;
     font-weight: 400;
     line-height: 1;
@@ -11379,7 +11379,7 @@ body.open-quickview-block .biolife-quickview-block{
         margin-top: 15px;
     }
     .contain-product.layout-default .info .product-title a{
-        color: #f7bd0d;
+        color: #000000;
     }
     .contain-product.layout-default{
         position: relative;
@@ -14615,3 +14615,31 @@ header {
     width: 200px; /* Adjust size as needed */
     height: auto;
 }
+.whatsapp-float {
+    position: fixed;
+    bottom: 43px;
+    right: 0px;
+    background: #6B21A8;
+    color: white;
+    border-radius: 50px;
+    padding: 10px 20px 10px 15px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    z-index: 1000;
+    transition: all 0.3s ease;
+  }
+  .whatsapp-float:hover {
+    background: #128C7E;
+    transform: translateY(-3px);
+  }
+  .whatsapp-icon {
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+  }
+  .whatsapp-text {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+  }

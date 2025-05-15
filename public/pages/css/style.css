@@ -202,7 +202,7 @@ select option{
     transform: rotate( -180deg );
 }
 .nice-select .current{
-    color: #ffffff;
+    color: #000000;
     display: inline-block;
     padding: 14px 0;
 }
@@ -476,7 +476,7 @@ body{
     animation-iteration-count: 1;
 }
 #biof-loading{
-    background-color: #F2F1EF;
+    background-color: #ffab02;
     height: 100%;
     width: 100%;
     position: fixed;
@@ -502,7 +502,7 @@ body{
     width: 20px;
     height: 20px;
     background-color: #05a503;
-    float: left;
+    /* float: left; */
     margin-right: 20px;
     margin-top: 65px;
     -moz-border-radius: 50% 50% 50% 50%;
@@ -979,7 +979,7 @@ body{
     margin-left: 4px;
 }
 .header-area .primary-menu>ul>li>a{
-    color: #222222;
+    color: #000000;
     font-size: 17px;
     font-weight: 600;
     display: inline-block;
@@ -1413,7 +1413,7 @@ body.open-mobile-search .header-area.layout-02{
 .contain-product .info .price ins .price-amount,
 .minicart-item .left-info .price ins .price-amount{
     font-size: 18px;
-    color: #111111;
+    color: #000000;
     font-weight: 700;
 }
 .price-contain ins,
@@ -2172,7 +2172,7 @@ body.open-mobile-search .header-area.layout-02{
 .contain-product .info .categories{
     display: block;
     font-size: 15px;
-    color: #888888;
+    color: #6B21A8;
     text-align: center;
     font-weight: 400;
     line-height: 1;
@@ -2186,7 +2186,7 @@ body.open-mobile-search .header-area.layout-02{
     text-align: center;
 }
 .contain-product .info .product-title a{
-    color: #222222;
+    color: #000000;
     display: inline-block;
 }
 .contain-product .info .price{
@@ -2473,7 +2473,7 @@ body.open-mobile-search .header-area.layout-02{
 }
 .header-search-bar.layout-01 .nice-select:after,
 .header-search-bar.layout-01 .nice-select .current{
-    color: #888888;
+    color: #000000;
 }
 .header-search-bar.layout-01 .nice-select .current{
     width: 103px;
@@ -4823,7 +4823,7 @@ body.open-overlay #overlay{
     font-size: 14px;
     line-height: 30px;
     display: inline-block;
-    color: #666666;
+    color: #000000;
 }
 .review-tab #comments .comment-review-form .actions li a i{
     margin-right: 7px;
@@ -4927,7 +4927,7 @@ body.open-overlay #overlay{
     display: block;
     margin: 6px 0 0;
     font-size: 15px;
-    color: #666666;
+    color: #000000;
     line-height: 1;
     font-family: 'Playfair Display', serif;
     font-style: italic;
@@ -5867,10 +5867,10 @@ body.open-overlay #overlay{
     clear: both;
 }
 .welcome-us-block{
-    background: url("../images/about-us/bn01.jpg");
+    background: url("images/about-us/bn01.jpg");
     background-position: center bottom;
     /*height: 499px;*/
-    height: 555px;
+    height: 500px;
 }
 .why-choose-us-block .box-title,
 .testimonial-block .box-title,
@@ -6964,7 +6964,7 @@ body.open-overlay #overlay{
 }
 .slider-opt04__layout01 .buttons,
 .slider-opt03__layout02 .buttons{
-    margin: 37px 0 0;
+    margin: -84px 0 0;
 }
 .slider-opt04__layout01 .buttons .btn,
 .slider-opt03__layout02 .buttons .btn{
@@ -7043,7 +7043,7 @@ li.slick-current .slider-opt04__layout01 .buttons .btn{
     animation-delay: 0.2s;
 }
 .slider-opt04__layout01 .buttons .btn.btn-bold:not(:hover){
-    background-color: #f8bb00;
+    background-color: #622c84;
 }
 .slider-opt04__layout01.light-version .buttons .btn-thin:not(:hover){
     color: #333333;
@@ -7763,7 +7763,7 @@ li.slick-current .slider-opt04__layout01 .buttons .btn{
     font-size: 16px;
     text-transform: uppercase;
     font-weight: 700;
-    color: #666666;
+    color: #000000;
     display: block;
     line-height: 1;
     background: transparent;
@@ -8135,7 +8135,7 @@ li.slick-current .slider-opt04__layout01 .buttons .btn{
     transition: all 0.3s ease;
 }
 .biolife-banner__promotion4 .buttons .btn.green-btn:not(:hover){
-    background-color: #f8bb00;
+    background-color: #622c84;
 }
 .biolife-banner__promotion4.v2{
     height: 450px;
@@ -9446,7 +9446,7 @@ li.slick-current .slider-opt04__layout01 .buttons .btn{
 .biolife-banner__style-06 .text-content .text-pr span,
 .biolife-banner__style-05 .text-content .text-pr span{
     font-size: 14px;
-    color: #666666;
+    color: #673584;
     display: inline-block;
     font-weight: 400;
     margin-right: 4px;
@@ -11379,7 +11379,7 @@ body.open-quickview-block .biolife-quickview-block{
         margin-top: 15px;
     }
     .contain-product.layout-default .info .product-title a{
-        color: #444444;
+        color: #000000;
     }
     .contain-product.layout-default{
         position: relative;
@@ -13224,7 +13224,7 @@ body.open-quickview-block .biolife-quickview-block{
         margin-left: 10px;
     }
     .slider-opt04__layout01 .media{
-        height: 400px;
+        height: 252px;
     }
     .biolife-banner__style-02 .text-content,
     .biolife-banner__style-03 .text-content,
@@ -14564,4 +14564,134 @@ body.open-quickview-block .biolife-quickview-block{
     .biolife-carousel.nav-none-on-mobile.nav-center-03 .slick-arrow.next{
         display: none !important;
     }
+}
+.product-thumb {
+    width: 100%; /* Adjust container width as needed */
+    height: 200px; /* Fixed height (same as your original) */
+    overflow: hidden; /* Ensures no overflow if image is larger */
+    display: flex; /* Helps with centering */
+    align-items: center; /* Vertically centers the image */
+    justify-content: center; /* Horizontally centers the image */
+}
+
+.product-thumnail {
+    max-width: 100%; /* Prevents image from exceeding container */
+    max-height: 100%; /* Prevents image from exceeding container */
+    width: auto; /* Maintains aspect ratio */
+    height: auto; /* Maintains aspect ratio */
+    object-fit: contain; /* Fits image inside container without cropping */
+    /* Optional: Add a subtle border or shadow */
+    border: 1px solid #eee;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+header {
+            position: sticky;
+            top: 0;
+            width: 100%;
+            background: #ffffff;
+            /* Change to match your theme */
+            padding: 10px 20px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            /* Ensures it's above other content */
+        }
+/* Preloader styles */
+#biof-loading {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+.biof-loading-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+.biof-loading-center img {
+    width: 200px; /* Adjust size as needed */
+    height: auto;
+}
+.whatsapp-float {
+    position: fixed;
+    bottom: 43px;
+    right: 0px;
+    background: #6B21A8;
+    color: white;
+    border-radius: 50px;
+    padding: 10px 20px 10px 15px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    z-index: 1000;
+    transition: all 0.3s ease;
+  }
+  .whatsapp-float:hover {
+    background: #128C7E;
+    transform: translateY(-3px);
+  }
+  .whatsapp-icon {
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+  }
+  .whatsapp-text {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+  }
+  /* Fix for form fields */
+#shipping-form select, 
+#shipping-form input {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: white;
+    font-size: 16px;
+}
+
+#shipping-form select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 20px;
+}
+
+/* Fix for field layout */
+.form-row {
+    margin-bottom: 20px;
+}
+
+.form-row label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+.form-row {
+    margin-bottom: 15px;
+}
+
+.form-row label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    background-color: #f0f6ff;
 }
