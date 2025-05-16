@@ -220,9 +220,9 @@
                             <div class="minicart-block">
     <div class="minicart-contain">
         <a href="#" class="link-to">
-            <span class="">
+            <span class="cart-icon-wrapper" style="position: relative; display: inline-block;">
                 <img src="./images/cart icon.png" alt="Cart" width="45" height="45">
-                <span class="qty">0</span>
+                <span class="cart-counter-badge" id="cart-icon-badge">0</span>
             </span>
             <span class="title">Cart -</span>
             <span class="sub-total">KES 0.00</span>
@@ -938,26 +938,40 @@
                             </div>
                         </div>
                     </div>
-
+                    <style>.text-content {
+                        position: relative; /* Required for absolute children */
+                      }
+                      
+                      /* Move button to bottom-left of the text-content */
+                      .slide1-button {
+                        position: absolute;
+                        bottom: -400px; /* Adjust as needed */
+                        right: -750px;   /* Adjust as needed */
+                        margin: 0;
+                        padding: 0;
+                        z-index: 2;
+                      }
+                      </style>   
                     <div class="col-lg-9 col-md-8 col-xs-12">
                         <div class="main-slide block-slider nav-change type02">
                             <ul class="biolife-carousel"
                                 data-slick='{"arrows": true, "dots": false, "slidesMargin": 0, "slidesToShow": 1, "infinite": true, "speed": 800, "autoplay": true, "autoplaySpeed": 3000, "fade": true}'>
                                 <li>
                                     <div class="slide-contain slider-opt04__layout01">
-                                        <div class="media">
-                                            <img src="images/home-04/Hero Banner 1.jpg" alt="Slide 1">
-                                        </div>
-                                        <div class="text-content">
-                                            <span class="first-line"></span>
-                                            <span class="second-line"></span>
-                                            <span class="third-line"></span>
-                                            <p class="buttons">
-                                                <a href="#" class="btn btn-bold">Shop now</a>
-                                            </p>
-                                        </div>
+                                      <div class="media">
+                                        <img src="images/home-04/Hero Banner 1.jpg" alt="Slide 1">
+                                      </div>
+                                      <div class="text-content">
+                                        <span class="first-line"></span>
+                                        <span class="second-line"></span>
+                                        <span class="third-line"></span>
+                                        <p class="buttons slide1-button">
+                                          <a href="#" class="btn btn-bold">Shop now</a>
+                                        </p>
+                                      </div>
                                     </div>
-                                </li>
+                                  </li>
+                               
                                 <li>
                                     <div class="slide-contain slider-opt04__layout01">
                                         <div class="media">
@@ -967,7 +981,7 @@
                                             <span class="first-line"></span>
                                             <span class="second-line"></span>
                                             <span class="third-line"></span>
-                                            <p class="buttons">
+                                            <p class="buttons slide1-button">
                                                 <a href="#" class="btn btn-bold">Shop now</a>
                                             </p>
                                         </div>
@@ -982,12 +996,13 @@
                                             <span class="first-line"></span>
                                             <span class="second-line"></span>
                                             <span class="third-line"></span>
-                                            <p class="buttons">
+                                            <p class="buttons slide1-button">
                                                 <a href="#" class="btn btn-bold">Shop now</a>
                                             </p>
                                         </div>
                                     </div>
                                 </li>
+                                
                             </ul>
                         </div>
                     </div>
@@ -2034,7 +2049,7 @@
                         </a>
                     </div>
                     <div class="mobile-block block-minicart">
-                        <a class="link-to-cart" href="#">
+                        <a class="link-to-cart" href="pages/shopping-cart.html">
                             <span class="fa fa-shopping-bag" aria-hidden="true"></span>
                             <span class="text">Cart</span>
                         </a>

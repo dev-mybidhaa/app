@@ -99,6 +99,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Update UI elements if they exist
         if (cartQuantity) cartQuantity.textContent = totalQuantity;
+        // Also update visible badge on the cart icon
+const iconBadge = document.getElementById('cart-icon-badge');
+if (iconBadge) iconBadge.textContent = totalQuantity;
         if (cartSubtotal) cartSubtotal.textContent = `KES ${subtotal.toFixed(2)}`;
 
         // Update cart items list
